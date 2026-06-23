@@ -11,6 +11,7 @@ permissions:
 jobs:
   run-monitor:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -33,6 +34,10 @@ jobs:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
           SEND_EMAIL: "true"
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          AUTO_ASX300: "true"
+          MAX_OPENAI_CLASSIFICATIONS: "12"
         run: python contrarian.py
 
       - name: Add report to workflow summary
@@ -44,10 +49,10 @@ jobs:
             echo "No latest_summary.md file was created." >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - name: Commit report if created
+      - name: Commit report and dashboard if created
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/*.csv reports/*.md || true
+          git add index.html reports/*.csv reports/*.md || true
           git diff --cached --quiet || git commit -m "Add daily contrarian report"
           git push
