@@ -25,7 +25,24 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run monitor
+        env:
+          EMAIL_TO: balkissoc@gmail.com
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SEND_EMAIL: "true"
         run: python contrarian.py
+
+      - name: Add report to workflow summary
+        if: always()
+        run: |
+          if [ -f reports/latest_summary.md ]; then
+            cat reports/latest_summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No latest_summary.md file was created." >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Commit report if created
         run: |
