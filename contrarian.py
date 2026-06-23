@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 import os
+import smtplib
+from dataclasses import dataclass
 from datetime import datetime, timezone
+from email.message import EmailMessage
 from pathlib import Path
 
 import pandas as pd
@@ -15,7 +18,16 @@ ONE_DAY_DROP = float(os.getenv("ONE_DAY_DROP", "-7"))
 FIVE_DAY_DROP = float(os.getenv("FIVE_DAY_DROP", "-12"))
 TWENTY_DAY_DROP = float(os.getenv("TWENTY_DAY_DROP", "-20"))
 
+SEND_EMAIL = os.getenv("SEND_EMAIL", "true").lower() in {"1", "true", "yes"}
+EMAIL_TO = os.getenv("EMAIL_TO", "balkissoc@gmail.com")
+EMAIL_FROM = os.getenv("EMAIL_FROM") or os.getenv("SMTP_USERNAME")
+SMTP_HOST = os.getenv("SMTP_HOST", "smtp.gmail.com")
+SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+SMTP_USERNAME = os.getenv("SMTP_USERNAME")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+
 REPORT_COLUMNS = [
+    "rank",
     "ticker",
     "company",
     "last_price",
@@ -30,6 +42,18 @@ REPORT_COLUMNS = [
 ]
 
 
+@dataclass
+class ScanResult:
+    output_path: Path
+    summary_path: Path
+    latest_csv_path: Path
+    run_time: str
+    total_scanned: int
+    candidates: int
+    status_counts: dict[str, int]
+    dataframe: pd.DataFrame
+
+
 def pct_change(current: float, previous: float) -> float | None:
     if previous is None or previous == 0:
         return None
@@ -40,6 +64,12 @@ def safe_round(value: float | None, digits: int = 2) -> float | None:
     if value is None:
         return None
     return round(float(value), digits)
+
+
+def money(value: int | float | None) -> str:
+    if value is None or pd.isna(value):
+        return ""
+    return f"A${value:,.0f}"
 
 
 def get_market_cap(stock: yf.Ticker) -> int | None:
@@ -118,6 +148,7 @@ def screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
     volume_spike = last_volume / avg_volume_20d if avg_volume_20d and avg_volume_20d > 0 else None
 
     return {
+        "rank": "",
         "ticker": ticker,
         "company": company,
         "last_price": safe_round(last_close),
@@ -132,21 +163,14 @@ def screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
     }, "candidate"
 
 
-def write_summary(
-    *,
-    run_time: str,
-    total_scanned: int,
-    candidates: int,
-    status_counts: dict[str, int],
-    output_path: Path,
-) -> None:
+def build_markdown_summary(result: ScanResult) -> str:
     lines = [
         "# Latest Contrarian Monitor Summary",
         "",
-        f"Run time: {run_time}",
-        f"Watchlist scanned: {total_scanned}",
-        f"Candidates found: {candidates}",
-        f"Report file: `{output_path.name}`",
+        f"Run time: {result.run_time}",
+        f"Watchlist scanned: {result.total_scanned}",
+        f"Candidates found: {result.candidates}",
+        f"Report file: `{result.output_path.name}`",
         "",
         "## Thresholds",
         "",
@@ -155,25 +179,120 @@ def write_summary(
         f"- 5-day fall: {FIVE_DAY_DROP}% or worse",
         f"- 20-day fall: {TWENTY_DAY_DROP}% or worse",
         "",
-        "## Scan status",
-        "",
     ]
 
-    for status, count in sorted(status_counts.items()):
-        lines.append(f"- {status}: {count}")
-
-    if candidates == 0:
+    if result.candidates:
+        lines.extend(["## Candidates", ""])
+        display_cols = [
+            "rank",
+            "ticker",
+            "company",
+            "last_price",
+            "market_cap_aud_approx",
+            "one_day_pct",
+            "five_day_pct",
+            "twenty_day_pct",
+            "volume_spike_vs_20d",
+            "trigger",
+        ]
+        table = result.dataframe[display_cols].copy()
+        table["market_cap_aud_approx"] = table["market_cap_aud_approx"].apply(money)
+        lines.append(table.to_markdown(index=False))
         lines.extend([
             "",
+            "## Manual review discipline",
+            "",
+            "Before buying, check ASX announcements, balance sheet strength, debt maturities, liquidity, free cash flow, regulatory risk and whether the adverse event is temporary or permanently damaging.",
+        ])
+    else:
+        lines.extend([
             "## Result",
             "",
             "No stocks triggered the price-drop screen in this run.",
         ])
 
-    (REPORTS_DIR / "latest_summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    lines.extend(["", "## Scan status", ""])
+    for status, count in sorted(result.status_counts.items()):
+        lines.append(f"- {status}: {count}")
+
+    return "\n".join(lines) + "\n"
 
 
-def main() -> None:
+def build_email_body(result: ScanResult) -> str:
+    if result.candidates == 0:
+        return (
+            "Daily contrarian investing monitor\n\n"
+            f"Run time: {result.run_time}\n"
+            f"Watchlist scanned: {result.total_scanned}\n"
+            "Candidates found: 0\n\n"
+            "No ASX stocks in the watchlist triggered the configured price-drop thresholds today.\n\n"
+            "Thresholds:\n"
+            f"- Market cap: A${MIN_MARKET_CAP:,.0f}+\n"
+            f"- 1-day fall: {ONE_DAY_DROP}% or worse\n"
+            f"- 5-day fall: {FIVE_DAY_DROP}% or worse\n"
+            f"- 20-day fall: {TWENTY_DAY_DROP}% or worse\n"
+        )
+
+    display_cols = [
+        "rank",
+        "ticker",
+        "company",
+        "last_price",
+        "market_cap_aud_approx",
+        "one_day_pct",
+        "five_day_pct",
+        "twenty_day_pct",
+        "volume_spike_vs_20d",
+        "trigger",
+    ]
+    table = result.dataframe[display_cols].copy()
+    table["market_cap_aud_approx"] = table["market_cap_aud_approx"].apply(money)
+
+    return (
+        "Daily contrarian investing monitor\n\n"
+        f"Run time: {result.run_time}\n"
+        f"Watchlist scanned: {result.total_scanned}\n"
+        f"Candidates found: {result.candidates}\n\n"
+        f"{table.to_string(index=False)}\n\n"
+        "Manual review discipline: check ASX announcements, debt, liquidity, free cash flow, regulatory issues and whether the adverse event is temporary or permanent.\n"
+    )
+
+
+def send_email_report(result: ScanResult) -> None:
+    if not SEND_EMAIL:
+        print("Email disabled by SEND_EMAIL setting.")
+        return
+
+    if not SMTP_USERNAME or not SMTP_PASSWORD or not EMAIL_FROM or not EMAIL_TO:
+        print("Email not sent. Missing SMTP_USERNAME, SMTP_PASSWORD, EMAIL_FROM or EMAIL_TO secret/env value.")
+        return
+
+    subject_status = f"{result.candidates} candidate(s)" if result.candidates else "no candidates"
+    subject = f"Contrarian monitor: {subject_status}"
+
+    message = EmailMessage()
+    message["Subject"] = subject
+    message["From"] = EMAIL_FROM
+    message["To"] = EMAIL_TO
+    message.set_content(build_email_body(result))
+
+    if result.output_path.exists():
+        message.add_attachment(
+            result.output_path.read_bytes(),
+            maintype="text",
+            subtype="csv",
+            filename=result.output_path.name,
+        )
+
+    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
+        server.starttls()
+        server.login(SMTP_USERNAME, SMTP_PASSWORD)
+        server.send_message(message)
+
+    print(f"Email sent to {EMAIL_TO}.")
+
+
+def run_scan() -> ScanResult:
     if not WATCHLIST_PATH.exists():
         raise FileNotFoundError(f"Watchlist not found: {WATCHLIST_PATH}")
 
@@ -193,35 +312,53 @@ def main() -> None:
     run_time = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     output_path = REPORTS_DIR / f"contrarian_candidates_{today}.csv"
+    latest_csv_path = REPORTS_DIR / "latest_candidates.csv"
+    summary_path = REPORTS_DIR / "latest_summary.md"
 
     df = pd.DataFrame(rows, columns=REPORT_COLUMNS)
-    if not df.empty and "one_day_pct" in df.columns:
+    if not df.empty:
         df = df.sort_values(
             by=["one_day_pct", "five_day_pct", "twenty_day_pct"],
             ascending=True,
             na_position="last",
-        )
+        ).reset_index(drop=True)
+        df["rank"] = range(1, len(df) + 1)
 
     df.to_csv(output_path, index=False)
-    write_summary(
+    df.to_csv(latest_csv_path, index=False)
+
+    result = ScanResult(
+        output_path=output_path,
+        summary_path=summary_path,
+        latest_csv_path=latest_csv_path,
         run_time=run_time,
         total_scanned=len(watchlist),
         candidates=len(df),
         status_counts=status_counts,
-        output_path=output_path,
+        dataframe=df,
     )
 
-    print(f"Created report: {output_path}")
-    print(f"Watchlist scanned: {len(watchlist)}")
-    print(f"Candidates found: {len(df)}")
+    summary_path.write_text(build_markdown_summary(result), encoding="utf-8")
+    return result
+
+
+def main() -> None:
+    result = run_scan()
+    send_email_report(result)
+
+    print(f"Created report: {result.output_path}")
+    print(f"Updated latest report: {result.latest_csv_path}")
+    print(f"Updated summary: {result.summary_path}")
+    print(f"Watchlist scanned: {result.total_scanned}")
+    print(f"Candidates found: {result.candidates}")
     print("Status counts:")
-    for status, count in sorted(status_counts.items()):
+    for status, count in sorted(result.status_counts.items()):
         print(f"- {status}: {count}")
 
-    if df.empty:
+    if result.dataframe.empty:
         print("No candidates triggered today.")
     else:
-        print(df.to_string(index=False))
+        print(result.dataframe.to_string(index=False))
 
 
 if __name__ == "__main__":
