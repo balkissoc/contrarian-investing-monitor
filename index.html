@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contrarian Investing Monitor</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 980px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #111827; }
+    h1 { color: #0b5ed7; }
+    .card { border: 1px solid #d0d7de; border-radius: 8px; padding: 18px; margin: 16px 0; background: #f8fafc; }
+    .warning { border-left: 5px solid #f59e0b; background: #fffbeb; }
+    .button { display: inline-block; padding: 10px 14px; margin: 6px 8px 6px 0; background: #0b5ed7; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
+    .button.secondary { background: #374151; }
+    code { background: #eef2f7; padding: 2px 5px; border-radius: 4px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #d0d7de; padding: 8px; text-align: left; }
+    th { background: #f3f4f6; }
+  </style>
+</head>
+<body>
+  <h1>Contrarian Investing Monitor</h1>
+
+  <div class="card warning">
+    <strong>This page is only the dashboard/instructions page.</strong><br>
+    The Python stock screen does not run inside this web page. It runs in <strong>GitHub Actions</strong> on a schedule or when manually triggered.
+  </div>
+
+  <div class="card">
+    <h2>Run the monitor</h2>
+    <p>Open the GitHub Actions workflow and press <strong>Run workflow</strong>.</p>
+    <a class="button" href="https://github.com/balkissoc/contrarian-investing-monitor/actions/workflows/daily.yml">Open GitHub Action</a>
+    <a class="button secondary" href="https://github.com/balkissoc/contrarian-investing-monitor/tree/main/reports">View Reports Folder</a>
+    <a class="button secondary" href="https://github.com/balkissoc/contrarian-investing-monitor/blob/main/contrarian.py">View Python Script</a>
+  </div>
+
+  <div class="card">
+    <h2>What happens when it runs</h2>
+    <table>
+      <tr><th>Step</th><th>Action</th></tr>
+      <tr><td>1</td><td>Reads <code>config/watchlist_asx.csv</code>.</td></tr>
+      <tr><td>2</td><td>Downloads recent price and market-cap data using <code>yfinance</code>.</td></tr>
+      <tr><td>3</td><td>Flags stocks over A$500m market cap with sharp 1-day, 5-day, or 20-day falls.</td></tr>
+      <tr><td>4</td><td>Writes a CSV report to <code>reports/</code>.</td></tr>
+      <tr><td>5</td><td>Commits the report back into the repository.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Thresholds</h2>
+    <table>
+      <tr><th>Test</th><th>Default</th></tr>
+      <tr><td>Minimum market capitalisation</td><td>A$500,000,000</td></tr>
+      <tr><td>1-day fall</td><td>-7% or worse</td></tr>
+      <tr><td>5-day fall</td><td>-12% or worse</td></tr>
+      <tr><td>20-day fall</td><td>-20% or worse</td></tr>
+    </table>
+  </div>
+
+  <div class="card warning">
+    <strong>Research aide only.</strong> This tool screens for potential contrarian opportunities. It does not recommend trades, verify solvency, check live announcements, or assess whether a fall is justified.
+  </div>
+</body>
+</html>
