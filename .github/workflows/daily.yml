@@ -31,11 +31,11 @@ jobs:
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: "587"
           SEND_EMAIL: "true"
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          OPENAI_MODEL: gpt-4o-mini
           AUTO_ASX300: "true"
           MAX_OPENAI_CLASSIFICATIONS: "12"
         run: python contrarian.py
