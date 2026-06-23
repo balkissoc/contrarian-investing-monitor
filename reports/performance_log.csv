@@ -1,0 +1,3 @@
+signal_date,ticker,company,signal_type,signal_price,current_price,days_since_signal,return_pct,last_checked,openai_score_at_signal,openai_classification_at_signal
+2026-06-23,REA.AX,REA Group,near_miss,131.52,131.52,0,0,2026-06-23,,not_run
+2026-06-23,BHP.AX,BHP Group,near_miss,59.92,59.92,0,0,2026-06-23,,not_run

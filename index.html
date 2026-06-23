@@ -5,59 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contrarian Investing Monitor</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 980px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #111827; }
+    body { font-family: Arial, sans-serif; max-width: 1200px; margin: 32px auto; padding: 0 20px; line-height: 1.45; color: #111827; }
     h1 { color: #0b5ed7; }
-    .card { border: 1px solid #d0d7de; border-radius: 8px; padding: 18px; margin: 16px 0; background: #f8fafc; }
+    .card { border: 1px solid #d0d7de; border-radius: 8px; padding: 18px; margin: 16px 0; background: #f8fafc; overflow-x: auto; }
     .warning { border-left: 5px solid #f59e0b; background: #fffbeb; }
     .button { display: inline-block; padding: 10px 14px; margin: 6px 8px 6px 0; background: #0b5ed7; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
     .button.secondary { background: #374151; }
     code { background: #eef2f7; padding: 2px 5px; border-radius: 4px; }
-    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
-    th, td { border: 1px solid #d0d7de; padding: 8px; text-align: left; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; font-size: 13px; }
+    th, td { border: 1px solid #d0d7de; padding: 8px; text-align: left; vertical-align: top; }
     th { background: #f3f4f6; }
+    .metric { display: inline-block; min-width: 170px; padding: 12px; margin: 6px 10px 6px 0; border: 1px solid #d0d7de; border-radius: 8px; background: white; }
+    .metric strong { display:block; font-size: 22px; }
   </style>
 </head>
 <body>
   <h1>Contrarian Investing Monitor</h1>
 
   <div class="card warning">
-    <strong>This page is only the dashboard/instructions page.</strong><br>
-    The Python stock screen does not run inside this web page. It runs in <strong>GitHub Actions</strong> on a schedule or when manually triggered.
+    <strong>Research aide only.</strong> This tool screens for possible contrarian opportunities. It does not recommend trades, verify solvency, or replace manual review of ASX announcements and financial statements.
   </div>
 
   <div class="card">
-    <h2>Run the monitor</h2>
-    <p>Open the GitHub Actions workflow and press <strong>Run workflow</strong>.</p>
-    <a class="button" href="https://github.com/balkissoc/contrarian-investing-monitor/actions/workflows/daily.yml">Open GitHub Action</a>
-    <a class="button secondary" href="https://github.com/balkissoc/contrarian-investing-monitor/tree/main/reports">View Reports Folder</a>
-    <a class="button secondary" href="https://github.com/balkissoc/contrarian-investing-monitor/blob/main/contrarian.py">View Python Script</a>
+    <h2>Latest run</h2>
+    <div class="metric"><span>Run time</span><strong>2026-06-23 22:56:37 UTC</strong></div>
+    <div class="metric"><span>Watchlist scanned</span><strong>20</strong></div>
+    <div class="metric"><span>Candidates</span><strong>0</strong></div>
+    <div class="metric"><span>Near misses</span><strong>2</strong></div>
+    <p>
+      <a class="button" href="https://github.com/balkissoc/contrarian-investing-monitor/actions/workflows/daily.yml">Run GitHub Action</a>
+      <a class="button secondary" href="https://github.com/balkissoc/contrarian-investing-monitor/tree/main/reports">Reports Folder</a>
+      <a class="button secondary" href="reports/latest_candidates.csv">Latest Candidates CSV</a>
+      <a class="button secondary" href="reports/latest_near_misses.csv">Latest Near Misses CSV</a>
+      <a class="button secondary" href="reports/performance_log.csv">Performance Log CSV</a>
+    </p>
   </div>
 
   <div class="card">
-    <h2>What happens when it runs</h2>
-    <table>
-      <tr><th>Step</th><th>Action</th></tr>
-      <tr><td>1</td><td>Reads <code>config/watchlist_asx.csv</code>.</td></tr>
-      <tr><td>2</td><td>Downloads recent price and market-cap data using <code>yfinance</code>.</td></tr>
-      <tr><td>3</td><td>Flags stocks over A$500m market cap with sharp 1-day, 5-day, or 20-day falls.</td></tr>
-      <tr><td>4</td><td>Writes a CSV report to <code>reports/</code>.</td></tr>
-      <tr><td>5</td><td>Commits the report back into the repository.</td></tr>
-    </table>
+    <h2>Candidates</h2>
+    <p><em>None.</em></p>
+  </div>
+
+  <div class="card">
+    <h2>Near Misses</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>rank</th>
+      <th>ticker</th>
+      <th>company</th>
+      <th>last_price</th>
+      <th>market_cap_aud_approx</th>
+      <th>one_day_pct</th>
+      <th>five_day_pct</th>
+      <th>twenty_day_pct</th>
+      <th>trigger</th>
+      <th>avoid_flags</th>
+      <th>openai_score</th>
+      <th>openai_classification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>REA.AX</td>
+      <td>REA Group</td>
+      <td>131.52</td>
+      <td>A$17,210,683,392</td>
+      <td>-3.13</td>
+      <td>-8.58</td>
+      <td>-13.24</td>
+      <td>5D &lt;= -8.0%</td>
+      <td></td>
+      <td></td>
+      <td>not_run</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>BHP.AX</td>
+      <td>BHP Group</td>
+      <td>59.92</td>
+      <td>A$304,434,937,856</td>
+      <td>-0.70</td>
+      <td>-8.08</td>
+      <td>-0.33</td>
+      <td>5D &lt;= -8.0%</td>
+      <td></td>
+      <td></td>
+      <td>not_run</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+  <div class="card">
+    <h2>Performance Log</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>signal_date</th>
+      <th>ticker</th>
+      <th>company</th>
+      <th>signal_type</th>
+      <th>signal_price</th>
+      <th>current_price</th>
+      <th>days_since_signal</th>
+      <th>return_pct</th>
+      <th>last_checked</th>
+      <th>openai_score_at_signal</th>
+      <th>openai_classification_at_signal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-06-23</td>
+      <td>BHP.AX</td>
+      <td>BHP Group</td>
+      <td>near_miss</td>
+      <td>59.92</td>
+      <td>59.92</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2026-06-23</td>
+      <td></td>
+      <td>not_run</td>
+    </tr>
+    <tr>
+      <td>2026-06-23</td>
+      <td>REA.AX</td>
+      <td>REA Group</td>
+      <td>near_miss</td>
+      <td>131.52</td>
+      <td>131.52</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2026-06-23</td>
+      <td></td>
+      <td>not_run</td>
+    </tr>
+  </tbody>
+</table>
   </div>
 
   <div class="card">
     <h2>Thresholds</h2>
     <table>
-      <tr><th>Test</th><th>Default</th></tr>
-      <tr><td>Minimum market capitalisation</td><td>A$500,000,000</td></tr>
-      <tr><td>1-day fall</td><td>-7% or worse</td></tr>
-      <tr><td>5-day fall</td><td>-12% or worse</td></tr>
-      <tr><td>20-day fall</td><td>-20% or worse</td></tr>
+      <tr><th>Test</th><th>Candidate</th><th>Near miss</th></tr>
+      <tr><td>Minimum market capitalisation</td><td colspan="2">A$500,000,000</td></tr>
+      <tr><td>1-day fall</td><td>-7.0% or worse</td><td>-4.0% or worse</td></tr>
+      <tr><td>5-day fall</td><td>-12.0% or worse</td><td>-8.0% or worse</td></tr>
+      <tr><td>20-day fall</td><td>-20.0% or worse</td><td>-15.0% or worse</td></tr>
     </table>
-  </div>
-
-  <div class="card warning">
-    <strong>Research aide only.</strong> This tool screens for potential contrarian opportunities. It does not recommend trades, verify solvency, check live announcements, or assess whether a fall is justified.
   </div>
 </body>
 </html>
