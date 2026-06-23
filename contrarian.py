@@ -15,6 +15,20 @@ ONE_DAY_DROP = float(os.getenv("ONE_DAY_DROP", "-7"))
 FIVE_DAY_DROP = float(os.getenv("FIVE_DAY_DROP", "-12"))
 TWENTY_DAY_DROP = float(os.getenv("TWENTY_DAY_DROP", "-20"))
 
+REPORT_COLUMNS = [
+    "ticker",
+    "company",
+    "last_price",
+    "market_cap_aud_approx",
+    "one_day_pct",
+    "five_day_pct",
+    "twenty_day_pct",
+    "volume_spike_vs_20d",
+    "trigger",
+    "manual_review_notes",
+    "error",
+]
+
 
 def pct_change(current: float, previous: float) -> float | None:
     if previous is None or previous == 0:
@@ -59,7 +73,7 @@ def assess_trigger(one_day: float | None, five_day: float | None, twenty_day: fl
     return "; ".join(triggers)
 
 
-def screen_ticker(ticker: str, company: str) -> dict | None:
+def screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
     stock = yf.Ticker(ticker)
 
     try:
@@ -69,20 +83,22 @@ def screen_ticker(ticker: str, company: str) -> dict | None:
             "ticker": ticker,
             "company": company,
             "error": f"price fetch failed: {exc}",
-        }
+        }, "error"
 
     if hist.empty or len(hist) < 21:
-        return None
+        return None, "insufficient_price_history"
 
     market_cap = get_market_cap(stock)
-    if market_cap is None or market_cap < MIN_MARKET_CAP:
-        return None
+    if market_cap is None:
+        return None, "market_cap_unavailable"
+    if market_cap < MIN_MARKET_CAP:
+        return None, "below_market_cap_threshold"
 
     close = hist["Close"].dropna()
     volume = hist["Volume"].dropna()
 
     if len(close) < 21:
-        return None
+        return None, "insufficient_close_history"
 
     last_close = float(close.iloc[-1])
     prev_close = float(close.iloc[-2])
@@ -95,7 +111,7 @@ def screen_ticker(ticker: str, company: str) -> dict | None:
 
     trigger = assess_trigger(one_day, five_day, twenty_day)
     if not trigger:
-        return None
+        return None, "no_price_drop_trigger"
 
     avg_volume_20d = float(volume.iloc[-21:-1].mean()) if len(volume) >= 21 else None
     last_volume = float(volume.iloc[-1]) if len(volume) else None
@@ -112,7 +128,49 @@ def screen_ticker(ticker: str, company: str) -> dict | None:
         "volume_spike_vs_20d": safe_round(volume_spike),
         "trigger": trigger,
         "manual_review_notes": "Check ASX announcements, debt, liquidity, free cash flow, regulatory issues and whether the event is temporary or permanent.",
-    }
+        "error": "",
+    }, "candidate"
+
+
+def write_summary(
+    *,
+    run_time: str,
+    total_scanned: int,
+    candidates: int,
+    status_counts: dict[str, int],
+    output_path: Path,
+) -> None:
+    lines = [
+        "# Latest Contrarian Monitor Summary",
+        "",
+        f"Run time: {run_time}",
+        f"Watchlist scanned: {total_scanned}",
+        f"Candidates found: {candidates}",
+        f"Report file: `{output_path.name}`",
+        "",
+        "## Thresholds",
+        "",
+        f"- Minimum market capitalisation: A${MIN_MARKET_CAP:,.0f}",
+        f"- 1-day fall: {ONE_DAY_DROP}% or worse",
+        f"- 5-day fall: {FIVE_DAY_DROP}% or worse",
+        f"- 20-day fall: {TWENTY_DAY_DROP}% or worse",
+        "",
+        "## Scan status",
+        "",
+    ]
+
+    for status, count in sorted(status_counts.items()):
+        lines.append(f"- {status}: {count}")
+
+    if candidates == 0:
+        lines.extend([
+            "",
+            "## Result",
+            "",
+            "No stocks triggered the price-drop screen in this run.",
+        ])
+
+    (REPORTS_DIR / "latest_summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main() -> None:
@@ -121,19 +179,22 @@ def main() -> None:
 
     watchlist = pd.read_csv(WATCHLIST_PATH)
     rows: list[dict] = []
+    status_counts: dict[str, int] = {}
 
     for _, row in watchlist.iterrows():
         ticker = str(row["ticker"]).strip()
         company = str(row.get("company", "")).strip()
-        result = screen_ticker(ticker, company)
+        result, status = screen_ticker(ticker, company)
+        status_counts[status] = status_counts.get(status, 0) + 1
         if result:
             rows.append(result)
 
     REPORTS_DIR.mkdir(exist_ok=True)
+    run_time = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     output_path = REPORTS_DIR / f"contrarian_candidates_{today}.csv"
 
-    df = pd.DataFrame(rows)
+    df = pd.DataFrame(rows, columns=REPORT_COLUMNS)
     if not df.empty and "one_day_pct" in df.columns:
         df = df.sort_values(
             by=["one_day_pct", "five_day_pct", "twenty_day_pct"],
@@ -142,8 +203,21 @@ def main() -> None:
         )
 
     df.to_csv(output_path, index=False)
+    write_summary(
+        run_time=run_time,
+        total_scanned=len(watchlist),
+        candidates=len(df),
+        status_counts=status_counts,
+        output_path=output_path,
+    )
 
     print(f"Created report: {output_path}")
+    print(f"Watchlist scanned: {len(watchlist)}")
+    print(f"Candidates found: {len(df)}")
+    print("Status counts:")
+    for status, count in sorted(status_counts.items()):
+        print(f"- {status}: {count}")
+
     if df.empty:
         print("No candidates triggered today.")
     else:
