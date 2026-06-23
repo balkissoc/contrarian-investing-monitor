@@ -31,6 +31,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/*.csv || true
+          git add reports/*.csv reports/*.md || true
           git diff --cached --quiet || git commit -m "Add daily contrarian report"
           git push
