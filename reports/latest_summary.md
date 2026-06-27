@@ -1,11 +1,11 @@
 # Latest Contrarian Monitor Summary
 
-Run time: 2026-06-25 23:04:54 UTC
+Run time: 2026-06-27 08:25:14 UTC
 Watchlist scanned: 20
 Candidates found: 0
-Near misses found: 1
-Candidate report: `contrarian_candidates_2026-06-25.csv`
-Near-miss report: `near_misses_2026-06-25.csv`
+Near misses found: 0
+Candidate report: `contrarian_candidates_2026-06-27.csv`
+Near-miss report: `near_misses_2026-06-27.csv`
 
 ## Thresholds
 
@@ -23,9 +23,7 @@ _None._
 
 ## Near Misses
 
-|   rank | ticker   | company   |   last_price | market_cap_aud_approx   |   one_day_pct |   five_day_pct |   twenty_day_pct |   volume_spike_vs_20d | trigger     | avoid_flags   | openai_score   | openai_classification   |
-|-------:|:---------|:----------|-------------:|:------------------------|--------------:|---------------:|-----------------:|----------------------:|:------------|:--------------|:---------------|:------------------------|
-|      1 | BHP.AX   | BHP Group |        58.52 | A$297,321,988,096       |         -1.65 |         -10.02 |             -4.5 |                  0.81 | 5D <= -8.0% |               |                | not_run                 |
+_None._
 
 ## Manual review discipline
 
@@ -33,16 +31,14 @@ Before buying, check ASX announcements, balance sheet strength, debt maturities,
 
 ## Scan status
 
-- market_cap_unavailable: 1
-- near_miss: 1
-- no_price_drop_trigger: 18
+- no_price_drop_trigger: 20
 
 ## Latest Performance Log Snapshot
 
 | signal_date   | ticker   | company   | signal_type   |   signal_price |   current_price |   days_since_signal |   return_pct | last_checked   |   openai_score_at_signal | openai_classification_at_signal   |
 |:--------------|:---------|:----------|:--------------|---------------:|----------------:|--------------------:|-------------:|:---------------|-------------------------:|:----------------------------------|
-| 2026-06-25    | BHP.AX   | BHP Group | near_miss     |          58.52 |           58.52 |                   0 |            0 | 2026-06-25     |                          | not_run                           |
-| 2026-06-24    | BHP.AX   | BHP Group | near_miss     |          59.5  |           58.52 |                   1 |            0 | 2026-06-24     |                      nan | not_run                           |
-| 2026-06-24    | REA.AX   | REA Group | near_miss     |         131.58 |          133.88 |                   1 |            0 | 2026-06-24     |                      nan | not_run                           |
-| 2026-06-23    | BHP.AX   | BHP Group | near_miss     |          59.92 |           58.52 |                   2 |            0 | 2026-06-23     |                      nan | not_run                           |
-| 2026-06-23    | REA.AX   | REA Group | near_miss     |         131.52 |          133.88 |                   2 |            0 | 2026-06-23     |                      nan | not_run                           |
+| 2026-06-25    | BHP.AX   | BHP Group | near_miss     |          58.52 |           58.99 |                   2 |            0 | 2026-06-25     |                      nan | not_run                           |
+| 2026-06-24    | BHP.AX   | BHP Group | near_miss     |          59.5  |           58.99 |                   3 |            0 | 2026-06-24     |                      nan | not_run                           |
+| 2026-06-24    | REA.AX   | REA Group | near_miss     |         131.58 |          133.54 |                   3 |            0 | 2026-06-24     |                      nan | not_run                           |
+| 2026-06-23    | BHP.AX   | BHP Group | near_miss     |          59.92 |           58.99 |                   4 |            0 | 2026-06-23     |                      nan | not_run                           |
+| 2026-06-23    | REA.AX   | REA Group | near_miss     |         131.52 |          133.54 |                   4 |            0 | 2026-06-23     |                      nan | not_run                           |
