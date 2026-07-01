@@ -28,10 +28,10 @@
 
   <div class="card">
     <h2>Latest run</h2>
-    <div class="metric"><span>Run time</span><strong>2026-06-30 23:00:51 UTC</strong></div>
+    <div class="metric"><span>Run time</span><strong>2026-07-01 22:59:14 UTC</strong></div>
     <div class="metric"><span>Watchlist scanned</span><strong>20</strong></div>
     <div class="metric"><span>Candidates</span><strong>0</strong></div>
-    <div class="metric"><span>Near misses</span><strong>0</strong></div>
+    <div class="metric"><span>Near misses</span><strong>1</strong></div>
     <p>
       <a class="button" href="https://github.com/balkissoc/contrarian-investing-monitor/actions/workflows/daily.yml">Run GitHub Action</a>
       <a class="button secondary" href="https://github.com/balkissoc/contrarian-investing-monitor/tree/main/reports">Reports Folder</a>
@@ -48,7 +48,40 @@
 
   <div class="card">
     <h2>Near Misses</h2>
-    <p><em>None.</em></p>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>rank</th>
+      <th>ticker</th>
+      <th>company</th>
+      <th>last_price</th>
+      <th>market_cap_aud_approx</th>
+      <th>one_day_pct</th>
+      <th>five_day_pct</th>
+      <th>twenty_day_pct</th>
+      <th>trigger</th>
+      <th>avoid_flags</th>
+      <th>openai_score</th>
+      <th>openai_classification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>COL.AX</td>
+      <td>Coles Group</td>
+      <td>23.35</td>
+      <td>A$31,362,400,256</td>
+      <td>-4.19</td>
+      <td>-1.77</td>
+      <td>8.35</td>
+      <td>1D &lt;= -4.0%</td>
+      <td></td>
+      <td></td>
+      <td>not_run</td>
+    </tr>
+  </tbody>
+</table>
   </div>
 
   <div class="card">
@@ -71,13 +104,26 @@
   </thead>
   <tbody>
     <tr>
+      <td>2026-07-01</td>
+      <td>COL.AX</td>
+      <td>Coles Group</td>
+      <td>near_miss</td>
+      <td>23.35</td>
+      <td>23.35</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2026-07-01</td>
+      <td></td>
+      <td>not_run</td>
+    </tr>
+    <tr>
       <td>2026-06-25</td>
       <td>BHP.AX</td>
       <td>BHP Group</td>
       <td>near_miss</td>
       <td>58.52</td>
-      <td>59.40</td>
-      <td>5</td>
+      <td>59.92</td>
+      <td>6</td>
       <td>0</td>
       <td>2026-06-25</td>
       <td>NaN</td>
@@ -89,8 +135,8 @@
       <td>BHP Group</td>
       <td>near_miss</td>
       <td>59.50</td>
-      <td>59.40</td>
-      <td>6</td>
+      <td>59.92</td>
+      <td>7</td>
       <td>0</td>
       <td>2026-06-24</td>
       <td>NaN</td>
@@ -102,8 +148,8 @@
       <td>REA Group</td>
       <td>near_miss</td>
       <td>131.58</td>
-      <td>139.19</td>
-      <td>6</td>
+      <td>139.17</td>
+      <td>7</td>
       <td>0</td>
       <td>2026-06-24</td>
       <td>NaN</td>
@@ -115,10 +161,10 @@
       <td>BHP Group</td>
       <td>near_miss</td>
       <td>59.92</td>
-      <td>59.40</td>
-      <td>7</td>
+      <td>59.92</td>
+      <td>8</td>
       <td>0</td>
-      <td>2026-06-23</td>
+      <td>2026-07-01</td>
       <td>NaN</td>
       <td>not_run</td>
     </tr>
@@ -128,8 +174,8 @@
       <td>REA Group</td>
       <td>near_miss</td>
       <td>131.52</td>
-      <td>139.19</td>
-      <td>7</td>
+      <td>139.17</td>
+      <td>8</td>
       <td>0</td>
       <td>2026-06-23</td>
       <td>NaN</td>
