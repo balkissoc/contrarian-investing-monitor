@@ -1,8 +1,8 @@
 signal_date,ticker,company,signal_type,signal_price,current_price,days_since_signal,return_pct,last_checked,openai_score_at_signal,openai_classification_at_signal
-2026-06-23,REA.AX,REA Group,near_miss,131.52,160.86,26,0,2026-06-23,,not_run
-2026-06-23,BHP.AX,BHP Group,near_miss,59.92,57.54,26,0,2026-07-01,,not_run
-2026-06-24,BHP.AX,BHP Group,near_miss,59.5,57.54,25,0,2026-06-24,,not_run
-2026-06-24,REA.AX,REA Group,near_miss,131.58,160.86,25,0,2026-06-24,,not_run
-2026-06-25,BHP.AX,BHP Group,near_miss,58.52,57.54,24,0,2026-06-25,,not_run
-2026-07-01,COL.AX,Coles Group,near_miss,23.35,23.21,18,0,2026-07-01,,not_run
-2026-07-02,WES.AX,Wesfarmers,near_miss,86.85,92.8,17,0,2026-07-02,,not_run
+2026-06-23,REA.AX,REA Group,near_miss,131.52,161.23,27,0,2026-06-23,,not_run
+2026-06-23,BHP.AX,BHP Group,near_miss,59.92,57.54,27,0,2026-07-01,,not_run
+2026-06-24,BHP.AX,BHP Group,near_miss,59.5,57.54,26,0,2026-06-24,,not_run
+2026-06-24,REA.AX,REA Group,near_miss,131.58,161.23,26,0,2026-06-24,,not_run
+2026-06-25,BHP.AX,BHP Group,near_miss,58.52,57.54,25,0,2026-06-25,,not_run
+2026-07-01,COL.AX,Coles Group,near_miss,23.35,23.38,19,0,2026-07-01,,not_run
+2026-07-02,WES.AX,Wesfarmers,near_miss,86.85,92.96,18,0,2026-07-02,,not_run
