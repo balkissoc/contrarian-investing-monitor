@@ -1,11 +1,11 @@
 # Latest Contrarian Monitor Summary
 
-Run time: 2026-08-07 01:26:48 UTC
+Run time: 2026-08-09 22:15:29 UTC
 Watchlist scanned: 20
 Candidates found: 0
 Near misses found: 0
-Candidate report: `contrarian_candidates_2026-08-07.csv`
-Near-miss report: `near_misses_2026-08-07.csv`
+Candidate report: `contrarian_candidates_2026-08-09.csv`
+Near-miss report: `near_misses_2026-08-09.csv`
 
 ## Thresholds
 
@@ -38,10 +38,10 @@ Before buying, check ASX announcements, balance sheet strength, debt maturities,
 
 | signal_date   | ticker   | company     | signal_type   |   signal_price |   current_price |   days_since_signal |   return_pct | last_checked   |   openai_score_at_signal | openai_classification_at_signal   |
 |:--------------|:---------|:------------|:--------------|---------------:|----------------:|--------------------:|-------------:|:---------------|-------------------------:|:----------------------------------|
-| 2026-07-02    | WES.AX   | Wesfarmers  | near_miss     |          86.85 |           90.52 |                  36 |            0 | 2026-07-02     |                      nan | not_run                           |
-| 2026-07-01    | COL.AX   | Coles Group | near_miss     |          23.35 |           24.07 |                  37 |            0 | 2026-07-01     |                      nan | not_run                           |
-| 2026-06-25    | BHP.AX   | BHP Group   | near_miss     |          58.52 |           62.8  |                  43 |            0 | 2026-06-25     |                      nan | not_run                           |
-| 2026-06-24    | BHP.AX   | BHP Group   | near_miss     |          59.5  |           62.8  |                  44 |            0 | 2026-06-24     |                      nan | not_run                           |
-| 2026-06-24    | REA.AX   | REA Group   | near_miss     |         131.58 |          174.65 |                  44 |            0 | 2026-06-24     |                      nan | not_run                           |
-| 2026-06-23    | BHP.AX   | BHP Group   | near_miss     |          59.92 |           62.8  |                  45 |            1 | 2026-08-04     |                      nan | not_run                           |
-| 2026-06-23    | REA.AX   | REA Group   | near_miss     |         131.52 |          174.65 |                  45 |            0 | 2026-06-23     |                      nan | not_run                           |
+| 2026-07-02    | WES.AX   | Wesfarmers  | near_miss     |          86.85 |           90.1  |                  38 |            0 | 2026-07-02     |                      nan | not_run                           |
+| 2026-07-01    | COL.AX   | Coles Group | near_miss     |          23.35 |           24.19 |                  39 |            0 | 2026-07-01     |                      nan | not_run                           |
+| 2026-06-25    | BHP.AX   | BHP Group   | near_miss     |          58.52 |           62.97 |                  45 |            0 | 2026-06-25     |                      nan | not_run                           |
+| 2026-06-24    | BHP.AX   | BHP Group   | near_miss     |          59.5  |           62.97 |                  46 |            0 | 2026-06-24     |                      nan | not_run                           |
+| 2026-06-24    | REA.AX   | REA Group   | near_miss     |         131.58 |          173.51 |                  46 |            0 | 2026-06-24     |                      nan | not_run                           |
+| 2026-06-23    | BHP.AX   | BHP Group   | near_miss     |          59.92 |           62.97 |                  47 |            1 | 2026-08-04     |                      nan | not_run                           |
+| 2026-06-23    | REA.AX   | REA Group   | near_miss     |         131.52 |          173.51 |                  47 |            0 | 2026-06-23     |                      nan | not_run                           |
