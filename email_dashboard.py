@@ -98,7 +98,7 @@ Research aide only. Review ASX announcements, balance sheet, debt, liquidity, ea
     message.set_content(plain)
     message.add_alternative(html_body, subtype="html")
 
-    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
+    with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=20) as server:
         server.starttls()
         server.login(SMTP_USERNAME, SMTP_PASSWORD)
         server.send_message(message)
