@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/runner/work/contrarian-investing-monitor/contrarian-investing-monitor/email_dashboard.py", line 108, in <module>
+    main()
+  File "/home/runner/work/contrarian-investing-monitor/contrarian-investing-monitor/email_dashboard.py", line 101, in main
+    server.login(SMTP_USERNAME, SMTP_PASSWORD)
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/smtplib.py", line 641, in auth
+    response = encode_base64(initial_response.encode('ascii'), eol='')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'ascii' codec can't encode character '\xa0' in position 25: ordinal not in range(128)
