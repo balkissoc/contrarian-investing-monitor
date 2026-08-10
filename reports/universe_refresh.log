@@ -1,0 +1,18 @@
+Global X A300: loaded 295 holdings names.
+Resolved 50/295 Global X holdings...
+Resolved 100/295 Global X holdings...
+Resolved 150/295 Global X holdings...
+Resolved 200/295 Global X holdings...
+Resolved 250/295 Global X holdings...
+Global X resolution: 16 unique ASX tickers; 278 unresolved names.
+First unresolved holdings: COMMONW BK AUSTR, NATL AUST BANK, ANZ GROUP HOLDIN, TELSTRA GROUP LT, QBE INSURANCE, ARISTOCRAT LEISU, NORTHERN STAR RE, BRAMBLES LTD, EVOLUTION MINING, COMPUTERSHARE LT, SOUTH32 LTD, SUNCORP GROUP LT, SCENTRE GROUP, INSURANCE AUSTRA, ORIGIN ENERGY
+Market Index universe refresh failed: Market Index exposed only 3 unique ticker links.
+Traceback (most recent call last):
+  File "/home/runner/work/contrarian-investing-monitor/contrarian-investing-monitor/universe.py", line 318, in <module>
+    main()
+  File "/home/runner/work/contrarian-investing-monitor/contrarian-investing-monitor/universe.py", line 313, in main
+    universe = refresh_universe()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/contrarian-investing-monitor/contrarian-investing-monitor/universe.py", line 306, in refresh_universe
+    raise RuntimeError(
+RuntimeError: Could not establish an ASX-300-sized universe and no adequate cached universe exists. Global X A300 resolved only 16 tickers | Market Index: Market Index exposed only 3 unique ticker links.
