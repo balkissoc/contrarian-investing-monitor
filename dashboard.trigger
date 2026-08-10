@@ -1,1 +1,1 @@
-Rebuild the graphical dashboard after introducing dashboard.py.
+Trigger full-universe validation run: 10 Aug 2026.
