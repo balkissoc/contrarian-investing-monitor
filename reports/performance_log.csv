@@ -7,3 +7,11 @@ signal_date,ticker,company,signal_type,signal_price,current_price,days_since_sig
 2026-07-01,COL.AX,Coles Group,near_miss,23.35,23.9,40,0,2026-07-01,,not_run
 2026-07-02,WES.AX,Wesfarmers,near_miss,86.85,89.54,39,0,2026-07-02,,not_run
 2026-08-10,WBC.AX,Westpac Banking Corporation,near_miss,35.7,35.7,0,0,2026-08-10,,not_run
+2026-08-10,ARF.AX,ARENA REIT,candidate,2.56,2.56,0,0,2026-08-10,,not_run
+2026-08-10,WBT.AX,WEEBIT NANO LTD,candidate,4.31,4.31,0,0,2026-08-10,,not_run
+2026-08-10,TVN.AX,TIVAN LTD,candidate,0.25,0.25,0,-2,2026-08-10,,not_run
+2026-08-10,DTR.AX,DATELINE RESOURCES LTD,candidate,0.12,0.12,0,0,2026-08-10,,not_run
+2026-08-10,CDA.AX,CODAN LTD,near_miss,39.12,39.12,0,0,2026-08-10,,not_run
+2026-08-10,BPT.AX,BEACH ENERGY LTD,near_miss,0.82,0.82,0,0,2026-08-10,,not_run
+2026-08-10,CNI.AX,CENTURIA CAPITAL GROUP,near_miss,1.49,1.49,0,0,2026-08-10,,not_run
+2026-08-10,LTR.AX,LIONTOWN LTD,near_miss,1.2,1.2,0,0,2026-08-10,,not_run
