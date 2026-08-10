@@ -41,6 +41,8 @@ jobs:
 
       - name: Refresh ASX 300-sized universe
         id: universe
+        env:
+          OPENFIGI_API_KEY: ${{ secrets.OPENFIGI_API_KEY }}
         run: |
           mkdir -p reports
           set -o pipefail
@@ -88,8 +90,8 @@ jobs:
       - name: Email dashboard link
         env:
           EMAIL_TO: balkissoc@gmail.com
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          EMAIL_FROM: balkissoc@gmail.com
+          SMTP_USERNAME: balkissoc@gmail.com
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_HOST: smtp.gmail.com
           SMTP_PORT: "587"
