@@ -15,6 +15,10 @@ on:
       - "email_dashboard.py"
       - ".github/workflows/daily.yml"
 
+concurrency:
+  group: contrarian-monitor
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
