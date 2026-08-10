@@ -1,0 +1,55 @@
+name: Email Dashboard Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "email_test.trigger"
+      - ".github/workflows/email-test.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  test-email:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Send dashboard email
+        id: email
+        continue-on-error: true
+        env:
+          EMAIL_TO: balkissoc@gmail.com
+          EMAIL_FROM: balkissoc@gmail.com
+          SMTP_USERNAME: balkissoc@gmail.com
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: "587"
+          DASHBOARD_URL: https://balkissoc.github.io/contrarian-investing-monitor/
+        run: |
+          mkdir -p reports
+          set -o pipefail
+          python email_dashboard.py 2>&1 | tee reports/email_test.log
+
+      - name: Persist email test result
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/email_test.log || true
+          git diff --cached --quiet || git commit -m "Record email test result"
+          git push
+
+      - name: Fail if email test failed
+        if: steps.email.outcome == 'failure'
+        run: exit 1
