@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - "dashboard.py"
+      - "dashboard.trigger"
 
 permissions:
   contents: write
