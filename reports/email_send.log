@@ -1,13 +1,1 @@
-Traceback (most recent call last):
-  File "/home/runner/work/contrarian-investing-monitor/contrarian-investing-monitor/email_dashboard.py", line 110, in <module>
-    main()
-  File "/home/runner/work/contrarian-investing-monitor/contrarian-investing-monitor/email_dashboard.py", line 103, in main
-    server.login(SMTP_USERNAME, SMTP_PASSWORD)
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/smtplib.py", line 750, in login
-    raise last_exception
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/smtplib.py", line 739, in login
-    (code, resp) = self.auth(
-                   ^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/smtplib.py", line 662, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84f5a3cadf2sm3916965b3a.22 - gsmtp')
+Dashboard-link email sent to balkissoc@gmail.com: https://balkissoc.github.io/contrarian-investing-monitor/
