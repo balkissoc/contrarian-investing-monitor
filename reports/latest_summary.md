@@ -1,6 +1,6 @@
 # Latest Contrarian Monitor Summary
 
-Run time: 2026-08-10 12:29:21 UTC
+Run time: 2026-08-10 12:32:50 UTC
 Watchlist scanned: 295
 Candidates found: 5
 Near misses found: 5
@@ -25,7 +25,7 @@ Near-miss report: `near_misses_2026-08-10.csv`
 |      2 | WBT.AX   | WEEBIT NANO LTD        |         4.31 | A$1,036,243,776         |         -2.49 |           0.94 |           -38.43 |                  0.74 | 20D <= -20.0%                            |               |                | not_run                 |
 |      3 | MYR.AX   | MYER HOLDINGS LTD      |         0.22 |                         |         -2.27 |           2.38 |           -24.56 |                  1.42 | 20D <= -20.0%                            |               |                | not_run                 |
 |      4 | TVN.AX   | TIVAN LTD              |         0.25 | A$569,862,848           |         -2    |          -2    |           -25.76 |                  1.07 | 20D <= -20.0%                            |               |                | not_run                 |
-|      5 | DTR.AX   | DATELINE RESOURCES LTD |         0.12 | A$504,064,032           |          0    |           0    |           -30.56 |                  0    | 20D <= -20.0%                            |               |                | not_run                 |
+|      5 | DTR.AX   | DATELINE RESOURCES LTD |         0.12 | A$504,064,032           |          0    |           0    |           -30.56 |                  0    | 20D <= -20.0%                            | suspended     |                | not_run                 |
 
 ## Near Misses
 
