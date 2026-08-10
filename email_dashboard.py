@@ -18,7 +18,9 @@ EMAIL_FROM = os.getenv("EMAIL_FROM") or os.getenv("SMTP_USERNAME")
 SMTP_HOST = os.getenv("SMTP_HOST", "smtp.gmail.com")
 SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
 SMTP_USERNAME = os.getenv("SMTP_USERNAME")
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+# Google displays App Passwords in grouped form. Remove all whitespace, including
+# non-breaking spaces that can be introduced when copying from a phone/browser.
+SMTP_PASSWORD = re.sub(r"\s+", "", os.getenv("SMTP_PASSWORD", ""))
 
 
 def extract(text: str, label: str, default: str = "—") -> str:
