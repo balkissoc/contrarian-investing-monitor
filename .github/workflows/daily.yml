@@ -40,6 +40,9 @@ jobs:
           MAX_OPENAI_CLASSIFICATIONS: "12"
         run: python contrarian.py
 
+      - name: Build graphical dashboard
+        run: python dashboard.py
+
       - name: Add report to workflow summary
         if: always()
         run: |
