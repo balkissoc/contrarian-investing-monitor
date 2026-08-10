@@ -15,3 +15,4 @@ signal_date,ticker,company,signal_type,signal_price,current_price,days_since_sig
 2026-08-10,BPT.AX,BEACH ENERGY LTD,near_miss,0.82,0.82,0,0,2026-08-10,,not_run
 2026-08-10,CNI.AX,CENTURIA CAPITAL GROUP,near_miss,1.49,1.49,0,0,2026-08-10,,not_run
 2026-08-10,LTR.AX,LIONTOWN LTD,near_miss,1.2,1.2,0,0,2026-08-10,,not_run
+2026-08-10,MYR.AX,MYER HOLDINGS LTD,candidate,0.22,0.22,0,0,2026-08-10,,not_run
