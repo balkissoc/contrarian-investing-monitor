@@ -1,18 +1,29 @@
 signal_date,ticker,company,signal_type,signal_price,current_price,days_since_signal,return_pct,last_checked,openai_score_at_signal,openai_classification_at_signal
-2026-06-23,REA.AX,REA Group,near_miss,131.52,175.34,48,0,2026-06-23,,not_run
-2026-06-23,BHP.AX,BHP Group,near_miss,59.92,63.52,48,1,2026-08-04,,not_run
-2026-06-24,BHP.AX,BHP Group,near_miss,59.5,63.52,47,0,2026-06-24,,not_run
-2026-06-24,REA.AX,REA Group,near_miss,131.58,175.34,47,0,2026-06-24,,not_run
-2026-06-25,BHP.AX,BHP Group,near_miss,58.52,63.52,46,0,2026-06-25,,not_run
-2026-07-01,COL.AX,Coles Group,near_miss,23.35,23.9,40,0,2026-07-01,,not_run
-2026-07-02,WES.AX,Wesfarmers,near_miss,86.85,89.54,39,0,2026-07-02,,not_run
-2026-08-10,WBC.AX,Westpac Banking Corporation,near_miss,35.7,35.7,0,0,2026-08-10,,not_run
-2026-08-10,ARF.AX,ARENA REIT,candidate,2.56,2.56,0,0,2026-08-10,,not_run
-2026-08-10,WBT.AX,WEEBIT NANO LTD,candidate,4.31,4.31,0,0,2026-08-10,,not_run
-2026-08-10,TVN.AX,TIVAN LTD,candidate,0.25,0.25,0,-2,2026-08-10,,not_run
-2026-08-10,DTR.AX,DATELINE RESOURCES LTD,candidate,0.12,0.12,0,0,2026-08-10,,not_run
-2026-08-10,CDA.AX,CODAN LTD,near_miss,39.12,39.12,0,0,2026-08-10,,not_run
-2026-08-10,BPT.AX,BEACH ENERGY LTD,near_miss,0.82,0.82,0,0,2026-08-10,,not_run
-2026-08-10,CNI.AX,CENTURIA CAPITAL GROUP,near_miss,1.49,1.49,0,0,2026-08-10,,not_run
-2026-08-10,LTR.AX,LIONTOWN LTD,near_miss,1.2,1.2,0,0,2026-08-10,,not_run
-2026-08-10,MYR.AX,MYER HOLDINGS LTD,candidate,0.22,0.22,0,0,2026-08-10,,not_run
+2026-06-23,REA.AX,REA Group,near_miss,131.52,177.08,49,0,2026-06-23,,not_run
+2026-06-23,BHP.AX,BHP Group,near_miss,59.92,63.93,49,1,2026-08-04,,not_run
+2026-06-24,BHP.AX,BHP Group,near_miss,59.5,63.93,48,0,2026-06-24,,not_run
+2026-06-24,REA.AX,REA Group,near_miss,131.58,177.08,48,0,2026-06-24,,not_run
+2026-06-25,BHP.AX,BHP Group,near_miss,58.52,63.93,47,0,2026-06-25,,not_run
+2026-07-01,COL.AX,Coles Group,near_miss,23.35,23.64,41,0,2026-07-01,,not_run
+2026-07-02,WES.AX,Wesfarmers,near_miss,86.85,89.42,40,0,2026-07-02,,not_run
+2026-08-10,WBC.AX,Westpac Banking Corporation,near_miss,35.7,35.69,1,0,2026-08-10,,not_run
+2026-08-10,ARF.AX,ARENA REIT,candidate,2.56,2.24,1,0,2026-08-10,,not_run
+2026-08-10,WBT.AX,WEEBIT NANO LTD,candidate,4.31,4.44,1,0,2026-08-10,,not_run
+2026-08-10,TVN.AX,TIVAN LTD,candidate,0.25,0.26,1,6,2026-08-11,,not_run
+2026-08-10,DTR.AX,DATELINE RESOURCES LTD,candidate,0.12,0.12,1,0,2026-08-10,,not_run
+2026-08-10,CDA.AX,CODAN LTD,near_miss,39.12,40.75,1,0,2026-08-10,,not_run
+2026-08-10,BPT.AX,BEACH ENERGY LTD,near_miss,0.82,0.87,1,0,2026-08-10,,not_run
+2026-08-10,CNI.AX,CENTURIA CAPITAL GROUP,near_miss,1.49,1.47,1,0,2026-08-10,,not_run
+2026-08-10,LTR.AX,LIONTOWN LTD,near_miss,1.2,1.18,1,0,2026-08-10,,not_run
+2026-08-10,MYR.AX,MYER HOLDINGS LTD,candidate,0.22,0.22,1,0,2026-08-11,,not_run
+2026-08-11,AOV.AX,AMOTIV LTD,candidate,6.41,6.41,0,0,2026-08-11,,not_run
+2026-08-11,ARF.AX,ARENA REIT,candidate,2.24,2.24,0,0,2026-08-11,,not_run
+2026-08-11,SGH.AX,SGH LTD,candidate,41.58,41.58,0,0,2026-08-11,,not_run
+2026-08-11,4DX.AX,4DMEDICAL LTD,candidate,4.08,4.08,0,0,2026-08-11,,not_run
+2026-08-11,DTR.AX,DATELINE RESOURCES LTD,candidate,0.12,0.12,0,0,2026-08-11,,not_run
+2026-08-11,WBT.AX,WEEBIT NANO LTD,candidate,4.44,4.44,0,0,2026-08-11,,not_run
+2026-08-11,A4N.AX,ALPHA HPA LTD,near_miss,0.5,0.5,0,1,2026-08-11,,not_run
+2026-08-11,DVP.AX,DEVELOP GLOBAL LTD,near_miss,4.96,4.96,0,0,2026-08-11,,not_run
+2026-08-11,LTR.AX,LIONTOWN LTD,near_miss,1.18,1.18,0,0,2026-08-11,,not_run
+2026-08-11,CNI.AX,CENTURIA CAPITAL GROUP,near_miss,1.47,1.47,0,0,2026-08-11,,not_run
+2026-08-11,WBC.AX,WESTPAC BANKING CORP,near_miss,35.69,35.69,0,0,2026-08-11,,not_run
