@@ -1,11 +1,11 @@
 # Latest Contrarian Monitor Summary
 
-Run time: 2026-08-13 22:28:29 UTC
+Run time: 2026-08-16 22:04:55 UTC
 Watchlist scanned: 295
-Candidates found: 4
-Near misses found: 16
-Candidate report: `contrarian_candidates_2026-08-13.csv`
-Near-miss report: `near_misses_2026-08-13.csv`
+Candidates found: 7
+Near misses found: 22
+Candidate report: `contrarian_candidates_2026-08-16.csv`
+Near-miss report: `near_misses_2026-08-16.csv`
 
 ## Thresholds
 
@@ -21,31 +21,40 @@ Near-miss report: `near_misses_2026-08-13.csv`
 
 |   rank | ticker   | company                    |   last_price | market_cap_aud_approx   |   one_day_pct |   five_day_pct |   twenty_day_pct |   volume_spike_vs_20d | trigger                     | avoid_flags   | openai_score   | openai_classification   |
 |-------:|:---------|:---------------------------|-------------:|:------------------------|--------------:|---------------:|-----------------:|----------------------:|:----------------------------|:--------------|:---------------|:------------------------|
-|      1 | 4DX.AX   | 4DMEDICAL LTD              |         3.91 | A$2,344,588,032         |         -5.1  |         -15.73 |             3.17 |                  0.74 | 5D <= -12.0%                |               |                | not_run                 |
-|      2 | TPW.AX   | TEMPLE & WEBSTER GROUP LTD |         5.24 | A$610,704,832           |         -1.87 |         -15.48 |            -0.76 |                  1.29 | 5D <= -12.0%                |               |                | not_run                 |
-|      3 | ARF.AX   | ARENA REIT                 |         2.33 | A$951,331,008           |         -0.43 |         -27.86 |           -29.39 |                  1.2  | 5D <= -12.0%; 20D <= -20.0% | default       |                | not_run                 |
-|      4 | WBT.AX   | WEEBIT NANO LTD            |         4.68 | A$1,125,202,048         |         -0.43 |           4.7  |           -28.22 |                  0.86 | 20D <= -20.0%               |               |                | not_run                 |
+|      1 | TVN.AX   | TIVAN LTD                  |         0.25 | A$593,122,496           |        -12.07 |           2    |            -7.27 |                  2.67 | 1D <= -7.0%                 | trading halt  |                | not_run                 |
+|      2 | SKG.AX   | STORAGE KING GROUP         |         1.16 | A$1,524,359,424         |         -8.3  |         -10.08 |           -11.79 |                 10.87 | 1D <= -7.0%                 |               |                | not_run                 |
+|      3 | MSB.AX   | MESOBLAST LTD              |         2.21 | A$2,866,283,520         |         -7.14 |          -0.9  |            -9.43 |                  1.2  | 1D <= -7.0%                 |               |                | not_run                 |
+|      4 | 4DX.AX   | 4DMEDICAL LTD              |         3.64 | A$2,182,807,040         |         -6.91 |         -13.74 |            13.75 |                  1.13 | 5D <= -12.0%                |               |                | not_run                 |
+|      5 | WBT.AX   | WEEBIT NANO LTD            |         4.44 | A$1,067,499,392         |         -5.13 |           0.45 |           -23.97 |                  0.86 | 20D <= -20.0%               |               |                | not_run                 |
+|      6 | ARF.AX   | ARENA REIT                 |         2.3  | A$935,261,184           |         -1.29 |         -29.88 |           -30.3  |                  1    | 5D <= -12.0%; 20D <= -20.0% | default       |                | not_run                 |
+|      7 | TPW.AX   | TEMPLE & WEBSTER GROUP LTD |         5.19 | A$604,877,504           |         -0.95 |         -14.21 |             0.58 |                  1.59 | 5D <= -12.0%                |               |                | not_run                 |
 
 ## Near Misses
 
 |   rank | ticker   | company                      |   last_price | market_cap_aud_approx   |   one_day_pct |   five_day_pct |   twenty_day_pct |   volume_spike_vs_20d | trigger                  | avoid_flags   | openai_score   | openai_classification   |
 |-------:|:---------|:-----------------------------|-------------:|:------------------------|--------------:|---------------:|-----------------:|----------------------:|:-------------------------|:--------------|:---------------|:------------------------|
-|      1 | ASB.AX   | AUSTAL LTD                   |         4.13 | A$1,743,166,464         |         -6.77 |           7.55 |            16.34 |                  1.81 | 1D <= -4.0%              |               |                | not_run                 |
-|      2 | EQR.AX   | EQ RESOURCES LTD             |         0.3  | A$1,546,536,192         |         -6.25 |          -6.25 |            22.45 |                  0.63 | 1D <= -4.0%              |               |                | not_run                 |
-|      3 | ELS.AX   | ELSIGHT LTD                  |         6.49 | A$1,440,802,432         |         -5.67 |          -7.68 |           -10.48 |                  0.98 | 1D <= -4.0%              |               |                | not_run                 |
-|      4 | HDN.AX   | HOMECO DAILY NEEDS REIT      |         1.21 | A$2,517,605,632         |         -5.49 |          -6.59 |            -4.37 |                  3.89 | 1D <= -4.0%              |               |                | not_run                 |
-|      5 | IAG.AX   | INSURANCE AUSTRALIA GROUP    |         7.81 | A$18,259,412,992        |         -5.1  |          -8.44 |            -5.33 |                  3.45 | 1D <= -4.0%; 5D <= -8.0% |               |                | not_run                 |
-|      6 | HLI.AX   | HELIA GROUP LTD              |         5.75 | A$1,575,500,032         |         -4.8  |          11.87 |             5.12 |                  1.22 | 1D <= -4.0%              |               |                | not_run                 |
-|      7 | VUL.AX   | VULCAN ENERGY RESOURCES LTD  |         2.96 | A$1,416,835,840         |         -4.52 |           8.03 |             6.47 |                  1.22 | 1D <= -4.0%              |               |                | not_run                 |
-|      8 | MAD.AX   | MADER GROUP LTD              |         6.82 | A$1,387,608,960         |         -2.57 |          -9.55 |           -11.2  |                  1.76 | 5D <= -8.0%              |               |                | not_run                 |
-|      9 | CQE.AX   | CHARTER HALL SOCIAL INFRASTR |         2.47 | A$916,638,656           |         -2.37 |         -10.18 |            -6.79 |                  1.43 | 5D <= -8.0%              |               |                | not_run                 |
-|     10 | LOV.AX   | LOVISA HOLDINGS LTD          |        24.56 | A$2,719,737,344         |         -1.8  |          -8.7  |             3.94 |                  0.73 | 5D <= -8.0%              |               |                | not_run                 |
-|     11 | DRO.AX   | DRONESHIELD LTD              |         2.01 | A$1,857,422,464         |         -1.47 |         -11.84 |           -13.36 |                  1.06 | 5D <= -8.0%              |               |                | not_run                 |
-|     12 | SGH.AX   | SGH LTD                      |        41.02 | A$16,695,065,600        |         -1.47 |         -11.69 |            -6.43 |                  2.41 | 5D <= -8.0%              |               |                | not_run                 |
-|     13 | JDO.AX   | JUDO CAPITAL HOLDINGS LTD    |         0.92 | A$1,031,581,632         |         -1.08 |         -11.11 |            -2.13 |                  1.39 | 5D <= -8.0%              | downgrade     |                | not_run_limit_reached   |
-|     14 | AOV.AX   | AMOTIV LTD                   |         6.64 | A$888,763,712           |          0    |          -9.66 |             1.53 |                  1.21 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
-|     15 | SEK.AX   | SEEK LTD                     |        13.91 | A$4,979,364,864         |          1.02 |          -9.5  |            -2.18 |                  2.11 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
-|     16 | PMV.AX   | PREMIER INVESTMENTS LTD      |        12.27 | A$1,957,917,312         |          2.59 |          -8.36 |           -11.96 |                  1.51 | 5D <= -8.0%              | downgrade     |                | not_run_limit_reached   |
+|      1 | DVP.AX   | DEVELOP GLOBAL LTD           |         4.73 | A$1,560,831,232         |         -6.71 |          -9.73 |           -14.62 |                  0.71 | 1D <= -4.0%; 5D <= -8.0% |               |                | not_run                 |
+|      2 | CU6.AX   | CLARITY PHARMACEUTICALS LTD  |         2.63 | A$981,203,648           |         -6.07 |          -2.23 |            13.36 |                  0.5  | 1D <= -4.0%              |               |                | not_run                 |
+|      3 | SRL.AX   | SUNRISE ENERGY METALS LTD    |        17.63 | A$2,987,190,272         |         -5.62 |          10.67 |            21.67 |                  0.72 | 1D <= -4.0%              |               |                | not_run                 |
+|      4 | MI6.AX   | MINERALS 260 LTD             |         0.74 | A$1,680,246,656         |         -5.13 |          -2.63 |            28.7  |                  0.46 | 1D <= -4.0%              |               |                | not_run                 |
+|      5 | CNI.AX   | CENTURIA CAPITAL GROUP       |         1.5  |                         |         -5.06 |           1.35 |           -10.98 |                  0.7  | 1D <= -4.0%              |               |                | not_run                 |
+|      6 | FML.AX   | FOCUS MINERALS LTD           |         1.9  | A$544,461,440           |         -5    |          -5.94 |            25.41 |                  0.8  | 1D <= -4.0%              |               |                | not_run                 |
+|      7 | BMN.AX   | BANNERMAN ENERGY LTD         |         3.45 | A$716,949,952           |         -4.96 |           1.77 |             8.49 |                  1.28 | 1D <= -4.0%              |               |                | not_run                 |
+|      8 | IPX.AX   | IPERIONX LTD                 |         3.29 | A$1,191,421,056         |         -4.91 |          -4.36 |             0.61 |                  0.96 | 1D <= -4.0%              |               |                | not_run                 |
+|      9 | FFM.AX   | FIREFLY METALS LTD           |         1.86 | A$1,429,941,888         |         -4.62 |          -2.11 |            12.39 |                  1    | 1D <= -4.0%              |               |                | not_run                 |
+|     10 | PDN.AX   | PALADIN ENERGY LTD           |        10.13 | A$4,552,001,024         |         -4.52 |          -0.2  |            20.31 |                  0.99 | 1D <= -4.0%              |               |                | not_run                 |
+|     11 | CYL.AX   | CATALYST METALS LTD          |         6.18 | A$1,629,474,560         |         -4.33 |          -4.33 |            15.73 |                  1.16 | 1D <= -4.0%              |               |                | not_run                 |
+|     12 | HDN.AX   | HOMECO DAILY NEEDS REIT      |         1.15 | A$2,413,140,480         |         -4.15 |         -10.47 |            -9.06 |                  4.11 | 1D <= -4.0%; 5D <= -8.0% |               |                | not_run                 |
+|     13 | TCL.AX   | TRANSURBAN GROUP             |        13.96 |                         |         -4.12 |          -3.79 |            -4.97 |                  1.48 | 1D <= -4.0%              |               |                | not_run_limit_reached   |
+|     14 | SBM.AX   | ST BARBARA LTD               |         0.58 | A$707,730,560           |         -4.1  |           0    |            42.68 |                  0.65 | 1D <= -4.0%              |               |                | not_run_limit_reached   |
+|     15 | DRO.AX   | DRONESHIELD LTD              |         1.96 | A$1,811,217,920         |         -2.49 |         -10.09 |            -8.41 |                  1.07 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     16 | GDG.AX   | GENERATION DEVELOPMENT GROUP |         3.79 | A$1,515,687,296         |         -1.3  |          -8.01 |             6.46 |                  0.51 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     17 | CQE.AX   | CHARTER HALL SOCIAL INFRASTR |         2.45 | A$909,216,512           |         -0.81 |         -10.58 |            -6.49 |                  1.15 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     18 | MYR.AX   | MYER HOLDINGS LTD            |         0.22 |                         |          0    |          -2.27 |           -18.87 |                  0.57 | 20D <= -15.0%            |               |                | not_run_limit_reached   |
+|     19 | JDO.AX   | JUDO CAPITAL HOLDINGS LTD    |         0.93 | A$1,038,177,152         |          0.54 |          -9.31 |            -1.6  |                  1.14 | 5D <= -8.0%              | downgrade     |                | not_run_limit_reached   |
+|     20 | LOV.AX   | LOVISA HOLDINGS LTD          |        24.71 | A$2,736,348,160         |          0.61 |          -8.82 |             5.82 |                  0.65 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     21 | SGH.AX   | SGH LTD                      |        41.3  | A$16,809,024,512        |          0.68 |          -9.96 |            -5.71 |                  2.48 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     22 | AOV.AX   | AMOTIV LTD                   |         6.72 | A$899,471,680           |          1.2  |          -8.32 |             2.91 |                  0.61 | 5D <= -8.0%              | impairment    |                | not_run_limit_reached   |
 
 ## Manual review discipline
 
@@ -53,32 +62,32 @@ Before buying, check ASX announcements, balance sheet strength, debt maturities,
 
 ## Scan status
 
-- below_market_cap_threshold: 4
-- candidate: 4
-- near_miss: 16
-- no_price_drop_trigger: 271
+- below_market_cap_threshold: 2
+- candidate: 7
+- near_miss: 22
+- no_price_drop_trigger: 264
 
 ## Latest Performance Log Snapshot
 
 | signal_date   | ticker   | company                      | signal_type   |   signal_price |   current_price |   days_since_signal |   return_pct | last_checked   | openai_score_at_signal   | openai_classification_at_signal   |
 |:--------------|:---------|:-----------------------------|:--------------|---------------:|----------------:|--------------------:|-------------:|:---------------|:-------------------------|:----------------------------------|
-| 2026-08-13    | 4DX.AX   | 4DMEDICAL LTD                | candidate     |           3.91 |            3.91 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | AOV.AX   | AMOTIV LTD                   | near_miss     |           6.64 |            6.64 |                   0 |            0 | 2026-08-13     |                          | not_run_limit_reached             |
-| 2026-08-13    | ARF.AX   | ARENA REIT                   | candidate     |           2.33 |            2.33 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | ASB.AX   | AUSTAL LTD                   | near_miss     |           4.13 |            4.13 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | CQE.AX   | CHARTER HALL SOCIAL INFRASTR | near_miss     |           2.47 |            2.47 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | DRO.AX   | DRONESHIELD LTD              | near_miss     |           2.01 |            2.01 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | ELS.AX   | ELSIGHT LTD                  | near_miss     |           6.49 |            6.49 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | EQR.AX   | EQ RESOURCES LTD             | near_miss     |           0.3  |            0.3  |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | HDN.AX   | HOMECO DAILY NEEDS REIT      | near_miss     |           1.21 |            1.21 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | HLI.AX   | HELIA GROUP LTD              | near_miss     |           5.75 |            5.75 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | IAG.AX   | INSURANCE AUSTRALIA GROUP    | near_miss     |           7.81 |            7.81 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | JDO.AX   | JUDO CAPITAL HOLDINGS LTD    | near_miss     |           0.92 |            0.92 |                   0 |            0 | 2026-08-13     |                          | not_run_limit_reached             |
-| 2026-08-13    | LOV.AX   | LOVISA HOLDINGS LTD          | near_miss     |          24.56 |           24.56 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | MAD.AX   | MADER GROUP LTD              | near_miss     |           6.82 |            6.82 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | PMV.AX   | PREMIER INVESTMENTS LTD      | near_miss     |          12.27 |           12.27 |                   0 |            0 | 2026-08-13     |                          | not_run_limit_reached             |
-| 2026-08-13    | SEK.AX   | SEEK LTD                     | near_miss     |          13.91 |           13.91 |                   0 |            0 | 2026-08-13     |                          | not_run_limit_reached             |
-| 2026-08-13    | SGH.AX   | SGH LTD                      | near_miss     |          41.02 |           41.02 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | TPW.AX   | TEMPLE & WEBSTER GROUP LTD   | candidate     |           5.24 |            5.24 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | VUL.AX   | VULCAN ENERGY RESOURCES LTD  | near_miss     |           2.96 |            2.96 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
-| 2026-08-13    | WBT.AX   | WEEBIT NANO LTD              | candidate     |           4.68 |            4.68 |                   0 |            0 | 2026-08-13     |                          | not_run                           |
+| 2026-08-16    | 4DX.AX   | 4DMEDICAL LTD                | candidate     |           3.64 |            3.64 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | AOV.AX   | AMOTIV LTD                   | near_miss     |           6.72 |            6.72 |                   0 |            0 | 2026-08-16     |                          | not_run_limit_reached             |
+| 2026-08-16    | ARF.AX   | ARENA REIT                   | candidate     |           2.3  |            2.3  |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | BMN.AX   | BANNERMAN ENERGY LTD         | near_miss     |           3.45 |            3.45 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | CNI.AX   | CENTURIA CAPITAL GROUP       | near_miss     |           1.5  |            1.5  |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | CQE.AX   | CHARTER HALL SOCIAL INFRASTR | near_miss     |           2.45 |            2.45 |                   0 |            0 | 2026-08-16     |                          | not_run_limit_reached             |
+| 2026-08-16    | CU6.AX   | CLARITY PHARMACEUTICALS LTD  | near_miss     |           2.63 |            2.63 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | CYL.AX   | CATALYST METALS LTD          | near_miss     |           6.18 |            6.18 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | DRO.AX   | DRONESHIELD LTD              | near_miss     |           1.96 |            1.96 |                   0 |            0 | 2026-08-16     |                          | not_run_limit_reached             |
+| 2026-08-16    | DVP.AX   | DEVELOP GLOBAL LTD           | near_miss     |           4.73 |            4.73 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | FFM.AX   | FIREFLY METALS LTD           | near_miss     |           1.86 |            1.86 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | FML.AX   | FOCUS MINERALS LTD           | near_miss     |           1.9  |            1.9  |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | GDG.AX   | GENERATION DEVELOPMENT GROUP | near_miss     |           3.79 |            3.79 |                   0 |            0 | 2026-08-16     |                          | not_run_limit_reached             |
+| 2026-08-16    | HDN.AX   | HOMECO DAILY NEEDS REIT      | near_miss     |           1.15 |            1.15 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | IPX.AX   | IPERIONX LTD                 | near_miss     |           3.29 |            3.29 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | JDO.AX   | JUDO CAPITAL HOLDINGS LTD    | near_miss     |           0.93 |            0.93 |                   0 |            0 | 2026-08-16     |                          | not_run_limit_reached             |
+| 2026-08-16    | LOV.AX   | LOVISA HOLDINGS LTD          | near_miss     |          24.71 |           24.71 |                   0 |            0 | 2026-08-16     |                          | not_run_limit_reached             |
+| 2026-08-16    | MI6.AX   | MINERALS 260 LTD             | near_miss     |           0.74 |            0.74 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | MSB.AX   | MESOBLAST LTD                | candidate     |           2.21 |            2.21 |                   0 |            0 | 2026-08-16     |                          | not_run                           |
+| 2026-08-16    | MYR.AX   | MYER HOLDINGS LTD            | near_miss     |           0.22 |            0.22 |                   0 |            0 | 2026-08-16     |                          | not_run_limit_reached             |
