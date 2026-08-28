@@ -1,11 +1,11 @@
 # Latest Contrarian Monitor Summary
 
-Run time: 2026-08-27 02:18:52 UTC
+Run time: 2026-08-28 05:51:50 UTC
 Watchlist scanned: 295
 Candidates found: 14
-Near misses found: 22
-Candidate report: `contrarian_candidates_2026-08-27.csv`
-Near-miss report: `near_misses_2026-08-27.csv`
+Near misses found: 28
+Candidate report: `contrarian_candidates_2026-08-28.csv`
+Near-miss report: `near_misses_2026-08-28.csv`
 
 ## Thresholds
 
@@ -19,49 +19,55 @@ Near-miss report: `near_misses_2026-08-27.csv`
 
 ## Candidates
 
-|   rank | ticker   | company                      |   last_price | market_cap_aud_approx   |   one_day_pct |   five_day_pct |   twenty_day_pct |   volume_spike_vs_20d | trigger                                  | avoid_flags   | openai_score   | openai_classification   |
-|-------:|:---------|:-----------------------------|-------------:|:------------------------|--------------:|---------------:|-----------------:|----------------------:|:-----------------------------------------|:--------------|:---------------|:------------------------|
-|      1 | OCL.AX   | OBJECTIVE CORPORATION LTD    |         5.82 | A$555,991,360           |        -22.05 |         -16.69 |           -17.05 |                  4.4  | 1D <= -7.0%; 5D <= -12.0%                |               |                | not_run                 |
-|      2 | BOE.AX   | BOSS ENERGY LTD              |         1.52 | A$631,066,496           |        -16.25 |           0.66 |            28.27 |                  2.19 | 1D <= -7.0%                              |               |                | not_run                 |
-|      3 | CNI.AX   | CENTURIA CAPITAL GROUP       |         1.14 |                         |        -13.91 |         -18.51 |           -22.64 |                  1.9  | 1D <= -7.0%; 5D <= -12.0%; 20D <= -20.0% |               |                | not_run                 |
-|      4 | GDG.AX   | GENERATION DEVELOPMENT GROUP |         3.31 | A$1,323,726,976         |        -13.8  |         -12.66 |           -18.87 |                  2.81 | 1D <= -7.0%; 5D <= -12.0%                |               |                | not_run                 |
-|      5 | SIQ.AX   | SMARTGROUP CORP LTD          |        11.25 | A$1,554,206,080         |        -13.26 |         -13.26 |           -12.38 |                  0.73 | 1D <= -7.0%; 5D <= -12.0%                |               |                | not_run                 |
-|      6 | MFG.AX   | MAGELLAN FINANCIAL GROUP LTD |         9.65 | A$2,823,666,176         |        -12.67 |          -7.12 |             2.33 |                  2.53 | 1D <= -7.0%                              |               |                | not_run                 |
-|      7 | MMS.AX   | MCMILLAN SHAKESPEARE LTD     |        19.26 | A$1,341,324,672         |         -8.24 |          -5.31 |            -2.33 |                  0.79 | 1D <= -7.0%                              |               |                | not_run                 |
-|      8 | NEC.AX   | NINE ENTERTAINMENT CO HOLDIN |         0.96 | A$1,530,260,480         |         -7.66 |          -1.03 |            -1.03 |                  1.5  | 1D <= -7.0%                              |               |                | not_run                 |
-|      9 | ABB.AX   | AUSSIE BROADBAND LTD         |         4.42 | A$1,394,178,816         |         -3.91 |         -12.65 |            -7.72 |                  0.55 | 5D <= -12.0%                             |               |                | not_run                 |
-|     10 | NAN.AX   | NANOSONICS LTD               |         2.76 | A$824,994,048           |         -2.47 |         -23.33 |           -11.82 |                  1.18 | 5D <= -12.0%                             |               |                | not_run                 |
-|     11 | SDR.AX   | SITEMINDER LTD               |         3.06 | A$866,239,680           |         -1.61 |         -21.74 |            -7.27 |                  0.75 | 5D <= -12.0%                             |               |                | not_run                 |
-|     12 | ARF.AX   | ARENA REIT                   |         2.35 | A$953,559,808           |         -1.47 |          -3.1  |           -26.72 |                  0.13 | 20D <= -20.0%                            |               |                | not_run                 |
-|     13 | EDV.AX   | ENDEAVOUR GROUP LTD/AUSTRALI |         3.02 | A$5,423,091,712         |         -1.31 |         -12.97 |           -12.72 |                  0.25 | 5D <= -12.0%                             |               |                | not_run_limit_reached   |
-|     14 | ZIP.AX   | ZIP CO LTD                   |         2.61 | A$3,251,855,872         |         -0.38 |         -14.43 |            10.59 |                  0.18 | 5D <= -12.0%                             |               |                | not_run_limit_reached   |
+|   rank | ticker   | company                      |   last_price | market_cap_aud_approx   |   one_day_pct |   five_day_pct |   twenty_day_pct |   volume_spike_vs_20d | trigger                     | avoid_flags   | openai_score   | openai_classification   |
+|-------:|:---------|:-----------------------------|-------------:|:------------------------|--------------:|---------------:|-----------------:|----------------------:|:----------------------------|:--------------|:---------------|:------------------------|
+|      1 | PXA.AX   | PEXA GROUP LTD               |         6.65 | A$1,169,975,808         |        -17.8  |         -17.9  |           -10.38 |                  8.33 | 1D <= -7.0%; 5D <= -12.0%   | downgrade     |                | not_run                 |
+|      2 | MAQ.AX   | MACQUARIE TECHNOLOGY GROUP L |        55.46 | A$1,429,411,200         |         -9.75 |          -8.03 |            -8.18 |                  1.41 | 1D <= -7.0%                 |               |                | not_run                 |
+|      3 | EQT.AX   | EQT HOLDINGS LTD             |        19.34 | A$518,178,752           |         -7.82 |         -12.49 |            14.78 |                  2.11 | 1D <= -7.0%; 5D <= -12.0%   |               |                | not_run                 |
+|      4 | SIQ.AX   | SMARTGROUP CORP LTD          |        10.48 | A$1,362,169,216         |         -7.26 |         -18.51 |           -18.19 |                  2.03 | 1D <= -7.0%; 5D <= -12.0%   |               |                | not_run                 |
+|      5 | MFG.AX   | MAGELLAN FINANCIAL GROUP LTD |         9.08 | A$2,656,879,872         |         -4.42 |         -13.28 |            -4.92 |                  2.68 | 5D <= -12.0%                |               |                | not_run                 |
+|      6 | INA.AX   | INGENIA COMMUNITIES GROUP    |         3.65 | A$1,487,678,976         |         -4    |         -13.24 |           -15.42 |                  2.06 | 5D <= -12.0%                |               |                | not_run                 |
+|      7 | MAD.AX   | MADER GROUP LTD              |         6.18 | A$1,257,393,408         |         -3.13 |         -12.59 |           -10.43 |                  1.18 | 5D <= -12.0%                |               |                | not_run                 |
+|      8 | ABB.AX   | AUSSIE BROADBAND LTD         |         4.34 | A$1,370,521,856         |         -1.92 |         -13.96 |            -8.91 |                  0.5  | 5D <= -12.0%                |               |                | not_run                 |
+|      9 | GDG.AX   | GENERATION DEVELOPMENT GROUP |         3.2  | A$1,279,736,064         |         -1.54 |         -16.01 |           -22.14 |                  1.69 | 5D <= -12.0%; 20D <= -20.0% |               |                | not_run                 |
+|     10 | ARF.AX   | ARENA REIT                   |         2.32 | A$947,248,000           |         -0.85 |          -6.83 |           -27.27 |                  0.33 | 20D <= -20.0%               | default       |                | not_run                 |
+|     11 | CNI.AX   | CENTURIA CAPITAL GROUP       |         1.18 | A$1,183,647,616         |         -0.67 |         -13.72 |           -19.32 |                  1.27 | 5D <= -12.0%                |               |                | not_run                 |
+|     12 | IEL.AX   | IDP EDUCATION LTD            |         1.82 | A$505,180,256           |          1.11 |           3.13 |           -21.43 |                  0.35 | 20D <= -20.0%               |               |                | not_run                 |
+|     13 | SDR.AX   | SITEMINDER LTD               |         3.14 | A$888,886,528           |          2.28 |         -16.93 |            -6.27 |                  0.99 | 5D <= -12.0%                |               |                | not_run_limit_reached   |
+|     14 | NAN.AX   | NANOSONICS LTD               |         2.73 | A$817,521,216           |          2.43 |         -24.66 |           -12.9  |                  1.36 | 5D <= -12.0%                |               |                | not_run_limit_reached   |
 
 ## Near Misses
 
-|   rank | ticker   | company                    |   last_price | market_cap_aud_approx   |   one_day_pct |   five_day_pct |   twenty_day_pct |   volume_spike_vs_20d | trigger                  | avoid_flags   | openai_score   | openai_classification   |
-|-------:|:---------|:---------------------------|-------------:|:------------------------|--------------:|---------------:|-----------------:|----------------------:|:-------------------------|:--------------|:---------------|:------------------------|
-|      1 | SIG.AX   | SIGMA HEALTHCARE LTD       |         2.66 | A$30,706,249,728        |         -6.34 |          -8.28 |           -10.14 |                  1.56 | 1D <= -4.0%; 5D <= -8.0% |               |                | not_run                 |
-|      2 | NXL.AX   | NUIX LTD                   |         2.01 | A$690,517,952           |         -5.63 |          34.45 |            62.1  |                  0.42 | 1D <= -4.0%              |               |                | not_run                 |
-|      3 | ARB.AX   | ARB CORP LTD               |        19.7  | A$1,648,103,680         |         -4.18 |           1.91 |            -0.51 |                  0.34 | 1D <= -4.0%              |               |                | not_run                 |
-|      4 | WTC.AX   | WISETECH GLOBAL LTD        |        39.52 | A$13,290,682,368        |         -3.35 |          -8.5  |             4.3  |                  0.57 | 5D <= -8.0%              |               |                | not_run                 |
-|      5 | IMD.AX   | IMDEX LTD                  |         3.51 | A$1,826,192,768         |         -3.04 |          -8.83 |            -3.04 |                  0.16 | 5D <= -8.0%              |               |                | not_run                 |
-|      6 | CHC.AX   | CHARTER HALL GROUP         |        19.99 | A$9,455,213,568         |         -3.01 |          -9.59 |           -14.24 |                  0.34 | 5D <= -8.0%              |               |                | not_run                 |
-|      7 | INA.AX   | INGENIA COMMUNITIES GROUP  |         3.89 | A$1,587,536,768         |         -2.38 |          -8.35 |            -9.63 |                  0.89 | 5D <= -8.0%              |               |                | not_run                 |
-|      8 | MP1.AX   | MEGAPORT LTD               |        17.19 | A$4,166,315,008         |         -1.83 |         -10.98 |             5.91 |                  0.32 | 5D <= -8.0%              |               |                | not_run                 |
-|      9 | RFF.AX   | RURAL FUNDS TRUST          |         1.93 | A$752,944,896           |         -1.18 |         -10.56 |           -12.97 |                  0.9  | 5D <= -8.0%              |               |                | not_run                 |
-|     10 | RIC.AX   | RIDLEY CORP LTD            |         2.56 | A$959,623,872           |         -1.16 |         -11.72 |            -9.22 |                  0.32 | 5D <= -8.0%              |               |                | not_run                 |
-|     11 | JBH.AX   | JB HI-FI LTD               |        67.08 | A$7,334,124,032         |         -1.13 |          -2.67 |           -15.12 |                  0.33 | 20D <= -15.0%            |               |                | not_run                 |
-|     12 | PME.AX   | PRO MEDICUS LTD            |       182.78 | A$19,095,021,568        |         -0.99 |         -11.28 |            13.74 |                  0.76 | 5D <= -8.0%              |               |                | not_run                 |
-|     13 | DRO.AX   | DRONESHIELD LTD            |         1.73 | A$1,594,056,576         |         -0.58 |         -11.54 |            -2.54 |                  0.56 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
-|     14 | HSN.AX   | HANSEN TECHNOLOGIES LTD    |         3.48 | A$711,750,144           |         -0.57 |           9.76 |           -16.25 |                  0.35 | 20D <= -15.0%            |               |                | not_run_limit_reached   |
-|     15 | MAF.AX   | MA FINANCIAL GROUP LTD     |         6.2  | A$1,223,086,464         |         -0.48 |         -11.62 |            12.06 |                  0.6  | 5D <= -8.0%              |               |                | not_run_limit_reached   |
-|     16 | MAD.AX   | MADER GROUP LTD            |         6.39 | A$1,300,120,448         |         -0.47 |          -9.75 |            -8.19 |                  0.68 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
-|     17 | MND.AX   | MONADELPHOUS GROUP LTD     |        28.74 |                         |         -0.38 |          -9.57 |             0.88 |                  0.32 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
-|     18 | MGH.AX   | MAAS GROUP HOLDINGS LTD    |         5.59 | A$2,019,853,056         |         -0.18 |          -9.4  |            13.62 |                  0.54 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
-|     19 | SUL.AX   | SUPER RETAIL GROUP LTD     |        13.12 | A$2,962,843,648         |          0.85 |          -9.2  |            -2.89 |                  0.22 | 5D <= -8.0%              | downgrade     |                | not_run_limit_reached   |
-|     20 | ING.AX   | INGHAMS GROUP LTD          |         2.04 | A$756,368,064           |          1.75 |          -8.33 |           -10.75 |                  0.14 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
-|     21 | TLX.AX   | TELIX PHARMACEUTICALS LTD  |        15.77 | A$5,356,699,648         |          1.78 |          -9.29 |            12.05 |                  0.25 | 5D <= -8.0%              | downgrade     |                | not_run_limit_reached   |
-|     22 | NEU.AX   | NEUREN PHARMACEUTICALS LTD |        20.7  | A$2,624,221,440         |          2.73 |         -10.54 |            18.42 |                  0.41 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|   rank | ticker   | company                      |   last_price | market_cap_aud_approx   |   one_day_pct |   five_day_pct |   twenty_day_pct |   volume_spike_vs_20d | trigger                  | avoid_flags   | openai_score   | openai_classification   |
+|-------:|:---------|:-----------------------------|-------------:|:------------------------|--------------:|---------------:|-----------------:|----------------------:|:-------------------------|:--------------|:---------------|:------------------------|
+|      1 | EOS.AX   | ELECTRO OPTIC SYSTEMS HOLDIN |        10.31 | A$2,286,857,728         |         -6.31 |          15.9  |            54.19 |                  0.69 | 1D <= -4.0%              |               |                | not_run                 |
+|      2 | LIC.AX   | LIFESTYLE COMMUNITIES LTD    |         5.3  | A$645,222,336           |         -5.86 |          -3.64 |             4.13 |                  0.67 | 1D <= -4.0%              |               |                | not_run                 |
+|      3 | BOE.AX   | BOSS ENERGY LTD              |         1.43 | A$592,455,232           |         -5.81 |          -6.12 |            16.97 |                  1.52 | 1D <= -4.0%              |               |                | not_run                 |
+|      4 | SXE.AX   | SOUTHERN CROSS ELECTRICAL    |         4.26 | A$1,314,165,504         |         -5.33 |          -9.55 |            -1.62 |                  1.17 | 1D <= -4.0%; 5D <= -8.0% |               |                | not_run                 |
+|      5 | RPL.AX   | REGAL PARTNERS LTD           |         2.6  | A$601,779,904           |         -5.29 |          -6.6  |            -2.21 |                  1.42 | 1D <= -4.0%              |               |                | not_run                 |
+|      6 | TUA.AX   | TUAS LTD                     |         2.07 | A$1,135,180,032         |         -5.05 |          -0.48 |            -4.17 |                  0.62 | 1D <= -4.0%              |               |                | not_run                 |
+|      7 | PDI.AX   | PREDICTIVE DISCOVERY LTD     |         4.4  | A$4,422,072,832         |         -4.56 |          -4.35 |            38.58 |                  0.27 | 1D <= -4.0%              |               |                | not_run                 |
+|      8 | GYG.AX   | GUZMAN Y GOMEZ LTD           |        28.16 | A$2,801,869,056         |         -4.33 |           5.45 |            12.85 |                  1.44 | 1D <= -4.0%              |               |                | not_run                 |
+|      9 | PPT.AX   | PERPETUAL LTD                |        19.37 | A$2,240,939,008         |         -4.25 |          -0.72 |             2.16 |                  0.92 | 1D <= -4.0%              |               |                | not_run                 |
+|     10 | SLC.AX   | SUPERLOOP LTD                |         2.81 | A$1,446,345,984         |         -4.1  |          -8.17 |           -12.19 |                  0.41 | 1D <= -4.0%; 5D <= -8.0% |               |                | not_run                 |
+|     11 | TVN.AX   | TIVAN LTD                    |         0.24 | A$558,556,032           |         -4    |          -5.88 |            -4    |                  0.3  | 1D <= -4.0%              |               |                | not_run                 |
+|     12 | SGP.AX   | STOCKLAND                    |         4.28 | A$10,419,595,264        |         -3.05 |          -8.83 |             0.35 |                  0.71 | 5D <= -8.0%              |               |                | not_run                 |
+|     13 | KLS.AX   | KELSIAN GROUP LTD            |         4.28 | A$1,162,690,688         |         -2.51 |          -8.55 |            -3.39 |                  0.67 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     14 | NEU.AX   | NEUREN PHARMACEUTICALS LTD   |        20.5  | A$2,598,866,432         |         -2.47 |          -8.73 |            13.89 |                  0.57 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     15 | QAL.AX   | QUALITAS LTD                 |         2.85 | A$859,059,840           |         -2.4  |         -11.49 |            -5.94 |                  1.92 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     16 | CHN.AX   | CHALICE MINING LTD           |         1.37 | A$533,352,160           |         -2.01 |          -8.56 |            22.6  |                  0.56 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     17 | IPH.AX   | IPH LTD                      |         3.32 | A$851,537,088           |         -1.78 |          -2.53 |           -15.65 |                  0.83 | 20D <= -15.0%            |               |                | not_run_limit_reached   |
+|     18 | MP1.AX   | MEGAPORT LTD                 |        16.84 | A$4,082,697,728         |         -1.26 |          -8.35 |            -6.93 |                  0.55 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     19 | ELV.AX   | ELEVRA LITHIUM LTD           |         8.27 | A$1,401,198,208         |         -1.25 |          -8.87 |            10.92 |                  1.27 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     20 | CHC.AX   | CHARTER HALL GROUP           |        19.65 | A$9,292,029,952         |         -0.98 |          -5.14 |           -15.8  |                  1.29 | 20D <= -15.0%            |               |                | not_run_limit_reached   |
+|     21 | DOW.AX   | DOWNER EDI LTD               |         6.53 | A$4,306,634,752         |         -0.98 |          -0.83 |           -16    |                  0.66 | 20D <= -15.0%            |               |                | not_run_limit_reached   |
+|     22 | MND.AX   | MONADELPHOUS GROUP LTD       |        28.98 | A$2,913,145,344         |         -0.41 |          -9.97 |            -0.99 |                  0.38 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     23 | RFF.AX   | RURAL FUNDS TRUST            |         1.92 | A$749,047,616           |         -0.41 |          -8.04 |           -11.43 |                  1.31 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     24 | NHF.AX   | NIB HOLDINGS LTD             |         6.74 | A$3,292,827,648         |          0.22 |          -8.99 |           -10.2  |                  0.19 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     25 | HSN.AX   | HANSEN TECHNOLOGIES LTD      |         3.46 | A$708,682,240           |          0.43 |           7.94 |           -16.81 |                  0.44 | 20D <= -15.0%            |               |                | not_run_limit_reached   |
+|     26 | MAF.AX   | MA FINANCIAL GROUP LTD       |         6.2  | A$1,223,086,464         |          0.49 |          -8.26 |             9.9  |                  0.39 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     27 | EDV.AX   | ENDEAVOUR GROUP LTD/AUSTRALI |         3.1  | A$5,557,771,264         |          1.14 |          -8.7  |           -11.06 |                  0.19 | 5D <= -8.0%              |               |                | not_run_limit_reached   |
+|     28 | JBH.AX   | JB HI-FI LTD                 |        67.58 | A$7,388,790,784         |          2.36 |          -0.51 |           -15.97 |                  0.55 | 20D <= -15.0%            |               |                | not_run_limit_reached   |
 
 ## Manual review discipline
 
@@ -69,32 +75,32 @@ Before buying, check ASX announcements, balance sheet strength, debt maturities,
 
 ## Scan status
 
-- below_market_cap_threshold: 5
+- below_market_cap_threshold: 3
 - candidate: 14
-- near_miss: 22
-- no_price_drop_trigger: 254
+- near_miss: 28
+- no_price_drop_trigger: 250
 
 ## Latest Performance Log Snapshot
 
 | signal_date   | ticker   | company                      | signal_type   |   signal_price |   current_price |   days_since_signal |   return_pct | last_checked   | openai_score_at_signal   | openai_classification_at_signal   |
 |:--------------|:---------|:-----------------------------|:--------------|---------------:|----------------:|--------------------:|-------------:|:---------------|:-------------------------|:----------------------------------|
-| 2026-08-27    | ABB.AX   | AUSSIE BROADBAND LTD         | candidate     |           4.42 |            4.44 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | ARB.AX   | ARB CORP LTD                 | near_miss     |          19.7  |           19.69 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | ARF.AX   | ARENA REIT                   | candidate     |           2.35 |            2.35 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | BOE.AX   | BOSS ENERGY LTD              | candidate     |           1.52 |            1.52 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | CHC.AX   | CHARTER HALL GROUP           | near_miss     |          19.99 |           20    |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | CNI.AX   | CENTURIA CAPITAL GROUP       | candidate     |           1.14 |            1.14 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | DRO.AX   | DRONESHIELD LTD              | near_miss     |           1.73 |            1.73 |                   0 |            0 | 2026-08-27     |                          | not_run_limit_reached             |
-| 2026-08-27    | EDV.AX   | ENDEAVOUR GROUP LTD/AUSTRALI | candidate     |           3.02 |            3.02 |                   0 |            0 | 2026-08-27     |                          | not_run_limit_reached             |
-| 2026-08-27    | GDG.AX   | GENERATION DEVELOPMENT GROUP | candidate     |           3.31 |            3.32 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | HSN.AX   | HANSEN TECHNOLOGIES LTD      | near_miss     |           3.48 |            3.47 |                   0 |            0 | 2026-08-27     |                          | not_run_limit_reached             |
-| 2026-08-27    | IMD.AX   | IMDEX LTD                    | near_miss     |           3.51 |            3.51 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | INA.AX   | INGENIA COMMUNITIES GROUP    | near_miss     |           3.89 |            3.89 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | ING.AX   | INGHAMS GROUP LTD            | near_miss     |           2.04 |            2.04 |                   0 |            0 | 2026-08-27     |                          | not_run_limit_reached             |
-| 2026-08-27    | JBH.AX   | JB HI-FI LTD                 | near_miss     |          67.08 |           67.03 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | MAD.AX   | MADER GROUP LTD              | near_miss     |           6.39 |            6.39 |                   0 |            0 | 2026-08-27     |                          | not_run_limit_reached             |
-| 2026-08-27    | MAF.AX   | MA FINANCIAL GROUP LTD       | near_miss     |           6.2  |            6.22 |                   0 |            0 | 2026-08-27     |                          | not_run_limit_reached             |
-| 2026-08-27    | MFG.AX   | MAGELLAN FINANCIAL GROUP LTD | candidate     |           9.65 |            9.67 |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | MGH.AX   | MAAS GROUP HOLDINGS LTD      | near_miss     |           5.59 |            5.61 |                   0 |            0 | 2026-08-27     |                          | not_run_limit_reached             |
-| 2026-08-27    | MMS.AX   | MCMILLAN SHAKESPEARE LTD     | candidate     |          19.26 |           19.3  |                   0 |            0 | 2026-08-27     |                          | not_run                           |
-| 2026-08-27    | MND.AX   | MONADELPHOUS GROUP LTD       | near_miss     |          28.74 |           28.73 |                   0 |            0 | 2026-08-27     |                          | not_run_limit_reached             |
+| 2026-08-28    | ABB.AX   | AUSSIE BROADBAND LTD         | candidate     |           4.34 |            4.34 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | ARF.AX   | ARENA REIT                   | candidate     |           2.32 |            2.32 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | BOE.AX   | BOSS ENERGY LTD              | near_miss     |           1.43 |            1.43 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | CHC.AX   | CHARTER HALL GROUP           | near_miss     |          19.65 |           19.65 |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | CHN.AX   | CHALICE MINING LTD           | near_miss     |           1.37 |            1.37 |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | CNI.AX   | CENTURIA CAPITAL GROUP       | candidate     |           1.18 |            1.18 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | DOW.AX   | DOWNER EDI LTD               | near_miss     |           6.53 |            6.53 |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | EDV.AX   | ENDEAVOUR GROUP LTD/AUSTRALI | near_miss     |           3.1  |            3.1  |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | ELV.AX   | ELEVRA LITHIUM LTD           | near_miss     |           8.27 |            8.27 |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | EOS.AX   | ELECTRO OPTIC SYSTEMS HOLDIN | near_miss     |          10.31 |           10.3  |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | EQT.AX   | EQT HOLDINGS LTD             | candidate     |          19.34 |           19.33 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | GDG.AX   | GENERATION DEVELOPMENT GROUP | candidate     |           3.2  |            3.2  |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | GYG.AX   | GUZMAN Y GOMEZ LTD           | near_miss     |          28.16 |           28.14 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | HSN.AX   | HANSEN TECHNOLOGIES LTD      | near_miss     |           3.46 |            3.46 |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | IEL.AX   | IDP EDUCATION LTD            | candidate     |           1.82 |            1.82 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | INA.AX   | INGENIA COMMUNITIES GROUP    | candidate     |           3.65 |            3.65 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
+| 2026-08-28    | IPH.AX   | IPH LTD                      | near_miss     |           3.32 |            3.33 |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | JBH.AX   | JB HI-FI LTD                 | near_miss     |          67.58 |           67.55 |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | KLS.AX   | KELSIAN GROUP LTD            | near_miss     |           4.28 |            4.28 |                   0 |            0 | 2026-08-28     |                          | not_run_limit_reached             |
+| 2026-08-28    | LIC.AX   | LIFESTYLE COMMUNITIES LTD    | near_miss     |           5.3  |            5.29 |                   0 |            0 | 2026-08-28     |                          | not_run                           |
