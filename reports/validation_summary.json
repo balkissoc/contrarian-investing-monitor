@@ -1,0 +1,70 @@
+{
+  "as_of": "2026-09-13",
+  "settings_version": "2026-09-hybrid-v1",
+  "benchmark": "A300.AX",
+  "prospective_events": 2,
+  "legacy_events": 272,
+  "unavailable_or_stale": 0,
+  "horizons": {
+    "5d": {
+      "mature": 0,
+      "matched": 0,
+      "median_net_pct": null,
+      "median_excess_pp": null,
+      "hit_20_pct": null
+    },
+    "20d": {
+      "mature": 0,
+      "matched": 0,
+      "median_net_pct": null,
+      "median_excess_pp": null,
+      "hit_20_pct": null
+    },
+    "60d": {
+      "mature": 0,
+      "matched": 0,
+      "median_net_pct": null,
+      "median_excess_pp": null,
+      "hit_20_pct": null
+    },
+    "12m": {
+      "mature": 0,
+      "matched": 0,
+      "median_net_pct": null,
+      "median_excess_pp": null,
+      "hit_20_pct": null
+    },
+    "24m": {
+      "mature": 0,
+      "matched": 0,
+      "median_net_pct": null,
+      "median_excess_pp": null,
+      "hit_20_pct": null
+    },
+    "36m": {
+      "mature": 0,
+      "matched": 0,
+      "median_net_pct": null,
+      "median_excess_pp": null,
+      "hit_20_pct": null
+    }
+  },
+  "score_bands": {
+    "0\u201339": {
+      "matched_20d": 0,
+      "median_excess_pp": null
+    },
+    "40\u201359": {
+      "matched_20d": 0,
+      "median_excess_pp": null
+    },
+    "60\u201379": {
+      "matched_20d": 0,
+      "median_excess_pp": null
+    },
+    "80\u2013100": {
+      "matched_20d": 0,
+      "median_excess_pp": null
+    }
+  }
+}
