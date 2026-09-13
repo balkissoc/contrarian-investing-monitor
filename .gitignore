@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+private/
+research-notebook*.json
+node_modules/

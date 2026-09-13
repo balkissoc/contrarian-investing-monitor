@@ -7,6 +7,7 @@ from typing import Any
 from urllib.parse import quote
 
 import pandas as pd
+from research_ui import card_context, workspace, validation_panel
 
 from monitor_metrics import attention_band, attention_score, risk_gate
 
@@ -294,7 +295,7 @@ def signal_cards(df: pd.DataFrame, performance: pd.DataFrame, *, near_miss: bool
         rationale_html = f'<p class="rationale">{esc(rationale)}</p>' if rationale else ""
         asx_url = f"https://www.asx.com.au/markets/company/{quote(ticker.lower())}"
         yahoo_url = f"https://au.finance.yahoo.com/quote/{quote(ticker_full)}"
-        searchable = " ".join((ticker, company, trigger, avoid_flags, ai_classification, gate_label)).lower()
+        searchable = " ".join((ticker, company, trigger, avoid_flags, ai_classification, gate_label, str(row.get('research_lane', '')), str(row.get('market_context', '')))).lower()
         market_cap_numeric = "" if market_cap is None else f"{market_cap:.0f}"
         volume_numeric = "" if volume is None else f"{volume:.4f}"
 
@@ -303,7 +304,7 @@ def signal_cards(df: pd.DataFrame, performance: pd.DataFrame, *, near_miss: bool
               data-search="{html.escape(searchable, quote=True)}" data-score="{score}"
               data-one-day="{as_float(row.get('one_day_pct')) or 0}" data-five-day="{as_float(row.get('five_day_pct')) or 0}"
               data-twenty-day="{as_float(row.get('twenty_day_pct')) or 0}" data-volume="{volume_numeric}"
-              data-market-cap="{market_cap_numeric}" data-risk="{esc(gate)}" data-ticker="{esc(ticker)}">
+              data-market-cap="{market_cap_numeric}" data-risk="{esc(gate)}" data-ticker="{esc(ticker)}" data-alert="{esc(row.get('alert_status', ''))}" data-context="{esc(row.get('market_context', ''))}" data-lane="{esc(row.get('research_lane', ''))}">
               <div class="signal-card-head"><div class="signal-identity"><div class="eyebrow">#{rank} · {'NEAR MISS' if near_miss else 'CANDIDATE'}</div>
                 <h3><a href="{asx_url}" target="_blank" rel="noopener noreferrer">{esc(ticker)}</a> <span>{esc(company)}</span></h3><p>{esc(date_text)}</p></div>
                 <div class="attention-score" aria-label="Attention score {score} out of 100"><strong>{score}</strong><span>/100</span></div></div>
@@ -311,7 +312,7 @@ def signal_cards(df: pd.DataFrame, performance: pd.DataFrame, *, near_miss: bool
               <div class="signal-key-data"><div><span>Price</span><strong>{fmt_price(row.get('last_price'))}</strong></div><div><span>Market cap</span><strong>{fmt_market_cap(market_cap)}</strong></div><div><span>Volume</span><strong>{esc(volume_text)}</strong></div></div>
               <div class="movement-row">{movement_chip('1 day', row.get('one_day_pct'))}{movement_chip('5 days', row.get('five_day_pct'))}{movement_chip('20 days', row.get('twenty_day_pct'))}</div>
               <div class="trigger-line"><span>Threshold reached</span><strong>{esc(trigger)}</strong></div>{rationale_html}{headline_details(row)}
-              <div class="source-actions"><a href="{asx_url}" target="_blank" rel="noopener noreferrer">ASX company &amp; announcements ↗</a><a href="{yahoo_url}" target="_blank" rel="noopener noreferrer">Price history ↗</a></div>
+              {card_context(row)}<div class="source-actions"><a href="{asx_url}" target="_blank" rel="noopener noreferrer">ASX company &amp; announcements ↗</a><a href="{yahoo_url}" target="_blank" rel="noopener noreferrer">Price history ↗</a></div>
             </article>""")
     return "".join(cards)
 
@@ -322,7 +323,9 @@ def signal_section(section_id: str, title: str, description: str, df: pd.DataFra
       <div class="panel-head"><div><h2>{esc(title)}</h2><p>{esc(description)}</p></div><span class="section-count">{len(df)}</span></div>
       <div class="filter-bar"><label class="search-field"><span>Search</span><input type="search" placeholder="Ticker, company, flag…" data-search-input></label>
         <label><span>Sort</span><select data-sort-select><option value="score">Attention score</option><option value="one-day">Largest 1-day fall</option><option value="five-day">Largest 5-day fall</option><option value="twenty-day">Largest 20-day fall</option><option value="volume">Highest volume</option><option value="market-cap">Largest company</option><option value="ticker">Ticker A–Z</option></select></label>
-        <label><span>Risk gate</span><select data-risk-select><option value="all">All results</option><option value="flagged">Flags / missing data</option><option value="clear">No first-pass flags</option></select></label></div>
+        <label><span>Headline gate</span><select data-risk-select><option value="all">All results</option><option value="flagged">Flags / missing data</option><option value="clear">No headline flags</option></select></label>
+        <label><span>Event</span><select data-event-select><option value="all">All events</option><option value="fresh">New / changed</option><option value="repeat">Repeats</option><option value="systemic">Systemic sell-off</option></select></label>
+        <label><span>Research lane</span><select data-lane-select><option value="all">All lanes</option><option value="core_research">Core</option><option value="cyclical_research">Cyclical</option><option value="turnaround_research">Turnaround</option><option value="sector_specialist">Sector specialist</option><option value="unclassified_missing_data">Missing evidence</option></select></label></div>
       <div class="result-status" data-result-status aria-live="polite"></div><div class="signal-grid" data-card-grid>{signal_cards(df, performance, near_miss=near_miss)}</div>
       <button class="show-more" type="button" data-show-more hidden>Show all</button>
     </section>"""
@@ -456,14 +459,15 @@ document.querySelectorAll('[data-signal-section]').forEach((section) => {
   };
   const render = () => {
     const query = search.value.trim().toLowerCase(); const choice = risk.value;
-    const matching = cards.filter((card) => { const textMatch = !query || card.dataset.search.includes(query); const isClear = card.dataset.risk === 'clear_first_pass'; return textMatch && (choice === 'all' || (choice === 'clear' && isClear) || (choice === 'flagged' && !isClear)); }).sort(compare);
+    const event = section.querySelector('[data-event-select]').value, lane = section.querySelector('[data-lane-select]').value;
+    const matching = cards.filter((card) => { const textMatch = !query || card.dataset.search.includes(query); const isClear = card.dataset.risk === 'clear_first_pass'; const eventMatch = event === 'all' || (event === 'fresh' && ['new','changed'].includes(card.dataset.alert)) || (event === 'repeat' && card.dataset.alert === 'repeat') || (event === 'systemic' && card.dataset.context === 'systemic_selloff'); return textMatch && eventMatch && (lane === 'all' || card.dataset.lane === lane) && (choice === 'all' || (choice === 'clear' && isClear) || (choice === 'flagged' && !isClear)); }).sort(compare);
     matching.forEach((card) => grid.appendChild(card)); cards.forEach((card) => { card.hidden = true; });
     const shown = expanded ? matching : matching.slice(0, limit); shown.forEach((card) => { card.hidden = false; });
     status.textContent = matching.length === cards.length ? `${shown.length} of ${cards.length} shown` : `${shown.length} of ${matching.length} matching shown`;
     more.hidden = matching.length <= limit; more.textContent = expanded ? `Show top ${limit}` : `Show all ${matching.length}`;
     if (matching.length === 0) status.textContent = 'No matching results';
   };
-  [search, sort, risk].forEach((control) => control.addEventListener(control === search ? 'input' : 'change', () => { expanded = false; render(); }));
+  [search, sort, risk, section.querySelector('[data-event-select]'), section.querySelector('[data-lane-select]')].forEach((control) => control.addEventListener(control === search ? 'input' : 'change', () => { expanded = false; render(); }));
   more.addEventListener('click', () => { expanded = !expanded; render(); }); render();
 });
 """
@@ -512,15 +516,15 @@ def build_dashboard() -> str:
     min_cap_number = as_float(str(thresholds["min_market_cap"]).replace(",", ""))
     threshold_html = f'<div class="threshold-grid"><div class="threshold-card"><span>1 DAY</span><strong>{esc(thresholds["candidate_1d"])}%</strong><small>Candidate</small><em>{esc(thresholds["near_1d"])}% near miss</em></div><div class="threshold-card"><span>5 DAYS</span><strong>{esc(thresholds["candidate_5d"])}%</strong><small>Candidate</small><em>{esc(thresholds["near_5d"])}% near miss</em></div><div class="threshold-card"><span>20 DAYS</span><strong>{esc(thresholds["candidate_20d"])}%</strong><small>Candidate</small><em>{esc(thresholds["near_20d"])}% near miss</em></div><div class="threshold-card"><span>MIN SIZE</span><strong>{fmt_market_cap(min_cap_number)}</strong><small>Market cap</small><em>A300 fallback flagged if unverified</em></div></div>'
 
-    return f'''<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Automated ASX contrarian price-event monitor for manual research triage."><title>Contrarian Investing Monitor</title><style>{CSS}</style></head><body>
-  <header class="topbar"><div class="container brand-row"><div class="brand"><div class="logo">↘</div><div><h1>Contrarian Investing Monitor</h1><p>ASX price-event radar · research triage</p></div></div><div class="header-meta">Latest automated scan<strong>{esc(run_time)}</strong><span>Latest displayed price: {esc(latest_price_date)}</span><nav class="top-nav" aria-label="Dashboard sections"><a href="#candidates">Candidates</a><a href="#near-misses">Near misses</a><a href="#performance">Performance</a></nav></div></div></header>
+    return f'''<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="ASX contrarian research with funding checks, valuation scenarios and forward validation."><title>Contrarian Investing Monitor</title><style>{CSS}</style><link rel="stylesheet" href="assets/research.css?v=2"></head><body>
+  <header class="topbar"><div class="container brand-row"><div class="brand"><div class="logo">↘</div><div><h1>Contrarian Investing Monitor</h1><p>ASX price-event radar · evidence before conviction</p></div></div><div class="header-meta">Latest automated scan<strong>{esc(run_time)}</strong><span>Latest displayed price: {esc(latest_price_date)}</span><nav class="top-nav" aria-label="Dashboard sections"><a href="#research">Research</a><a href="#candidates">Candidates</a><a href="#near-misses">Near misses</a><a href="#validation">Validation</a></nav></div></div></header>
   <main class="container dashboard"><section class="hero {hero_class}"><div class="hero-icon">{hero_icon}</div><div><h2>{esc(hero_title)}</h2><p>{esc(hero_text)}</p></div><div class="hero-priority">{top_priority_html}</div></section>{coverage_warning}
     <section class="kpi-grid" aria-label="Scan summary"><div class="kpi"><span>Universe</span><strong>{total}</strong><small>A300-style shares scanned</small></div><div class="kpi accent"><span>Candidates</span><strong>{candidate_count}</strong><small>strong threshold events</small></div><div class="kpi watch"><span>Near misses</span><strong>{near_count}</strong><small>early warning events</small></div><div class="kpi priority"><span>Immediate review</span><strong>{priority_count}</strong><small>attention score 80+</small></div><div class="kpi issue"><span>Quality warnings</span><strong>{quality_warnings}</strong><small>risk or missing-data gates</small></div></section>
-    <div class="layout"><div>{signal_section("candidates", "Candidate radar", "Complete candidate list, ranked by transparent review urgency — not expected return.", candidates, performance, near_miss=False, initial_limit=8)}{signal_section("near-misses", "Near misses", "Early sell-offs approaching the stronger candidate thresholds.", near_misses, performance, near_miss=True, initial_limit=6)}<section class="panel" id="performance"><div class="panel-head"><div><h2>Signal performance</h2><p>Daily repeats condensed into distinct sell-off episodes with maturity-aware results.</p></div><span class="section-count">{episode_count}</span></div>{perf_metrics}{perf_table}</section></div>
+    {workspace(current_signals)}<div class="layout"><div>{signal_section("candidates", "Candidate radar", "Review urgency only. Filter new events, systemic sell-offs or a research lane.", candidates, performance, near_miss=False, initial_limit=8)}{signal_section("near-misses", "Near misses & volatility watch", "Early falls and unusually large moves relative to the stock’s own prior volatility.", near_misses, performance, near_miss=True, initial_limit=6)}{validation_panel()}<section class="panel" id="performance"><div class="panel-head"><div><h2>Legacy signal-close observations</h2><p>Descriptive history; unavailable signal-close entries are not tradable returns.</p></div><span class="section-count">{episode_count}</span></div>{perf_metrics}{perf_table}</section></div>
       <aside><section class="panel"><div class="panel-head"><div><h2>Scan health</h2><p>Exclusive outcomes across the loaded universe.</p></div></div>{''.join(status_html) if status_html else '<p class="disclaimer">No scan-status information available.</p>'}<p class="footnote">No trigger: {no_trigger}. Below size threshold: {below_cap}. Quality warnings can overlap candidate and near-miss counts.</p></section><section class="panel"><div class="panel-head"><div><h2>Trigger thresholds</h2><p>Automatic price-event settings.</p></div></div>{threshold_html}</section>
       <section class="panel" id="methodology"><div class="panel-head"><div><h2>How to read the score</h2><p>Attention score ≠ investment score.</p></div></div><ol class="method-list"><li><strong>55 points:</strong> strongest fall relative to its candidate threshold.</li><li><strong>25 points:</strong> breadth across 1-, 5- and 20-day windows.</li><li><strong>10 points:</strong> confirmation across multiple candidate windows.</li><li><strong>10 points:</strong> volume above the 20-day average.</li></ol><details class="methodology-details"><summary>Risk-gate limitations</summary><p>Headline flags and automated classifications are only a first pass. “No first-pass flags” does not verify solvency, governance, valuation or that a shock is temporary.</p></details></section>
       <section class="panel"><div class="panel-head"><div><h2>Controls &amp; data</h2><p>Run the workflow or inspect source records.</p></div></div><div class="actions"><a class="button primary" href="https://github.com/balkissoc/contrarian-investing-monitor/actions/workflows/daily.yml">Run scan manually</a><a class="button" href="reports/latest_candidates.csv">Candidates CSV</a><a class="button" href="reports/latest_near_misses.csv">Near misses CSV</a></div><details class="raw"><summary>Developer / history links</summary><div class="actions" style="margin-top:8px"><a class="button" href="reports/performance_log.csv">Performance CSV</a><a class="button" href="https://github.com/balkissoc/contrarian-investing-monitor/tree/main/reports">Reports folder</a></div></details></section>
-      <section class="panel disclaimer"><strong>Research aide only.</strong><p>This monitor finds unusual price falls. It does not recommend securities or verify investment suitability. Before acting, review official ASX announcements, the cause of the fall, balance-sheet strength, debt maturities, liquidity, cash flow, governance and valuation.</p></section></aside></div><div class="footer">Generated automatically · Performance figures are descriptive, not a back-test or forecast</div></main><script>{JAVASCRIPT}</script></body></html>'''
+      <section class="panel disclaimer"><strong>Research aide only.</strong><p>This monitor finds unusual price falls. It does not recommend securities or verify investment suitability. Before acting, review official ASX announcements, the cause of the fall, balance-sheet strength, debt maturities, liquidity, cash flow, governance and valuation.</p></section></aside></div><div class="footer">Generated automatically · No validated 20% annual return claim</div></main><script>{JAVASCRIPT}</script><script src="assets/research_core.js?v=2"></script><script src="assets/research.js?v=2"></script></body></html>'''
 
 
 def main() -> None:

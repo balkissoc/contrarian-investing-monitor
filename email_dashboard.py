@@ -42,6 +42,10 @@ def top_signal(path: Path) -> str:
         return "See dashboard"
     if not rows:
         return "None"
+    if "alert_status" in rows[0]:
+        rows = [row for row in rows if row.get("alert_status") in {"new", "changed"}]
+        if not rows:
+            return "No material changes; repeated events remain on the dashboard"
 
     def score(row: dict[str, str]) -> int:
         try:
@@ -75,10 +79,12 @@ def main() -> None:
     scanned = extract(text, "Watchlist scanned")
     candidates = extract(text, "Candidates found")
     near_misses = extract(text, "Near misses found")
+    fresh_events = extract(text, "New or changed events", "Not assessed")
+    repeats = extract(text, "Repeated events", "Not assessed")
     top_candidate = top_signal(CANDIDATES_PATH)
     top_near = top_signal(NEAR_MISSES_PATH)
 
-    subject = f"Contrarian Monitor — {candidates} candidate(s), {near_misses} near miss(es)"
+    subject = f"Contrarian Monitor — {fresh_events} new/changed event(s)"
 
     plain = f"""Contrarian Investing Monitor
 
@@ -86,13 +92,15 @@ Latest scan: {run_time}
 Universe scanned: {scanned}
 Candidates: {candidates}
 Near misses: {near_misses}
+New or changed events: {fresh_events}
+Repeated events retained on dashboard: {repeats}
 Top candidate: {top_candidate}
 Top near miss: {top_near}
 
 Open the graphical dashboard:
 {DASHBOARD_URL}
 
-Research aide only. Review ASX announcements, balance sheet, debt, liquidity, earnings quality and the cause of any sell-off before making an investment decision.
+Every signal remains research incomplete. Open the research notebook to document funding under stress, valuation, catalysts and failure conditions. Headline terms require investigation; they are not verified exclusions.
 """
 
     safe_url = html.escape(DASHBOARD_URL, quote=True)
@@ -100,6 +108,7 @@ Research aide only. Review ASX announcements, balance sheet, debt, liquidity, ea
 <html><body style="font-family:Arial,sans-serif;color:#102033;line-height:1.5">
   <div style="max-width:620px;margin:auto;padding:24px">
     <h2 style="margin:0 0 16px">Contrarian Investing Monitor</h2>
+    <p><strong>{html.escape(fresh_events)} new or materially changed events.</strong> {html.escape(repeats)} repeats remain searchable on the dashboard. Research is incomplete until funding and valuation evidence is checked.</p>
     <table style="width:100%;border-collapse:collapse;margin-bottom:20px">
       <tr><td style="padding:8px;border-bottom:1px solid #e5e7eb">Universe scanned</td><td style="padding:8px;border-bottom:1px solid #e5e7eb;text-align:right"><strong>{html.escape(scanned)}</strong></td></tr>
       <tr><td style="padding:8px;border-bottom:1px solid #e5e7eb">Candidates</td><td style="padding:8px;border-bottom:1px solid #e5e7eb;text-align:right"><strong>{html.escape(candidates)}</strong></td></tr>

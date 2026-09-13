@@ -12,6 +12,13 @@ on:
       - "dashboard.py"
       - "dashboard.trigger"
       - "monitor_metrics.py"
+      - "research.py"
+      - "research_ui.py"
+      - "validation.py"
+      - "assets/**"
+      - "config/research_settings.json"
+      - "config/experimental_watchlist.csv"
+      - "requirements.txt"
       - "universe.py"
       - "run_monitor.py"
       - "email_dashboard.py"
@@ -43,7 +50,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run regression tests
-        run: python -m unittest discover -s tests -v
+        run: |
+          python -m unittest discover -s tests -v
+          node --test tests/research_core.test.cjs
 
       - name: Refresh ASX 300-sized universe
         id: universe
@@ -89,7 +98,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config/*.csv index.html reports/*.csv reports/*.md reports/universe_refresh.log || true
+          git add config/*.csv index.html reports/*.csv reports/*.md reports/universe_refresh.log
+          git add reports/fundamental_cache.json reports/alert_state.json reports/latest_prices.json reports/validation_summary.json
           git diff --cached --quiet || git commit -m "Add daily contrarian report"
           git push
 

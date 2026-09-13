@@ -6,8 +6,10 @@ import pandas as pd
 import yfinance as yf
 
 import contrarian
+import research
 
 HISTORY_RETRIES = 3
+LATEST_MARKS: dict[str, dict] = {}
 
 
 def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
@@ -17,7 +19,7 @@ def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
 
     for attempt in range(HISTORY_RETRIES):
         try:
-            hist = stock.history(period="3mo", interval="1d", auto_adjust=True)
+            hist = stock.history(period="2y", interval="1d", auto_adjust=True)
             if not hist.empty:
                 break
         except Exception as exc:
@@ -39,6 +41,14 @@ def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
         return None, "insufficient_price_history"
 
     last_close = float(close.iloc[-1])
+    actions = []
+    for date, bar in hist.iterrows():
+        dividend = research.as_number(bar.get("Dividends")) or 0
+        split = research.as_number(bar.get("Stock Splits")) or 0
+        if dividend or split:
+            actions.append({"date": pd.Timestamp(date).date().isoformat(), "dividend": dividend, "split": split})
+    LATEST_MARKS[ticker] = {"ticker": ticker, "company": company, "price": last_close,
+                            "date": contrarian.price_date_from_history(hist), "actions": actions}
     prev_close = float(close.iloc[-2])
     five_day_close = float(close.iloc[-6])
     twenty_day_close = float(close.iloc[-21])
@@ -49,6 +59,8 @@ def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
 
     candidate_trigger = contrarian.assess_price_trigger(one_day, five_day, twenty_day, near_miss=False)
     near_miss_trigger = contrarian.assess_price_trigger(one_day, five_day, twenty_day, near_miss=True)
+    context = research.price_context(hist)
+    LATEST_MARKS[ticker]["median_turnover"] = context["median_turnover_20d_aud"]
 
     if candidate_trigger:
         signal_type = "candidate"
@@ -56,6 +68,9 @@ def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
     elif near_miss_trigger:
         signal_type = "near_miss"
         trigger = near_miss_trigger
+    elif context["volatility_trigger"]:
+        signal_type = "near_miss"
+        trigger = "Volatility watch: " + context["volatility_trigger"]
     else:
         # Do not make an additional Yahoo market-cap request for the vast majority
         # of securities that have not triggered a price event.
@@ -128,12 +143,45 @@ def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
         ).strip(),
         "error": "",
     }
-    return row, signal_type
+    row.update(context)
+    today = contrarian.datetime.now(contrarian.PERTH_TZ).date().isoformat()
+    return research.enrich_signal(row, stock, hist, today), signal_type
 
 
 def main() -> None:
+    if not research.CACHE_PATH.exists():
+        research.write_json(research.CACHE_PATH, {})
     contrarian.screen_ticker = robust_screen_ticker
     contrarian.main()
+    research.write_json(contrarian.REPORTS_DIR / "latest_prices.json", LATEST_MARKS)
+    if research.SETTINGS["experimental_universe_enabled"]:
+        run_experimental()
+    else:
+        pd.DataFrame(columns=contrarian.REPORT_COLUMNS).to_csv("reports/experimental_candidates.csv", index=False)
+    from dashboard import main as build_dashboard
+    build_dashboard()
+
+
+def run_experimental() -> None:
+    """Explicitly supplied broader names; never mix them into the A300 baseline."""
+    names = pd.read_csv("config/experimental_watchlist.csv").fillna("")
+    baseline = set(contrarian.load_watchlist()["ticker"])
+    previous_cap = contrarian.MIN_MARKET_CAP
+    rows = []
+    try:
+        contrarian.MIN_MARKET_CAP = research.SETTINGS["experimental_min_market_cap_aud"]
+        for _, entry in names.drop_duplicates("ticker").iterrows():
+            ticker = contrarian.normalise_asx_ticker(str(entry["ticker"]))
+            if ticker in baseline:
+                continue
+            row, status = robust_screen_ticker(ticker, str(entry.get("company", "")))
+            if row and status in {"candidate", "near_miss"}:
+                row["universe_lane"] = "experimental"
+                row["research_status"] = "experimental_incomplete"
+                rows.append(row)
+    finally:
+        contrarian.MIN_MARKET_CAP = previous_cap
+    pd.DataFrame(rows, columns=contrarian.REPORT_COLUMNS).to_csv("reports/experimental_candidates.csv", index=False)
 
 
 if __name__ == "__main__":

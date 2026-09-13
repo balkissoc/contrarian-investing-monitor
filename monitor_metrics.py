@@ -84,11 +84,11 @@ def risk_gate(
         headline_text = ""
 
     if flags:
-        return "headline_risk", "Headline risk flag"
+        return "headline_risk", "Headline investigation needed"
     if any(term in classification_text for term in ("permanent impairment", "high risk", "avoid")):
-        return "ai_risk", "Automated high-risk flag"
+        return "ai_risk", "AI concern — verify evidence"
     if as_number(market_cap) is None:
         return "size_unverified", "Market cap unverified"
     if not headline_text:
         return "news_unavailable", "No news context found"
-    return "clear_first_pass", "No first-pass flags"
+    return "clear_first_pass", "No headline flags; research incomplete"
