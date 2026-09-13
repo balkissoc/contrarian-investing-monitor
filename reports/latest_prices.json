@@ -2755,7 +2755,7 @@
   "CNU.AX": {
     "ticker": "CNU.AX",
     "company": "CHORUS LTD",
-    "price": 7.150000095367432,
+    "price": 6.894275188446045,
     "date": "2026-09-11",
     "actions": [
       {
@@ -2779,7 +2779,7 @@
         "split": 0
       }
     ],
-    "median_turnover": 3980909.7839865685
+    "median_turnover": 3838529.736383438
   },
   "MTS.AX": {
     "ticker": "MTS.AX",
@@ -5336,7 +5336,7 @@
   "KLS.AX": {
     "ticker": "KLS.AX",
     "company": "KELSIAN GROUP LTD",
-    "price": 4.059999942779541,
+    "price": 3.9600000381469727,
     "date": "2026-09-11",
     "actions": [
       {
@@ -5360,7 +5360,7 @@
         "split": 0
       }
     ],
-    "median_turnover": 2049294.0030920506
+    "median_turnover": 1998818.797217369
   },
   "SNL.AX": {
     "ticker": "SNL.AX",
@@ -5550,7 +5550,7 @@
   "CCP.AX": {
     "ticker": "CCP.AX",
     "company": "CREDIT CORP GROUP LTD",
-    "price": 14.149999618530273,
+    "price": 13.694999694824219,
     "date": "2026-09-11",
     "actions": [
       {
@@ -5574,7 +5574,7 @@
         "split": 0
       }
     ],
-    "median_turnover": 3553343.314853668
+    "median_turnover": 3439083.8695487976
   },
   "GLF.AX": {
     "ticker": "GLF.AX",
@@ -6035,10 +6035,10 @@
   "VGN.AX": {
     "ticker": "VGN.AX",
     "company": "VIRGIN AUSTRALIA HOLDINGS LT",
-    "price": 2.7300000190734863,
+    "price": 2.6540000438690186,
     "date": "2026-09-11",
     "actions": [],
-    "median_turnover": 2656496.5319269896
+    "median_turnover": 2582542.7213380337
   },
   "BRE.AX": {
     "ticker": "BRE.AX",
