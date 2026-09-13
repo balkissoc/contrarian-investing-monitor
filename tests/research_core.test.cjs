@@ -22,6 +22,10 @@ test('a documented case can complete, but failed covenants override attractive u
   r.covenants='fail';assert.equal(C.checklist(r,S,'2026-09-13').ready,false);
   assert.equal(C.checklist(r,S,'2026-09-13').blocked.length,1);
 });
+test('an exact 20% hurdle is not rejected by floating-point rounding',()=>{
+  const result=C.checklist({entry:1000,bear:800,base:1200,bull:1500,dividend:0,years:1,costBps:0},S,'2026-09-13');
+  assert.ok(!result.blocked.some(reason=>reason.includes('hurdle')));
+});
 test('model cannot spend beyond cash or initial concentration limit',()=>{
   const b=book(), marks={'AAA.AX':{price:10,date:'2026-09-13',median_turnover:1000000}};
   const order={ticker:'AAA.AX',units:300,fee:5,lane:'core_research'};
@@ -54,4 +58,11 @@ test('split events adjust held quantities without manufacturing cash',()=>{
   C.settle(b,{'AAA.AX':{price:5,date:'2026-09-03',actions:[{date:'2026-09-02',dividend:0,split:2}]}},S,'2026-09-03');
   assert.equal(C.holdings(b).positions['AAA.AX'].units,200);
   assert.equal(C.holdings(b).cash,48995);
+});
+test('calendar-year targets distinguish complete years, partial years and missing boundaries',()=>{
+  const b=book();b.nav=[{date:'2026-12-31',equity:60000},{date:'2027-12-31',equity:72000},{date:'2028-09-13',equity:73000}];
+  const rows=C.calendarReturns(b,'2028-09-13');
+  assert.equal(rows[0].complete,false);assert.equal(rows[1].complete,true);
+  assert.ok(Math.abs(rows[1].returnPct-20)<1e-8);assert.equal(rows[2].complete,false);
+  b.nav.shift();assert.equal(C.calendarReturns(b,'2028-09-13')[1].returnPct,null);
 });

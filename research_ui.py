@@ -32,6 +32,7 @@ def card_context(row) -> str:
     alert = clean(row.get("alert_status")) or "Not assessed"
     market = clean(row.get("market_context")).replace("_", " ")
     status = clean(row.get("fundamental_status"))
+    liquidity = clean(row.get("liquidity_gate")).replace("_", " ") or "unknown"
     currency = clean(row.get("fundamental_currency")) or "Currency unknown"
     missing = esc(row.get("required_information"))
     facts = "".join(f'<div><span>{label}</span><strong>{number(row.get(field), digits=0)}</strong></div>' for label, field in (("Net income", "net_income"), ("Free cash flow", "free_cash_flow"), ("Cash", "total_cash"), ("Total debt", "total_debt")))
@@ -40,7 +41,7 @@ def card_context(row) -> str:
       <div><span>5D / 20D vs market</span><strong>{number(row.get('market_relative_five_day_pp'), ' pp')} / {number(row.get('market_relative_twenty_day_pp'), ' pp')}</strong></div>
       <div><span>1D / 5D / 20D volatility units</span><strong>{number(row.get('one_day_z'), 'σ')} / {number(row.get('five_day_z'), 'σ')} / {number(row.get('twenty_day_z'), 'σ')}</strong></div>
       <div><span>Median daily turnover · approx.</span><strong>A${number(row.get('median_turnover_20d_aud'), digits=0)}</strong></div></div>
-      <p class="footnote">Market: {esc(market)} · Prices: {esc(row.get('price_freshness'))} · Liquidity: {esc(row.get('liquidity_gate'))}</p>
+      <p class="footnote">Market: {esc(market)} · Prices: {esc(row.get('price_freshness'))} · Liquidity: {esc(liquidity)}</p>
       <details><summary>Financial evidence and sector context</summary><p>Yahoo snapshot · {esc(currency)} · latest reported quarter {esc(row.get('fundamental_period')) or 'unknown'} · retrieved {esc(row.get('fundamental_fetched')) or 'unavailable'} ({esc(status)}). Earnings/cash flow are provider aggregates; cash/debt are balance-sheet snapshots. Verify periods and accounting in filings.</p>
       <div class="context-grid">{facts}</div><p>Sector: {esc(row.get('sector')) or 'unknown'} · {esc(row.get('industry'))}. 5D / 20D relative to {esc(row.get('sector_benchmark')) or 'unavailable'}: {number(row.get('sector_relative_five_day_pp'), ' pp')} / {number(row.get('sector_relative_twenty_day_pp'), ' pp')}. Sector indices exclude dividends; this approximate comparison includes stock distributions and is not alpha.</p>
       <p><strong>Investigation:</strong> {esc(row.get('investigation_flags')) or 'No automated issues recorded; mandatory evidence is still missing.'}</p><p><strong>Required information:</strong> {missing}</p></details>
@@ -64,7 +65,9 @@ def workspace(signals: pd.DataFrame) -> str:
     verify = [("unknown", "Not checked"), ("pass", "Checked against evidence"), ("fail", "Verified concern")]
     funding = ''.join(field(k, label, "number") for k, label in (("cash", "Usable cash now"), ("facilities", "Committed, drawable facilities"), ("debtDue", "Debt due within 24 months"), ("stressOcf", "Annual stressed operating cash flow, after interest, before capex"), ("capex", "Committed capex over 24 months"), ("buffer", "Minimum cash buffer")))
     scenarios = ''.join(field(k, label, "number", value) for k, label, value in (("entry", "Assumed entry price A$", ""), ("bear", "Bear terminal price A$", ""), ("base", "Base terminal price A$", ""), ("bull", "Bull terminal price A$", ""), ("dividend", "Annual cash dividend per share A$", ""), ("years", "Scenario horizon in years", "1"), ("costBps", "Round-trip spread / slippage cost, basis points", s["simulation_round_trip_cost_bps"])))
-    signals_data = json.loads(signals.to_json(orient="records"))
+    # Only the fields used by the notebook; do not duplicate all news/report data in HTML.
+    fields = [name for name in ("ticker", "company", "last_price", "research_lane") if name in signals]
+    signals_data = json.loads(signals[fields].to_json(orient="records"))
     payload = {"settings": s, "signals": signals_data, "marks": read_json(ROOT / "reports/latest_prices.json")}
     encoded = json.dumps(payload, allow_nan=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     return f'''<section class="panel research-workspace" id="research"><div class="panel-head"><div><h2>Research &amp; decision workspace</h2><p>Find the expectation that is wrong. Prove the business can survive. Price the outcome per share.</p></div><span class="event-badge">Hybrid research</span></div>

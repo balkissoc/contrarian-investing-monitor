@@ -21,7 +21,8 @@
   function checklist(r, s, today) {
     const missing = [];
     const blocked = [];
-    for (const key of ['thesis', 'expectations', 'valuationBasis', 'catalyst', 'falsify', 'exposures', 'fundingNotes']) if (!String(r[key] || '').trim()) missing.push(key);
+    const labels = {thesis:'investment thesis', expectations:'market expectations and contrary evidence', valuationBasis:'valuation basis and sources', catalyst:'catalyst and milestones', falsify:'thesis failure conditions', exposures:'shared economic exposures', fundingNotes:'funding assumptions and maturity schedule'};
+    for (const [key,label] of Object.entries(labels)) if (!String(r[key] || '').trim()) missing.push(label);
     if (!/^https:\/\//i.test(r.source || '')) missing.push('official evidence URL');
     if (!/^\d{4}-\d{2}-\d{2}$/.test(r.evidenceDate || '') || !Number.isFinite(Date.parse(r.evidenceDate)) || r.evidenceDate > today) missing.push('valid evidence date');
     else if ((Date.parse(today) - Date.parse(r.evidenceDate)) / 86400000 > 210) missing.push('updated financial evidence');
@@ -38,7 +39,7 @@
     const [entry, bear, base, bull, dividend, years, cost] = prices;
     const baseCase = prices.includes(null) ? null : scenario(entry, base, dividend, years, cost, s.annual_target_pct);
     if (!baseCase || bear < 0 || bear > base || base > bull) missing.push('ordered bear ≤ base ≤ bull scenarios');
-    else if (baseCase.annualPct < s.annual_target_pct) blocked.push('Base scenario below the annual planning hurdle');
+    else if (baseCase.annualPct + 1e-9 < s.annual_target_pct) blocked.push('Base scenario below the annual planning hurdle');
     if (!r.lane || r.lane === 'unclassified_missing_data') missing.push('research lane');
     if (r.lane === 'turnaround_research' && !String(r.turnaround || '').trim()) missing.push('funded turnaround milestones and dilution case');
     if (['cyclical_research', 'sector_specialist'].includes(r.lane) && !String(r.sectorNotes || '').trim()) missing.push('sector-specific or mid-cycle assessment');
@@ -85,6 +86,16 @@
     if (order.units * price / turnover * 100 > s.max_order_turnover_pct) return 'Order exceeds the model turnover participation limit';
     return '';
   }
+  function calendarReturns(book, today) {
+    const startYear=Number(book.started.slice(0,4)), currentYear=Number(today.slice(0,4)), rows=[];
+    for (let year=startYear;year<=currentYear;year++) {
+      const start=year===startYear?{date:book.started,equity:book.capital}:book.nav.find(n=>n.date===`${year-1}-12-31`);
+      const end=year===currentYear?book.nav.filter(n=>n.date.startsWith(String(year))).at(-1):book.nav.find(n=>n.date===`${year}-12-31`);
+      const complete=Boolean(start&&end&&end.date===`${year}-12-31`&&(year>startYear||book.started===`${year}-01-01`));
+      rows.push({year,returnPct:start&&end?pct(end.equity,start.equity):null,status:!start||!end?'Year-end observation missing':complete?'Full calendar year':year===currentYear?'Year to date / partial year':'Partial first year',complete});
+    }
+    return rows;
+  }
   function settle(book, marks, s, today) {
     // Fills use the first later close actually seen by this browser; never the signal close.
     // Broker fees plus slippage are explicit. This is an illustrative paper ledger only.
@@ -116,7 +127,7 @@
     book.ledger.sort((a,b)=>a.date.localeCompare(b.date) || ((a.side==='SPLIT'?0:a.side==='DIVIDEND'?1:2)-(b.side==='SPLIT'?0:b.side==='DIVIDEND'?1:2)));
     return book;
   }
-  const api = {num, pct, scenario, funding, checklist, holdings, valuation, buyLimit, settle};
+  const api = {num, pct, scenario, funding, checklist, holdings, valuation, buyLimit, calendarReturns, settle};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   root.ContrarianResearch = api;
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -62,7 +62,7 @@
     // Keep in-progress notes when moving to another company, without marking them reviewed.
     if (dirty) {
       const current = readForm(), key = normalise(form.dataset.loadedTicker || '');
-      if (key) { state.records[key] = {...current, ticker:key, reviewedAt:state.records[key]?.reviewedAt || ''}; persist(); }
+      if (key) { state.records[key] = {...current, ticker:key, reviewedAt:''}; persist(); }
     }
     form.reset();
     const signal = data.signals.find(row => row.ticker === ticker) || {};
@@ -88,7 +88,7 @@
   function captureDraft() {
     if (!dirty) return;
     const r = readForm(), ticker = normalise(form.dataset.loadedTicker || r.ticker);
-    if (ticker) state.records[ticker] = {...r, ticker, reviewedAt:state.records[ticker]?.reviewedAt || ''};
+    if (ticker) state.records[ticker] = {...r, ticker, reviewedAt:''};
   }
   byId('research-export').addEventListener('click', () => {
     captureDraft();
@@ -129,8 +129,11 @@
     if (turnaround>s.turnaround_total_pct) risks.push('Combined turnaround allocation exceeds its ceiling');
     for (const [tag,weight] of Object.entries(exposures)) if (weight>s.shared_exposure_review_pct) risks.push(`${tag}: ${weight.toFixed(1)}% shared exposure needs review`);
     const overdue = Object.entries(state.records).filter(([,r])=>r.reviewDate && r.reviewDate<today()).map(([ticker])=>ticker);
+    const annualRows=C.calendarReturns(b,today()).map(row=>`<tr><td>${row.year}</td><td>${percent(row.returnPct)}</td><td>${escape(row.status)}</td><td>${row.complete?(row.returnPct+1e-9>=s.annual_target_pct?'Met 20% target':'Below 20% target'):'Not assessed as a full year'}</td></tr>`).join('');
     byId('paper-results').innerHTML = `<div class="research-summary"><div><strong>${money(v.equity)}</strong><span>model equity including cash</span></div><div><strong>${money(v.cash)}</strong><span>uninvested cash</span></div><div><strong>${percent(v.equity===null?null:C.pct(v.equity,b.capital))}</strong><span>since ${escape(b.started)} · not annualised</span></div><div><strong>${percent(dd)}</strong><span>current drawdown from observed peak</span></div></div><p>First-year ambition: ${money(b.capital*1.2)}. Years below 20% count as missed targets; do not extrapolate short results.</p>${v.missing.length?`<p class="form-message">Prices missing or stale: ${escape(v.missing.join(', '))}. Complete performance is unavailable.</p>`:''}${risks.length?`<p class="form-message">Exposure review: ${escape(risks.join('; '))}.</p>`:''}${overdue.length?`<p class="form-message">Research reviews overdue: ${escape(overdue.join(', '))}.</p>`:''}<div class="table-wrap"><table><thead><tr><th>Company</th><th>Shares</th><th>Value</th><th>Lane</th><th>Price date</th></tr></thead><tbody>${currentRows || '<tr><td colspan="5">No paper holdings. All model capital remains in cash.</td></tr>'}</tbody></table></div><details><summary>Paper orders and fills</summary><div class="ledger"><table><thead><tr><th>Submitted</th><th>Company</th><th>Order</th><th>Status</th><th>Action</th></tr></thead><tbody>${pending}</tbody></table><table><thead><tr><th>Fill / event date</th><th>Company</th><th>Type</th><th>Details</th></tr></thead><tbody>${fills}</tbody></table></div></details>`;
     byId('paper-results').querySelectorAll('[data-cancel-order]').forEach(button=>button.addEventListener('click',()=>{const order=b.orders.find(o=>o.id===button.dataset.cancelOrder);if(order)order.status='cancelled';persist();renderPortfolio();}));
+    byId('paper-results').insertAdjacentHTML('beforeend',`<details><summary>Calendar-year target record</summary><div class="table-wrap"><table><thead><tr><th>Year</th><th>Return</th><th>Coverage</th><th>Each-year target</th></tr></thead><tbody>${annualRows}</tbody></table></div><p class="footnote">Full-year assessment needs stored observations at both year boundaries. Open the dashboard at year end to capture them. Missing boundaries and partial years are never annualised into a claimed 20% success.</p></details>`);
+    if (!corrupt) persist();
   }
   byId('paper-order').addEventListener('click',()=>{
     const ticker=normalise(form.elements.ticker.value), r=state.records[ticker], b=state.book;
