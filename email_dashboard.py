@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import html
 import os
 import re
@@ -7,8 +8,11 @@ import smtplib
 from email.message import EmailMessage
 from pathlib import Path
 
+from monitor_metrics import attention_score, risk_gate
 
 SUMMARY_PATH = Path("reports/latest_summary.md")
+CANDIDATES_PATH = Path("reports/latest_candidates.csv")
+NEAR_MISSES_PATH = Path("reports/latest_near_misses.csv")
 DASHBOARD_URL = os.getenv(
     "DASHBOARD_URL",
     "https://balkissoc.github.io/contrarian-investing-monitor/",
@@ -24,25 +28,40 @@ SMTP_PASSWORD = re.sub(r"\s+", "", os.getenv("SMTP_PASSWORD", ""))
 
 
 def extract(text: str, label: str, default: str = "—") -> str:
-    match = re.search(rf"^{re.escape(label)}:\s*(.+)$", text, flags=re.M)
+    match = re.search(rf"^{re.escape(label)}:\s*(.+)$", text, flags=re.MULTILINE)
     return match.group(1).strip() if match else default
 
 
-def first_near_miss(text: str) -> str:
-    section = re.search(r"## Near Misses\s*(.*?)(?:\n## |\Z)", text, flags=re.S)
-    if not section or "_None._" in section.group(1):
+def top_signal(path: Path) -> str:
+    if not path.exists():
+        return "None"
+    try:
+        with path.open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle))
+    except Exception:
+        return "See dashboard"
+    if not rows:
         return "None"
 
-    rows = [line for line in section.group(1).splitlines() if line.strip().startswith("|")]
-    if len(rows) < 3:
-        return "See dashboard"
-    cells = [cell.strip() for cell in rows[2].strip("|").split("|")]
-    if len(cells) >= 8:
-        ticker = cells[1]
-        company = cells[2]
-        one_day = cells[5]
-        return f"{ticker} — {company} ({one_day}% 1-day)"
-    return "See dashboard"
+    def score(row: dict[str, str]) -> int:
+        try:
+            return int(float(row.get("attention_score", "")))
+        except (TypeError, ValueError):
+            return attention_score(
+                row.get("one_day_pct"),
+                row.get("five_day_pct"),
+                row.get("twenty_day_pct"),
+                row.get("volume_spike_vs_20d"),
+            )
+
+    top = max(rows, key=score)
+    ticker = str(top.get("ticker", "")).replace(".AX", "")
+    company = str(top.get("company", ""))
+    gate = str(top.get("risk_gate_label", "") or risk_gate(
+        top.get("avoid_flags"), top.get("market_cap_aud_approx"),
+        top.get("openai_classification"), top.get("news_headlines"),
+    )[1])
+    return f"{ticker} — {company} ({score(top)}/100; {gate})"
 
 
 def main() -> None:
@@ -56,7 +75,8 @@ def main() -> None:
     scanned = extract(text, "Watchlist scanned")
     candidates = extract(text, "Candidates found")
     near_misses = extract(text, "Near misses found")
-    top_near = first_near_miss(text)
+    top_candidate = top_signal(CANDIDATES_PATH)
+    top_near = top_signal(NEAR_MISSES_PATH)
 
     subject = f"Contrarian Monitor — {candidates} candidate(s), {near_misses} near miss(es)"
 
@@ -66,6 +86,7 @@ Latest scan: {run_time}
 Universe scanned: {scanned}
 Candidates: {candidates}
 Near misses: {near_misses}
+Top candidate: {top_candidate}
 Top near miss: {top_near}
 
 Open the graphical dashboard:
@@ -83,6 +104,7 @@ Research aide only. Review ASX announcements, balance sheet, debt, liquidity, ea
       <tr><td style="padding:8px;border-bottom:1px solid #e5e7eb">Universe scanned</td><td style="padding:8px;border-bottom:1px solid #e5e7eb;text-align:right"><strong>{html.escape(scanned)}</strong></td></tr>
       <tr><td style="padding:8px;border-bottom:1px solid #e5e7eb">Candidates</td><td style="padding:8px;border-bottom:1px solid #e5e7eb;text-align:right"><strong>{html.escape(candidates)}</strong></td></tr>
       <tr><td style="padding:8px;border-bottom:1px solid #e5e7eb">Near misses</td><td style="padding:8px;border-bottom:1px solid #e5e7eb;text-align:right"><strong>{html.escape(near_misses)}</strong></td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #e5e7eb">Top candidate</td><td style="padding:8px;border-bottom:1px solid #e5e7eb;text-align:right">{html.escape(top_candidate)}</td></tr>
       <tr><td style="padding:8px;border-bottom:1px solid #e5e7eb">Top near miss</td><td style="padding:8px;border-bottom:1px solid #e5e7eb;text-align:right">{html.escape(top_near)}</td></tr>
     </table>
     <p><a href="{safe_url}" style="display:inline-block;background:#24599c;color:white;text-decoration:none;font-weight:bold;padding:12px 18px;border-radius:8px">Open graphical dashboard</a></p>

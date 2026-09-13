@@ -13,12 +13,17 @@ This tool screens a broad Australian large/mid-cap universe of roughly 300 compa
 - Checks market capitalisation only after a stock has triggered a price event, reducing unnecessary data requests on the ~300-stock universe.
 - Flags **candidates** that meet the sharp-drop thresholds.
 - Flags **near misses** that are not yet candidates but are starting to sell off.
+- Assigns a transparent **0–100 attention score** based on price-event strength, multi-window confirmation and unusual volume. The score ranks manual-review urgency; it is not a valuation or buy score.
+- Applies a separate first-pass risk/data gate for headline risk terms, unverified market capitalisation, missing news context and high-risk AI classifications.
 - Pulls recent Google News RSS headlines for triggered stocks.
 - Scans headlines for avoid flags such as insolvency, fraud, trading halt, capital raising, covenant and going concern terms.
 - Optionally uses OpenAI to classify each triggered stock as temporary panic, watch-only, high risk or possible permanent impairment.
 - Writes dated CSV reports to `reports/`.
 - Updates `reports/latest_candidates.csv`, `reports/latest_near_misses.csv`, `reports/latest_summary.md` and `reports/performance_log.csv` each run.
-- Regenerates `index.html` into a graphical GitHub Pages dashboard.
+- Regenerates `index.html` into a searchable, sortable and mobile-responsive GitHub Pages dashboard, with every result available rather than a truncated top list.
+- Records the actual market-data date separately from the AWST scan date.
+- Condenses repeated daily signals into distinct sell-off episodes for dashboard reporting.
+- Measures mature episodes at fixed 5, 20 and 60 ASX-session horizons and refreshes performance prices in batches to reduce stale records and unnecessary requests.
 - Emails `balkissoc@gmail.com` a concise scan summary and a direct link to the graphical dashboard when the Gmail App Password secret is configured.
 - Runs manually from GitHub Actions using `workflow_dispatch`.
 - Runs automatically on ASX business days at about 6:00am Perth time.
@@ -49,6 +54,23 @@ The universe refresh diagnostic is written to:
 | 1-day fall | -7% or worse | -4% or worse |
 | 5-day fall | -12% or worse | -8% or worse |
 | 20-day fall | -20% or worse | -15% or worse |
+
+## Attention score and risk gate
+
+The attention score is deliberately mechanical and reproducible:
+
+| Component | Maximum points |
+| --- | ---: |
+| Strongest fall relative to its candidate threshold | 55 |
+| Breadth across 1-day, 5-day and 20-day windows | 25 |
+| Confirmation across multiple candidate windows | 10 |
+| Volume above the 20-day average | 10 |
+
+The score does **not** assess valuation, solvency, balance-sheet strength or expected return. Those matters remain manual-review gates. Signals for the same ticker separated by no more than seven calendar days are treated as one sell-off episode in the dashboard so that a prolonged decline is not counted as a new independent event every day.
+
+Performance aggregates include only successfully refreshed adjusted-price histories. Unavailable histories are retained in the CSV, visibly flagged, and excluded from aggregate outcomes. Legacy signal-close dates are inferred; 5/20/60-session outcomes are descriptive, not a tradable back-test, benchmark comparison or forecast. Episode grouping does not establish statistical independence.
+
+The dashboard displays scan times in Perth time, records price-session dates for new signals, and warns when a scan is more than 96 hours old. Search, sorting and “Show all” controls expose every candidate and near miss. Scheduled and manual runs retain email delivery; code-push runs refresh the site without sending an extra email.
 
 ## Email setup
 
@@ -106,7 +128,7 @@ The workflow currently uses `gpt-4o-mini` when classification is enabled.
 | `reports/latest_candidates.csv` | Latest strict contrarian candidates |
 | `reports/latest_near_misses.csv` | Latest near-miss sell-offs |
 | `reports/latest_summary.md` | Human-readable summary |
-| `reports/performance_log.csv` | Tracks later performance of triggered stocks |
+| `reports/performance_log.csv` | Tracks current and fixed 5/20/60-session outcomes of triggered stocks |
 | `reports/universe_refresh.log` | Records how the ~300-stock universe was built |
 | `config/watchlist_asx.csv` | Cached resolved screening universe |
 

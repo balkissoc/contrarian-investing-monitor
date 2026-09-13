@@ -7,7 +7,6 @@ import yfinance as yf
 
 import contrarian
 
-
 HISTORY_RETRIES = 3
 
 
@@ -70,6 +69,11 @@ def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
     market_cap_status = ""
     if market_cap is not None and market_cap < contrarian.MIN_MARKET_CAP:
         return None, "below_market_cap_threshold"
+    company, enriched_market_cap = contrarian.improve_company_name(stock, company, market_cap)
+    if enriched_market_cap is not None:
+        market_cap = enriched_market_cap
+    if market_cap is not None and market_cap < contrarian.MIN_MARKET_CAP:
+        return None, "below_market_cap_threshold"
     if market_cap is None:
         market_cap_status = "Market cap temporarily unavailable; retained because ticker is in the broad A300 universe."
 
@@ -80,12 +84,25 @@ def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
     news_items = contrarian.fetch_news(company, ticker)
     headlines = contrarian.flatten_headlines(news_items)
     avoid_flags = contrarian.identify_avoid_flags(headlines)
+    gate_key, gate_label = contrarian.risk_gate(avoid_flags, market_cap, "", headlines)
+    review_score = contrarian.attention_score(
+        one_day,
+        five_day,
+        twenty_day,
+        volume_spike,
+        candidate_thresholds=(
+            contrarian.ONE_DAY_DROP,
+            contrarian.FIVE_DAY_DROP,
+            contrarian.TWENTY_DAY_DROP,
+        ),
+    )
 
     row = {
         "rank": "",
         "signal_type": signal_type,
         "ticker": ticker,
         "company": company,
+        "price_date": contrarian.price_date_from_history(hist),
         "last_price": contrarian.safe_round(last_close),
         "market_cap_aud_approx": market_cap,
         "one_day_pct": contrarian.safe_round(one_day),
@@ -93,8 +110,15 @@ def robust_screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
         "twenty_day_pct": contrarian.safe_round(twenty_day),
         "volume_spike_vs_20d": contrarian.safe_round(volume_spike),
         "trigger": trigger,
+        "attention_score": review_score,
+        "attention_band": contrarian.attention_band(review_score),
+        "risk_gate": gate_key,
+        "risk_gate_label": gate_label,
         "avoid_flags": avoid_flags,
         "news_headlines": headlines,
+        "news_sources": contrarian.flatten_news_field(news_items, "source"),
+        "news_urls": contrarian.flatten_news_field(news_items, "link"),
+        "news_published": contrarian.flatten_news_field(news_items, "published"),
         "openai_score": "",
         "openai_classification": "",
         "openai_rationale": "",

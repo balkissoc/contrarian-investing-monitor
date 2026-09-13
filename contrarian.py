@@ -8,14 +8,17 @@ import time
 import urllib.parse
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 import requests
 import yfinance as yf
+
+from monitor_metrics import attention_band, attention_score, risk_gate
 
 try:
     from openai import OpenAI
@@ -27,6 +30,7 @@ WATCHLIST_PATH = Path("config/watchlist_asx.csv")
 REPORTS_DIR = Path("reports")
 PERFORMANCE_LOG_PATH = REPORTS_DIR / "performance_log.csv"
 DASHBOARD_PATH = Path("index.html")
+PERTH_TZ = ZoneInfo("Australia/Perth")
 
 MIN_MARKET_CAP = int(os.getenv("MIN_MARKET_CAP", "500000000"))
 ONE_DAY_DROP = float(os.getenv("ONE_DAY_DROP", "-7"))
@@ -85,6 +89,7 @@ REPORT_COLUMNS = [
     "signal_type",
     "ticker",
     "company",
+    "price_date",
     "last_price",
     "market_cap_aud_approx",
     "one_day_pct",
@@ -92,13 +97,42 @@ REPORT_COLUMNS = [
     "twenty_day_pct",
     "volume_spike_vs_20d",
     "trigger",
+    "attention_score",
+    "attention_band",
+    "risk_gate",
+    "risk_gate_label",
     "avoid_flags",
     "news_headlines",
+    "news_sources",
+    "news_urls",
+    "news_published",
     "openai_score",
     "openai_classification",
     "openai_rationale",
     "manual_review_notes",
     "error",
+]
+
+PERFORMANCE_COLUMNS = [
+    "signal_date",
+    "price_date",
+    "price_date_source",
+    "current_price_date",
+    "history_status",
+    "ticker",
+    "company",
+    "signal_type",
+    "signal_price",
+    "current_price",
+    "days_since_signal",
+    "trading_sessions_since_signal",
+    "return_pct",
+    "return_5d_pct",
+    "return_20d_pct",
+    "return_60d_pct",
+    "last_checked",
+    "openai_score_at_signal",
+    "openai_classification_at_signal",
 ]
 
 
@@ -124,7 +158,7 @@ class ScanResult:
 def pct_change(current: float, previous: float) -> float | None:
     if previous is None or previous == 0:
         return None
-    return (current / previous - 1) * 100
+    return round((current / previous - 1) * 100, 10)
 
 
 def safe_round(value: float | None, digits: int = 2) -> float | None:
@@ -291,13 +325,54 @@ def fetch_news(company: str, ticker: str) -> list[dict[str, str]]:
 
 
 def flatten_headlines(news_items: list[dict[str, str]]) -> str:
-    return " | ".join(item["title"] for item in news_items if item.get("title"))
+    return flatten_news_field(news_items, "title")
+
+
+def flatten_news_field(news_items: list[dict[str, str]], field: str) -> str:
+    # Keep empty entries so a missing publisher/link cannot shift onto another title.
+    return " | ".join(str(item.get(field, "")).replace("|", "¦").strip() for item in news_items if item.get("title"))
 
 
 def identify_avoid_flags(headlines: str) -> str:
     text = headlines.lower()
     flags = sorted({keyword for keyword in AVOID_KEYWORDS if keyword in text})
     return "; ".join(flags)
+
+
+def price_date_from_history(history: pd.DataFrame) -> str:
+    if history.empty:
+        return ""
+    try:
+        valid = history.dropna(subset=["Close"]) if "Close" in history.columns else history
+        return pd.Timestamp(valid.index[-1]).date().isoformat()
+    except Exception:
+        return ""
+
+
+def improve_company_name(
+    stock: yf.Ticker,
+    company: str,
+    known_market_cap: int | None = None,
+) -> tuple[str, int | None]:
+    """Best-efforts company-name enrichment for triggered shares only."""
+
+    market_cap = known_market_cap if known_market_cap is not None else get_market_cap(stock)
+    cleaned = str(company or "").strip()
+    likely_truncated = len(cleaned) >= 24 or cleaned.endswith((" L", " LT", " HOLDIN", " MANAGEME", " AUSTR"))
+    if cleaned and not likely_truncated and market_cap is not None:
+        return cleaned, market_cap
+
+    try:
+        info = stock.get_info()
+        if market_cap is None and info.get("marketCap"):
+            market_cap = int(info["marketCap"])
+        resolved = str(info.get("longName") or info.get("shortName") or "").strip()
+        if resolved:
+            cleaned = resolved
+    except Exception:
+        pass
+
+    return cleaned, market_cap
 
 
 def classify_with_openai(row: dict[str, Any], news_items: list[dict[str, str]]) -> dict[str, Any]:
@@ -367,7 +442,7 @@ def screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
     if hist.empty or len(hist) < 21:
         return None, "insufficient_price_history"
 
-    market_cap = get_market_cap(stock)
+    company, market_cap = improve_company_name(stock, company)
     if market_cap is None:
         return None, "market_cap_unavailable"
     if market_cap < MIN_MARKET_CAP:
@@ -407,12 +482,15 @@ def screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
     news_items = fetch_news(company, ticker)
     headlines = flatten_headlines(news_items)
     avoid_flags = identify_avoid_flags(headlines)
+    gate_key, gate_label = risk_gate(avoid_flags, market_cap, "", headlines)
+    review_score = attention_score(one_day, five_day, twenty_day, volume_spike)
 
     row = {
         "rank": "",
         "signal_type": signal_type,
         "ticker": ticker,
         "company": company,
+        "price_date": price_date_from_history(hist),
         "last_price": safe_round(last_close),
         "market_cap_aud_approx": market_cap,
         "one_day_pct": safe_round(one_day),
@@ -420,8 +498,15 @@ def screen_ticker(ticker: str, company: str) -> tuple[dict | None, str]:
         "twenty_day_pct": safe_round(twenty_day),
         "volume_spike_vs_20d": safe_round(volume_spike),
         "trigger": trigger,
+        "attention_score": review_score,
+        "attention_band": attention_band(review_score),
+        "risk_gate": gate_key,
+        "risk_gate_label": gate_label,
         "avoid_flags": avoid_flags,
         "news_headlines": headlines,
+        "news_sources": flatten_news_field(news_items, "source"),
+        "news_urls": flatten_news_field(news_items, "link"),
+        "news_published": flatten_news_field(news_items, "published"),
         "openai_score": "",
         "openai_classification": "",
         "openai_rationale": "",
@@ -454,73 +539,224 @@ def add_openai_classifications(df: pd.DataFrame) -> pd.DataFrame:
             df.at[index, key] = value
         scored += 1
 
+    for index, row in df.iterrows():
+        gate_key, gate_label = risk_gate(
+            row.get("avoid_flags"),
+            row.get("market_cap_aud_approx"),
+            row.get("openai_classification"),
+            row.get("news_headlines"),
+        )
+        df.at[index, "risk_gate"] = gate_key
+        df.at[index, "risk_gate_label"] = gate_label
+
     return df
+
+
+def _history_series(data: pd.DataFrame, ticker: str, field: str, batch_size: int) -> pd.Series:
+    if data.empty:
+        return pd.Series(dtype=float)
+
+    series: pd.Series | pd.DataFrame
+    try:
+        if isinstance(data.columns, pd.MultiIndex):
+            first_level = set(data.columns.get_level_values(0).astype(str))
+            second_level = set(data.columns.get_level_values(1).astype(str))
+            if ticker in first_level:
+                series = data[ticker][field]
+            elif ticker in second_level:
+                series = data[field][ticker]
+            else:
+                return pd.Series(dtype=float)
+        elif batch_size == 1 and field in data.columns:
+            series = data[field]
+        else:
+            return pd.Series(dtype=float)
+    except (KeyError, TypeError):
+        return pd.Series(dtype=float)
+
+    if isinstance(series, pd.DataFrame):
+        series = series.iloc[:, 0]
+    series = pd.to_numeric(series, errors="coerce").dropna()
+    if series.empty:
+        return pd.Series(dtype=float)
+
+    index = pd.to_datetime(series.index, errors="coerce")
+    valid = ~index.isna()
+    series = series.loc[valid].copy()
+    index = index[valid]
+    if getattr(index, "tz", None) is not None:
+        # Daily bars carry the exchange's session date. Converting Sydney midnight
+        # to Perth first would incorrectly move each session into the previous day.
+        index = index.tz_localize(None)
+    series.index = index.normalize()
+    return series.groupby(level=0).last().sort_index()
+
+
+def download_performance_history(
+    tickers: list[str],
+    start_date: str,
+    end_date: str,
+    *,
+    batch_size: int = 25,
+) -> dict[str, tuple[pd.Series, pd.Series]]:
+    """Download raw and adjusted closes once per ticker batch, not once per signal row."""
+
+    histories: dict[str, tuple[pd.Series, pd.Series]] = {}
+    for start in range(0, len(tickers), batch_size):
+        batch = tickers[start:start + batch_size]
+        data = pd.DataFrame()
+        for attempt in range(2):
+            try:
+                data = yf.download(
+                    batch,
+                    start=start_date,
+                    end=end_date,
+                    interval="1d",
+                    auto_adjust=False,
+                    progress=False,
+                    group_by="ticker",
+                    threads=True,
+                )
+            except Exception as exc:
+                print(f"Performance history batch failed ({', '.join(batch[:3])}...): {exc}")
+            if not data.empty:
+                break
+            if attempt == 0:
+                time.sleep(4)
+        if data.empty:
+            continue
+
+        for ticker in batch:
+            raw_close = _history_series(data, ticker, "Close", len(batch))
+            adjusted_close = _history_series(data, ticker, "Adj Close", len(batch))
+            # Never silently mix raw-price returns into adjusted-return cohorts.
+            if not raw_close.empty and not adjusted_close.empty:
+                histories[ticker] = (raw_close, adjusted_close)
+        if start + batch_size < len(tickers):
+            time.sleep(1)
+    return histories
+
+
+def _future_return(adjusted: pd.Series, anchor_date: pd.Timestamp, sessions: int) -> float | None:
+    anchor_values = adjusted[adjusted.index <= anchor_date]
+    future_values = adjusted[adjusted.index > anchor_date]
+    if anchor_values.empty or len(future_values) < sessions:
+        return None
+    anchor_price = float(anchor_values.iloc[-1])
+    future_price = float(future_values.iloc[sessions - 1])
+    return pct_change(future_price, anchor_price)
 
 
 def update_performance_log(today: str, candidates_df: pd.DataFrame, near_misses_df: pd.DataFrame) -> pd.DataFrame:
     REPORTS_DIR.mkdir(exist_ok=True)
-    columns = [
-        "signal_date",
-        "ticker",
-        "company",
-        "signal_type",
-        "signal_price",
-        "current_price",
-        "days_since_signal",
-        "return_pct",
-        "last_checked",
-        "openai_score_at_signal",
-        "openai_classification_at_signal",
-    ]
 
     if PERFORMANCE_LOG_PATH.exists():
         log = pd.read_csv(PERFORMANCE_LOG_PATH)
     else:
-        log = pd.DataFrame(columns=columns)
+        log = pd.DataFrame(columns=PERFORMANCE_COLUMNS)
+
+    numeric_columns = {
+        "signal_price",
+        "current_price",
+        "days_since_signal",
+        "trading_sessions_since_signal",
+        "return_pct",
+        "return_5d_pct",
+        "return_20d_pct",
+        "return_60d_pct",
+        "openai_score_at_signal",
+    }
+    for column in PERFORMANCE_COLUMNS:
+        if column not in log.columns:
+            log[column] = pd.NA if column in numeric_columns else ""
+    for column in numeric_columns:
+        log[column] = pd.to_numeric(log[column], errors="coerce").astype(float)
 
     new_signals = pd.concat([candidates_df, near_misses_df], ignore_index=True)
     for _, row in new_signals.iterrows():
         existing = (
-            (log.get("signal_date", pd.Series(dtype=str)).astype(str) == today)
-            & (log.get("ticker", pd.Series(dtype=str)).astype(str) == str(row["ticker"]))
-            & (log.get("signal_type", pd.Series(dtype=str)).astype(str) == str(row["signal_type"]))
+            (log["signal_date"].astype(str) == today)
+            & (log["ticker"].astype(str) == str(row["ticker"]))
+            & (log["signal_type"].astype(str) == str(row["signal_type"]))
         )
-        if not existing.any():
-            log.loc[len(log)] = {
-                "signal_date": today,
-                "ticker": row["ticker"],
-                "company": row["company"],
-                "signal_type": row["signal_type"],
-                "signal_price": row["last_price"],
-                "current_price": row["last_price"],
-                "days_since_signal": 0,
-                "return_pct": 0,
-                "last_checked": today,
-                "openai_score_at_signal": row.get("openai_score", ""),
-                "openai_classification_at_signal": row.get("openai_classification", ""),
-            }
+        if existing.any():
+            continue
+        log.loc[len(log)] = {
+            "signal_date": today,
+            "price_date": row.get("price_date", ""),
+            "price_date_source": "recorded",
+            "current_price_date": row.get("price_date", ""),
+            "history_status": "awaiting_refresh",
+            "ticker": row["ticker"],
+            "company": row["company"],
+            "signal_type": row["signal_type"],
+            "signal_price": row["last_price"],
+            "current_price": row["last_price"],
+            "days_since_signal": 0,
+            "trading_sessions_since_signal": 0,
+            "return_pct": 0.0,
+            "return_5d_pct": None,
+            "return_20d_pct": None,
+            "return_60d_pct": None,
+            "last_checked": today,
+            "openai_score_at_signal": row.get("openai_score", ""),
+            "openai_classification_at_signal": row.get("openai_classification", ""),
+        }
+
+    if log.empty:
+        log = log[PERFORMANCE_COLUMNS]
+        log.to_csv(PERFORMANCE_LOG_PATH, index=False)
+        return log
+
+    anchor_candidates = pd.to_datetime(log["price_date"], errors="coerce")
+    fallback_dates = pd.to_datetime(log["signal_date"], errors="coerce")
+    earliest_anchor = anchor_candidates.fillna(fallback_dates).min()
+    if pd.isna(earliest_anchor):
+        earliest_anchor = pd.Timestamp(today) - timedelta(days=120)
+    start_date = (pd.Timestamp(earliest_anchor) - timedelta(days=10)).date().isoformat()
+    end_date = (pd.Timestamp(today) + timedelta(days=2)).date().isoformat()
+    tickers = sorted({str(value).strip() for value in log["ticker"] if str(value).strip()})
+    histories = download_performance_history(tickers, start_date, end_date)
+    today_dt = pd.Timestamp(today)
+    log["history_status"] = "refresh_unavailable"
 
     for index, row in log.iterrows():
         ticker = str(row.get("ticker", "")).strip()
-        if not ticker:
+        history = histories.get(ticker)
+        if not history:
             continue
-        try:
-            hist = yf.Ticker(ticker).history(period="5d", interval="1d", auto_adjust=True)
-            if not hist.empty:
-                current_price = float(hist["Close"].dropna().iloc[-1])
-                signal_price = float(row.get("signal_price", 0))
-                signal_date = pd.to_datetime(row.get("signal_date"), errors="coerce")
-                today_dt = pd.to_datetime(today)
-                days_since = int((today_dt - signal_date).days) if pd.notna(signal_date) else ""
-                return_pct = pct_change(current_price, signal_price)
-                log.at[index, "current_price"] = safe_round(current_price)
-                log.at[index, "days_since_signal"] = days_since
-                log.at[index, "return_pct"] = safe_round(return_pct)
-                log.at[index, "last_checked"] = today
-        except Exception as exc:
-            print(f"Performance revaluation failed for {ticker}: {exc}")
+        raw_close, adjusted_close = history
 
-    log = log[columns]
+        anchor = pd.to_datetime(row.get("price_date"), errors="coerce")
+        anchor_source = str(row.get("price_date_source", "") or "")
+        if pd.isna(anchor):
+            anchor = pd.to_datetime(row.get("signal_date"), errors="coerce")
+            anchor_source = "inferred_from_legacy_signal_date"
+        if pd.isna(anchor):
+            continue
+
+        available_anchors = adjusted_close[adjusted_close.index <= pd.Timestamp(anchor)]
+        if available_anchors.empty:
+            continue
+        anchor_date = pd.Timestamp(available_anchors.index[-1])
+        future_adjusted = adjusted_close[adjusted_close.index > anchor_date]
+        current_adjusted = float(adjusted_close.iloc[-1])
+        anchor_adjusted = float(available_anchors.iloc[-1])
+
+        log.at[index, "price_date"] = anchor_date.date().isoformat()
+        log.at[index, "price_date_source"] = anchor_source or "recorded"
+        log.at[index, "current_price_date"] = adjusted_close.index[-1].date().isoformat()
+        log.at[index, "history_status"] = "refreshed"
+        log.at[index, "current_price"] = safe_round(float(raw_close.iloc[-1]))
+        log.at[index, "days_since_signal"] = max(0, int((today_dt - anchor_date).days))
+        log.at[index, "trading_sessions_since_signal"] = len(future_adjusted)
+        log.at[index, "return_pct"] = safe_round(pct_change(current_adjusted, anchor_adjusted))
+        log.at[index, "return_5d_pct"] = safe_round(_future_return(adjusted_close, anchor_date, 5))
+        log.at[index, "return_20d_pct"] = safe_round(_future_return(adjusted_close, anchor_date, 20))
+        log.at[index, "return_60d_pct"] = safe_round(_future_return(adjusted_close, anchor_date, 60))
+        log.at[index, "last_checked"] = today
+
+    log = log[PERFORMANCE_COLUMNS]
     log.to_csv(PERFORMANCE_LOG_PATH, index=False)
     return log
 
@@ -563,6 +799,9 @@ def build_markdown_summary(result: ScanResult) -> str:
         "rank",
         "ticker",
         "company",
+        "price_date",
+        "attention_score",
+        "risk_gate_label",
         "last_price",
         "market_cap_aud_approx",
         "one_day_pct",
@@ -612,6 +851,9 @@ def build_dashboard_html(result: ScanResult) -> str:
         "rank",
         "ticker",
         "company",
+        "price_date",
+        "attention_score",
+        "risk_gate_label",
         "last_price",
         "market_cap_aud_approx",
         "one_day_pct",
@@ -779,9 +1021,32 @@ def send_email_report(result: ScanResult) -> None:
 def sort_signal_df(df: pd.DataFrame) -> pd.DataFrame:
     if df.empty:
         return df
+    df = df.copy()
+    df["attention_score"] = df.apply(
+        lambda row: attention_score(
+            row.get("one_day_pct"),
+            row.get("five_day_pct"),
+            row.get("twenty_day_pct"),
+            row.get("volume_spike_vs_20d"),
+            candidate_thresholds=(ONE_DAY_DROP, FIVE_DAY_DROP, TWENTY_DAY_DROP),
+        ),
+        axis=1,
+    )
+    df["attention_band"] = df["attention_score"].map(attention_band)
+    gates = df.apply(
+        lambda row: risk_gate(
+            row.get("avoid_flags"),
+            row.get("market_cap_aud_approx"),
+            row.get("openai_classification"),
+            row.get("news_headlines"),
+        ),
+        axis=1,
+    )
+    df["risk_gate"] = [gate[0] for gate in gates]
+    df["risk_gate_label"] = [gate[1] for gate in gates]
     df = df.sort_values(
-        by=["one_day_pct", "five_day_pct", "twenty_day_pct"],
-        ascending=True,
+        by=["attention_score", "one_day_pct", "five_day_pct", "twenty_day_pct"],
+        ascending=[False, True, True, True],
         na_position="last",
     ).reset_index(drop=True)
     df["rank"] = range(1, len(df) + 1)
@@ -802,8 +1067,10 @@ def run_scan() -> ScanResult:
             rows.append(result)
 
     REPORTS_DIR.mkdir(exist_ok=True)
-    run_time = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now_utc = datetime.now(timezone.utc)
+    now_perth = now_utc.astimezone(PERTH_TZ)
+    run_time = now_perth.strftime("%d %b %Y %H:%M:%S AWST")
+    today = now_perth.strftime("%Y-%m-%d")
 
     output_path = REPORTS_DIR / f"contrarian_candidates_{today}.csv"
     latest_csv_path = REPORTS_DIR / "latest_candidates.csv"
@@ -847,7 +1114,9 @@ def run_scan() -> ScanResult:
     )
 
     summary_path.write_text(build_markdown_summary(result), encoding="utf-8")
-    DASHBOARD_PATH.write_text(build_dashboard_html(result), encoding="utf-8")
+    from dashboard import build_dashboard
+
+    DASHBOARD_PATH.write_text(build_dashboard(), encoding="utf-8")
     return result
 
 
