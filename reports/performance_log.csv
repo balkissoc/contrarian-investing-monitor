@@ -977,5 +977,5 @@ signal_date,price_date,price_date_source,current_price_date,history_status,ticke
 2026-09-13,2026-09-11,recorded,2026-09-11,refreshed,BAP.AX,BAPCOR LTD,near_miss,0.8,0.8,2.0,0.0,0.0,,,,2026-09-13,,not_run_limit_reached,,,,
 2026-09-13,2026-09-11,recorded,2026-09-11,refreshed,S32.AX,SOUTH32 LTD,near_miss,5.02,5.02,2.0,0.0,0.0,,,,2026-09-13,,not_run_limit_reached,,,,
 2026-09-13,2026-09-11,recorded,2026-09-11,refreshed,BHP.AX,BHP GROUP LTD,near_miss,60.87,60.87,2.0,0.0,0.0,,,,2026-09-13,,not_run_limit_reached,,,,
-2026-09-13,2026-09-11,recorded,2026-09-11,refreshed,GPT.AX,GPT GROUP,near_miss,4.39,4.39,2.0,0.0,0.0,,,,2026-09-13,,not_run,51,sector_specialist,no_systemic_trigger,2026-09-hybrid-v1
-2026-09-13,2026-09-11,recorded,2026-09-11,refreshed,ORI.AX,Orica Limited,near_miss,22.05,22.05,2.0,0.0,0.0,,,,2026-09-13,,not_run,42,cyclical_research,no_systemic_trigger,2026-09-hybrid-v1
+2026-09-13,2026-09-11,recorded,2026-09-11,refreshed,GPT.AX,GPT GROUP,near_miss,4.39,4.39,2.0,0.0,0.0,,,,2026-09-13,,not_run,51.0,sector_specialist,no_systemic_trigger,2026-09-hybrid-v1
+2026-09-13,2026-09-11,recorded,2026-09-11,refreshed,ORI.AX,Orica Limited,near_miss,22.05,22.05,2.0,0.0,0.0,,,,2026-09-13,,not_run,42.0,cyclical_research,no_systemic_trigger,2026-09-hybrid-v1
