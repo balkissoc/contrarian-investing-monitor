@@ -1,7 +1,5 @@
 Global X A300: loaded 293 equity holdings with SEDOL identifiers.
-OpenFIGI resolution: 292 holdings loaded from trusted cache; 1 SEDOLs require mapping.
-OpenFIGI mapped 1/1 uncached SEDOLs...
-Global X/OpenFIGI resolution: 292 unique ASX tickers; 1 unresolved holdings.
-First unresolved holdings: BANNERMAN ENERGY
-Universe refreshed from Global X A300 holdings via OpenFIGI SEDOL mapping: 292 tickers written to config/watchlist_asx.csv.
-Ready to scan 292 ASX tickers.
+OpenFIGI resolution: 293 holdings loaded from trusted cache; 0 SEDOLs require mapping.
+Global X/OpenFIGI resolution: 293 unique ASX tickers; 0 unresolved holdings.
+Universe refreshed from Global X A300 holdings via OpenFIGI SEDOL mapping: 293 tickers written to config/watchlist_asx.csv.
+Ready to scan 293 ASX tickers.
