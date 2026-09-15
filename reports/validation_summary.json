@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-09-14",
+  "as_of": "2026-09-15",
   "settings_version": "2026-09-hybrid-v1",
   "benchmark": "A300.AX",
-  "prospective_events": 2,
+  "prospective_events": 9,
   "legacy_events": 272,
   "unavailable_or_stale": 0,
   "horizons": {
