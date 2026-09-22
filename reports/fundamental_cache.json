@@ -1278,7 +1278,7 @@
     "industry": "Gold",
     "fundamental_currency": "AUD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-09-16",
+    "fundamental_fetched": "2026-09-23",
     "fundamental_source": "https://au.finance.yahoo.com/quote/CYL.AX/financials/",
     "net_income": 171120000.0,
     "free_cash_flow": 14133625.0,
@@ -1662,5 +1662,31 @@
     "operating_cash_flow": -10564000.0,
     "total_cash": 8712000.0,
     "total_debt": 0.0
+  },
+  "ORG.AX": {
+    "sector": "Utilities",
+    "industry": "Utilities - Diversified",
+    "fundamental_currency": "AUD",
+    "fundamental_period": "2026-06-30",
+    "fundamental_fetched": "2026-09-23",
+    "fundamental_source": "https://au.finance.yahoo.com/quote/ORG.AX/financials/",
+    "net_income": 1574000000.0,
+    "free_cash_flow": 818625024.0,
+    "operating_cash_flow": 1916999936.0,
+    "total_cash": 866000000.0,
+    "total_debt": 5006000128.0
+  },
+  "ARB.AX": {
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts",
+    "fundamental_currency": "AUD",
+    "fundamental_period": "2026-06-30",
+    "fundamental_fetched": "2026-09-23",
+    "fundamental_source": "https://au.finance.yahoo.com/quote/ARB.AX/financials/",
+    "net_income": 92414000.0,
+    "free_cash_flow": 64307376.0,
+    "operating_cash_flow": 103666000.0,
+    "total_cash": 47895000.0,
+    "total_debt": 49553000.0
   }
 }
