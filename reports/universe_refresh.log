@@ -1,5 +1,6 @@
-Global X A300: loaded 294 equity holdings with SEDOL identifiers.
-OpenFIGI resolution: 294 holdings loaded from trusted cache; 0 SEDOLs require mapping.
-Global X/OpenFIGI resolution: 294 unique ASX tickers; 0 unresolved holdings.
-Universe refreshed from Global X A300 holdings via OpenFIGI SEDOL mapping: 294 tickers written to config/watchlist_asx.csv.
-Ready to scan 294 ASX tickers.
+Global X A300: loaded 297 equity holdings with SEDOL identifiers.
+OpenFIGI resolution: 288 holdings loaded from trusted cache; 9 SEDOLs require mapping.
+OpenFIGI mapped 9/9 uncached SEDOLs...
+Global X/OpenFIGI resolution: 297 unique ASX tickers; 0 unresolved holdings.
+Universe refreshed from Global X A300 holdings via OpenFIGI SEDOL mapping: 297 tickers written to config/watchlist_asx.csv.
+Ready to scan 297 ASX tickers.
