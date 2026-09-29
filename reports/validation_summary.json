@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-09-28",
+  "as_of": "2026-09-29",
   "settings_version": "2026-09-hybrid-v1",
   "benchmark": "A300.AX",
-  "prospective_events": 72,
+  "prospective_events": 74,
   "legacy_events": 272,
   "unavailable_or_stale": 0,
   "horizons": {
     "5d": {
-      "mature": 24,
-      "matched": 24,
-      "median_net_pct": -1.43,
-      "median_excess_pp": -1.47,
+      "mature": 31,
+      "matched": 31,
+      "median_net_pct": -1.69,
+      "median_excess_pp": -1.56,
       "hit_20_pct": null
     },
     "20d": {
