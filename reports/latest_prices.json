@@ -2,8 +2,8 @@
   "BHP.AX": {
     "ticker": "BHP.AX",
     "company": "BHP GROUP LTD",
-    "price": 60.290000915527344,
-    "date": "2026-09-29",
+    "price": 60.79499816894531,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -31,8 +31,8 @@
   "CBA.AX": {
     "ticker": "CBA.AX",
     "company": "COMMONWEALTH BANK OF AUSTRAL",
-    "price": 150.63999938964844,
-    "date": "2026-09-29",
+    "price": 149.22000122070312,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-19",
@@ -55,13 +55,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 286618604.938118
+    "median_turnover": 285756967.03261566
   },
   "NAB.AX": {
     "ticker": "NAB.AX",
     "company": "NATIONAL AUSTRALIA BANK LTD",
-    "price": 39.09000015258789,
-    "date": "2026-09-29",
+    "price": 38.775001525878906,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-12",
@@ -89,8 +89,8 @@
   "WBC.AX": {
     "ticker": "WBC.AX",
     "company": "WESTPAC BANKING CORP",
-    "price": 34.93000030517578,
-    "date": "2026-09-29",
+    "price": 34.775001525878906,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-07",
@@ -113,13 +113,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 152806588.78104782
+    "median_turnover": 147052605.54837418
   },
   "ANZ.AX": {
     "ticker": "ANZ.AX",
     "company": "ANZ GROUP HOLDINGS LTD",
-    "price": 38.28499984741211,
-    "date": "2026-09-29",
+    "price": 38.2400016784668,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-13",
@@ -147,8 +147,8 @@
   "CSL.AX": {
     "ticker": "CSL.AX",
     "company": "CSL LTD",
-    "price": 181.94500732421875,
-    "date": "2026-09-29",
+    "price": 182.3800048828125,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-10",
@@ -171,13 +171,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 184917318.1828308
+    "median_turnover": 179696953.72011566
   },
   "MQG.AX": {
     "ticker": "MQG.AX",
     "company": "MACQUARIE GROUP LTD",
-    "price": 243.83999633789062,
-    "date": "2026-09-29",
+    "price": 244.57000732421875,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-11",
@@ -205,8 +205,8 @@
   "WES.AX": {
     "ticker": "WES.AX",
     "company": "WESFARMERS LTD",
-    "price": 73.98999786376953,
-    "date": "2026-09-29",
+    "price": 74.55999755859375,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -229,13 +229,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 131458843.77349854
+    "median_turnover": 126703266.29584503
   },
   "RIO.AX": {
     "ticker": "RIO.AX",
     "company": "RIO TINTO LTD",
-    "price": 162.92999267578125,
-    "date": "2026-09-29",
+    "price": 164.0500030517578,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -258,13 +258,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 143961380.5146103
+    "median_turnover": 147612241.49472046
   },
   "WDS.AX": {
     "ticker": "WDS.AX",
     "company": "WOODSIDE ENERGY GROUP LTD",
-    "price": 31.30500030517578,
-    "date": "2026-09-29",
+    "price": 31.549999237060547,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -292,8 +292,8 @@
   "TLS.AX": {
     "ticker": "TLS.AX",
     "company": "TELSTRA GROUP LTD",
-    "price": 4.800000190734863,
-    "date": "2026-09-29",
+    "price": 4.789999961853027,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-26",
@@ -321,8 +321,8 @@
   "GMG.AX": {
     "ticker": "GMG.AX",
     "company": "GOODMAN GROUP",
-    "price": 26.049999237060547,
-    "date": "2026-09-29",
+    "price": 26.485000610351562,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -345,13 +345,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 93196844.5670538
+    "median_turnover": 95989945.24595356
   },
   "WOW.AX": {
     "ticker": "WOW.AX",
     "company": "WOOLWORTHS GROUP LTD",
-    "price": 38.7599983215332,
-    "date": "2026-09-29",
+    "price": 38.66999816894531,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -374,13 +374,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 74418507.91765594
+    "median_turnover": 73495609.22027397
   },
   "TCL.AX": {
     "ticker": "TCL.AX",
     "company": "TRANSURBAN GROUP",
-    "price": 12.9399995803833,
-    "date": "2026-09-29",
+    "price": 12.949999809265137,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -408,8 +408,8 @@
   "QBE.AX": {
     "ticker": "QBE.AX",
     "company": "QBE INSURANCE GROUP LTD",
-    "price": 23.459999084472656,
-    "date": "2026-09-29",
+    "price": 23.309999465942383,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -434,11 +434,40 @@
     ],
     "median_turnover": 70435850.9938469
   },
+  "NST.AX": {
+    "ticker": "NST.AX",
+    "company": "NORTHERN STAR RESOURCES LTD",
+    "price": 25.25,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-05",
+        "dividend": 0.25,
+        "split": 0
+      },
+      {
+        "date": "2025-09-02",
+        "dividend": 0.3,
+        "split": 0
+      },
+      {
+        "date": "2026-03-04",
+        "dividend": 0.25,
+        "split": 0
+      },
+      {
+        "date": "2026-09-09",
+        "dividend": 0.3,
+        "split": 0
+      }
+    ],
+    "median_turnover": 93177913.28541756
+  },
   "ALL.AX": {
     "ticker": "ALL.AX",
     "company": "ARISTOCRAT LEISURE LTD",
-    "price": 59.025001525878906,
-    "date": "2026-09-29",
+    "price": 58.71500015258789,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-29",
@@ -466,8 +495,8 @@
   "COL.AX": {
     "ticker": "COL.AX",
     "company": "COLES GROUP LTD",
-    "price": 23.3700008392334,
-    "date": "2026-09-29",
+    "price": 23.219999313354492,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -490,42 +519,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 48779298.37224007
-  },
-  "NST.AX": {
-    "ticker": "NST.AX",
-    "company": "NORTHERN STAR RESOURCES LTD",
-    "price": 23.030000686645508,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-05",
-        "dividend": 0.25,
-        "split": 0
-      },
-      {
-        "date": "2025-09-02",
-        "dividend": 0.3,
-        "split": 0
-      },
-      {
-        "date": "2026-03-04",
-        "dividend": 0.25,
-        "split": 0
-      },
-      {
-        "date": "2026-09-09",
-        "dividend": 0.3,
-        "split": 0
-      }
-    ],
-    "median_turnover": 93177913.28541756
+    "median_turnover": 44891881.3261776
   },
   "STO.AX": {
     "ticker": "STO.AX",
     "company": "SANTOS LTD",
-    "price": 8.414999961853027,
-    "date": "2026-09-29",
+    "price": 8.579999923706055,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-24",
@@ -548,13 +548,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 85121865.40454626
+    "median_turnover": 87182955.40021896
   },
   "EVN.AX": {
     "ticker": "EVN.AX",
     "company": "EVOLUTION MINING LTD",
-    "price": 13.194999694824219,
-    "date": "2026-09-29",
+    "price": 13.470000267028809,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-04",
@@ -582,8 +582,8 @@
   "FMG.AX": {
     "ticker": "FMG.AX",
     "company": "FORTESCUE LTD",
-    "price": 16.30500030517578,
-    "date": "2026-09-29",
+    "price": 16.28499984741211,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-26",
@@ -611,8 +611,8 @@
   "BXB.AX": {
     "ticker": "BXB.AX",
     "company": "BRAMBLES LTD",
-    "price": 19.040000915527344,
-    "date": "2026-09-29",
+    "price": 19.020000457763672,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-12",
@@ -640,8 +640,8 @@
   "S32.AX": {
     "ticker": "S32.AX",
     "company": "SOUTH32 LTD",
-    "price": 5.0,
-    "date": "2026-09-29",
+    "price": 4.980000019073486,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -664,13 +664,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 70653560.2742908
+    "median_turnover": 72137903.39142346
   },
   "CPU.AX": {
     "ticker": "CPU.AX",
     "company": "COMPUTERSHARE LTD",
-    "price": 40.689998626708984,
-    "date": "2026-09-29",
+    "price": 40.650001525878906,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-18",
@@ -693,13 +693,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 50636820.937194824
+    "median_turnover": 48457579.056619644
   },
   "SUN.AX": {
     "ticker": "SUN.AX",
     "company": "SUNCORP GROUP LTD",
-    "price": 18.93000030517578,
-    "date": "2026-09-29",
+    "price": 19.010000228881836,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-17",
@@ -722,13 +722,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 47074486.03189087
+    "median_turnover": 49572492.712804794
   },
   "ORG.AX": {
     "ticker": "ORG.AX",
     "company": "ORIGIN ENERGY LTD",
-    "price": 10.890000343322754,
-    "date": "2026-09-29",
+    "price": 10.850000381469727,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-04",
@@ -756,8 +756,8 @@
   "IAG.AX": {
     "ticker": "IAG.AX",
     "company": "INSURANCE AUSTRALIA GROUP",
-    "price": 7.980000019073486,
-    "date": "2026-09-29",
+    "price": 7.934999942779541,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-18",
@@ -786,7 +786,7 @@
     "ticker": "SCG.AX",
     "company": "SCENTRE GROUP",
     "price": 3.4200000762939453,
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-13",
@@ -809,13 +809,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 39910773.2972213
+    "median_turnover": 38191443.73444712
   },
   "SOL.AX": {
     "ticker": "SOL.AX",
     "company": "WASHINGTON H SOUL PATTINSON",
-    "price": 47.02000045776367,
-    "date": "2026-09-29",
+    "price": 46.83000183105469,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-15",
@@ -838,13 +838,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 18334952.289344788
+    "median_turnover": 18950565.52751541
   },
   "APA.AX": {
     "ticker": "APA.AX",
     "company": "APA GROUP",
-    "price": 10.710000038146973,
-    "date": "2026-09-29",
+    "price": 10.670000076293945,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -867,13 +867,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 23385004.568211555
+    "median_turnover": 23712339.37635231
   },
   "QAN.AX": {
     "ticker": "QAN.AX",
     "company": "QANTAS AIRWAYS LTD",
-    "price": 8.979999542236328,
-    "date": "2026-09-29",
+    "price": 9.175000190734863,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-11",
@@ -896,13 +896,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 53240557.23971605
+    "median_turnover": 50228572.39206076
   },
   "BSL.AX": {
     "ticker": "BSL.AX",
     "company": "BLUESCOPE STEEL LTD",
-    "price": 30.575000762939453,
-    "date": "2026-09-29",
+    "price": 30.010000228881836,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-21",
@@ -930,13 +930,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 40105312.54868412
+    "median_turnover": 39174940.09446716
   },
   "SIG.AX": {
     "ticker": "SIG.AX",
     "company": "SIGMA HEALTHCARE LTD",
-    "price": 2.565000057220459,
-    "date": "2026-09-29",
+    "price": 2.569999933242798,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-01",
@@ -959,21 +959,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 62258366.79049671
-  },
-  "LYC.AX": {
-    "ticker": "LYC.AX",
-    "company": "LYNAS RARE EARTHS LTD",
-    "price": 13.649999618530273,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 44458087.247766495
+    "median_turnover": 58861560.44237006
   },
   "MPL.AX": {
     "ticker": "MPL.AX",
     "company": "MEDIBANK PRIVATE LTD",
-    "price": 4.574999809265137,
-    "date": "2026-09-29",
+    "price": 4.545000076293945,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -996,13 +988,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 28810335.19200611
+    "median_turnover": 28029666.364812613
+  },
+  "LYC.AX": {
+    "ticker": "LYC.AX",
+    "company": "LYNAS RARE EARTHS LTD",
+    "price": 13.640000343322754,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 44096508.721838
   },
   "PLS.AX": {
     "ticker": "PLS.AX",
     "company": "PLS GROUP LTD",
-    "price": 3.869999885559082,
-    "date": "2026-09-29",
+    "price": 3.8450000286102295,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-09-02",
@@ -1015,8 +1015,8 @@
   "ASX.AX": {
     "ticker": "ASX.AX",
     "company": "ASX LTD",
-    "price": 58.150001525878906,
-    "date": "2026-09-29",
+    "price": 58.185001373291016,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-21",
@@ -1044,8 +1044,8 @@
   "ORI.AX": {
     "ticker": "ORI.AX",
     "company": "ORICA LTD",
-    "price": 23.2549991607666,
-    "date": "2026-09-29",
+    "price": 23.139999389648438,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-22",
@@ -1068,42 +1068,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 32937178.11747265
-  },
-  "TLC.AX": {
-    "ticker": "TLC.AX",
-    "company": "LOTTERY CORP LTD/THE",
-    "price": 4.824999809265137,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-02-26",
-        "dividend": 0.08,
-        "split": 0
-      },
-      {
-        "date": "2025-08-27",
-        "dividend": 0.085,
-        "split": 0
-      },
-      {
-        "date": "2026-02-25",
-        "dividend": 0.08,
-        "split": 0
-      },
-      {
-        "date": "2026-08-26",
-        "dividend": 0.085,
-        "split": 0
-      }
-    ],
-    "median_turnover": 43443545.51884794
+    "median_turnover": 30735683.39372158
   },
   "ALD.AX": {
     "ticker": "ALD.AX",
     "company": "AMPOL LTD",
-    "price": 43.68000030517578,
-    "date": "2026-09-29",
+    "price": 43.40999984741211,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-07",
@@ -1128,54 +1099,40 @@
     ],
     "median_turnover": 65604796.08073616
   },
-  "ALQ.AX": {
-    "ticker": "ALQ.AX",
-    "company": "ALS LTD",
-    "price": 20.520000457763672,
-    "date": "2026-09-29",
+  "TLC.AX": {
+    "ticker": "TLC.AX",
+    "company": "LOTTERY CORP LTD/THE",
+    "price": 4.815000057220459,
+    "date": "2026-09-30",
     "actions": [
       {
-        "date": "2024-11-27",
-        "dividend": 0.189,
+        "date": "2025-02-26",
+        "dividend": 0.08,
         "split": 0
       },
       {
-        "date": "2025-07-03",
-        "dividend": 0.197,
+        "date": "2025-08-27",
+        "dividend": 0.085,
         "split": 0
       },
       {
-        "date": "2025-11-26",
-        "dividend": 0.194,
+        "date": "2026-02-25",
+        "dividend": 0.08,
         "split": 0
       },
       {
-        "date": "2026-06-12",
-        "dividend": 0.231,
+        "date": "2026-08-26",
+        "dividend": 0.085,
         "split": 0
       }
     ],
-    "median_turnover": 28449658.30891514
-  },
-  "SFR.AX": {
-    "ticker": "SFR.AX",
-    "company": "SANDFIRE RESOURCES LTD",
-    "price": 22.0,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2026-09-10",
-        "dividend": 0.35,
-        "split": 0
-      }
-    ],
-    "median_turnover": 36073218.93668842
+    "median_turnover": 43733336.11007428
   },
   "RHC.AX": {
     "ticker": "RHC.AX",
     "company": "RAMSAY HEALTH CARE LTD",
-    "price": 55.494998931884766,
-    "date": "2026-09-29",
+    "price": 55.459999084472656,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -1198,13 +1155,56 @@
         "split": 0
       }
     ],
-    "median_turnover": 44984449.344841
+    "median_turnover": 42230186.04958916
+  },
+  "SFR.AX": {
+    "ticker": "SFR.AX",
+    "company": "SANDFIRE RESOURCES LTD",
+    "price": 22.010000228881836,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2026-09-10",
+        "dividend": 0.35,
+        "split": 0
+      }
+    ],
+    "median_turnover": 38314118.895879745
+  },
+  "ALQ.AX": {
+    "ticker": "ALQ.AX",
+    "company": "ALS LTD",
+    "price": 20.639999389648438,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2024-11-27",
+        "dividend": 0.189,
+        "split": 0
+      },
+      {
+        "date": "2025-07-03",
+        "dividend": 0.197,
+        "split": 0
+      },
+      {
+        "date": "2025-11-26",
+        "dividend": 0.194,
+        "split": 0
+      },
+      {
+        "date": "2026-06-12",
+        "dividend": 0.231,
+        "split": 0
+      }
+    ],
+    "median_turnover": 29561039.133872986
   },
   "SGP.AX": {
     "ticker": "SGP.AX",
     "company": "STOCKLAND",
-    "price": 4.074999809265137,
-    "date": "2026-09-29",
+    "price": 4.135000228881836,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -1227,21 +1227,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 57409098.29592347
+    "median_turnover": 55681912.64133811
   },
   "XRO.AX": {
     "ticker": "XRO.AX",
     "company": "XERO LTD",
-    "price": 58.38999938964844,
-    "date": "2026-09-29",
+    "price": 57.599998474121094,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 57085698.38449478
   },
   "COH.AX": {
     "ticker": "COH.AX",
     "company": "COCHLEAR LTD",
-    "price": 143.1300048828125,
-    "date": "2026-09-29",
+    "price": 141.94000244140625,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-20",
@@ -1264,13 +1264,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 45657411.24845886
+    "median_turnover": 46889114.75066376
   },
   "VCX.AX": {
     "ticker": "VCX.AX",
     "company": "VICINITY CENTRES",
-    "price": 2.2850000858306885,
-    "date": "2026-09-29",
+    "price": 2.305000066757202,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-24",
@@ -1298,8 +1298,8 @@
   "MIN.AX": {
     "ticker": "MIN.AX",
     "company": "MINERAL RESOURCES LTD",
-    "price": 51.97999954223633,
-    "date": "2026-09-29",
+    "price": 52.04999923706055,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-09-08",
@@ -1307,42 +1307,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 70302173.8066349
-  },
-  "PRU.AX": {
-    "ticker": "PRU.AX",
-    "company": "PERSEUS MINING LTD",
-    "price": 6.40500020980835,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-10",
-        "dividend": 0.025,
-        "split": 0
-      },
-      {
-        "date": "2025-09-09",
-        "dividend": 0.05,
-        "split": 0
-      },
-      {
-        "date": "2026-03-05",
-        "dividend": 0.05,
-        "split": 0
-      },
-      {
-        "date": "2026-09-07",
-        "dividend": 0.09,
-        "split": 0
-      }
-    ],
-    "median_turnover": 26693809.659050226
+    "median_turnover": 69152358.81209564
   },
   "SHL.AX": {
     "ticker": "SHL.AX",
     "company": "SONIC HEALTHCARE LTD",
-    "price": 18.920000076293945,
-    "date": "2026-09-29",
+    "price": 18.690000534057617,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -1365,13 +1336,42 @@
         "split": 0
       }
     ],
-    "median_turnover": 40135539.171648026
+    "median_turnover": 39492845.88040924
+  },
+  "PME.AX": {
+    "ticker": "PME.AX",
+    "company": "PRO MEDICUS LTD",
+    "price": 161.24000549316406,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-02-27",
+        "dividend": 0.25,
+        "split": 0
+      },
+      {
+        "date": "2025-09-03",
+        "dividend": 0.3,
+        "split": 0
+      },
+      {
+        "date": "2026-02-26",
+        "dividend": 0.32,
+        "split": 0
+      },
+      {
+        "date": "2026-09-07",
+        "dividend": 0.37,
+        "split": 0
+      }
+    ],
+    "median_turnover": 27387822.95121765
   },
   "TNE.AX": {
     "ticker": "TNE.AX",
     "company": "TECHNOLOGY ONE LTD",
-    "price": 29.290000915527344,
-    "date": "2026-09-29",
+    "price": 29.309999465942383,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-28",
@@ -1396,48 +1396,40 @@
     ],
     "median_turnover": 21964142.607726097
   },
-  "PME.AX": {
-    "ticker": "PME.AX",
-    "company": "PRO MEDICUS LTD",
-    "price": 165.13999938964844,
-    "date": "2026-09-29",
+  "PRU.AX": {
+    "ticker": "PRU.AX",
+    "company": "PERSEUS MINING LTD",
+    "price": 6.599999904632568,
+    "date": "2026-09-30",
     "actions": [
       {
-        "date": "2025-02-27",
-        "dividend": 0.25,
+        "date": "2025-03-10",
+        "dividend": 0.025,
         "split": 0
       },
       {
-        "date": "2025-09-03",
-        "dividend": 0.3,
+        "date": "2025-09-09",
+        "dividend": 0.05,
         "split": 0
       },
       {
-        "date": "2026-02-26",
-        "dividend": 0.32,
+        "date": "2026-03-05",
+        "dividend": 0.05,
         "split": 0
       },
       {
         "date": "2026-09-07",
-        "dividend": 0.37,
+        "dividend": 0.09,
         "split": 0
       }
     ],
-    "median_turnover": 29170924.38934326
-  },
-  "NXT.AX": {
-    "ticker": "NXT.AX",
-    "company": "NEXTDC LTD",
-    "price": 11.020000457763672,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 39606599.21247864
+    "median_turnover": 26177491.518012524
   },
   "GPT.AX": {
     "ticker": "GPT.AX",
     "company": "GPT GROUP",
-    "price": 4.440000057220459,
-    "date": "2026-09-29",
+    "price": 4.494999885559082,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -1460,27 +1452,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 26496421.70259261
-  },
-  "GMD.AX": {
-    "ticker": "GMD.AX",
-    "company": "GENESIS MINERALS LTD",
-    "price": 7.210000038146973,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2026-09-09",
-        "dividend": 0.05,
-        "split": 0
-      }
-    ],
-    "median_turnover": 47661913.00057459
+    "median_turnover": 28285174.084659576
   },
   "CHC.AX": {
     "ticker": "CHC.AX",
     "company": "CHARTER HALL GROUP",
-    "price": 17.860000610351562,
-    "date": "2026-09-29",
+    "price": 17.8799991607666,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -1503,13 +1481,35 @@
         "split": 0
       }
     ],
-    "median_turnover": 36085960.12366295
+    "median_turnover": 33350201.47578907
+  },
+  "NXT.AX": {
+    "ticker": "NXT.AX",
+    "company": "NEXTDC LTD",
+    "price": 10.8100004196167,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 39606599.21247864
+  },
+  "GMD.AX": {
+    "ticker": "GMD.AX",
+    "company": "GENESIS MINERALS LTD",
+    "price": 7.369999885559082,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2026-09-09",
+        "dividend": 0.05,
+        "split": 0
+      }
+    ],
+    "median_turnover": 46133146.06644058
   },
   "CAR.AX": {
     "ticker": "CAR.AX",
     "company": "CAR GROUP LTD",
-    "price": 21.510000228881836,
-    "date": "2026-09-29",
+    "price": 22.149999618530273,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-14",
@@ -1532,13 +1532,100 @@
         "split": 0
       }
     ],
-    "median_turnover": 38444472.9800148
+    "median_turnover": 38194749.92167473
+  },
+  "MGR.AX": {
+    "ticker": "MGR.AX",
+    "company": "MIRVAC GROUP",
+    "price": 1.784999966621399,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2024-12-30",
+        "dividend": 0.045,
+        "split": 0
+      },
+      {
+        "date": "2025-06-27",
+        "dividend": 0.045,
+        "split": 0
+      },
+      {
+        "date": "2025-12-30",
+        "dividend": 0.047,
+        "split": 0
+      },
+      {
+        "date": "2026-06-29",
+        "dividend": 0.048,
+        "split": 0
+      }
+    ],
+    "median_turnover": 28174818.693846524
+  },
+  "JBH.AX": {
+    "ticker": "JBH.AX",
+    "company": "JB HI-FI LTD",
+    "price": 67.40499877929688,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-02-20",
+        "dividend": 1.7,
+        "split": 0
+      },
+      {
+        "date": "2025-08-21",
+        "dividend": 2.05,
+        "split": 0
+      },
+      {
+        "date": "2026-02-26",
+        "dividend": 2.1,
+        "split": 0
+      },
+      {
+        "date": "2026-08-27",
+        "dividend": 1.27,
+        "split": 0
+      }
+    ],
+    "median_turnover": 31604442.67904663
+  },
+  "SGH.AX": {
+    "ticker": "SGH.AX",
+    "company": "SGH LTD",
+    "price": 36.689998626708984,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-10",
+        "dividend": 0.3,
+        "split": 0
+      },
+      {
+        "date": "2025-09-11",
+        "dividend": 0.32,
+        "split": 0
+      },
+      {
+        "date": "2026-03-04",
+        "dividend": 0.32,
+        "split": 0
+      },
+      {
+        "date": "2026-09-10",
+        "dividend": 0.32,
+        "split": 0
+      }
+    ],
+    "median_turnover": 23593242.064756393
   },
   "RMS.AX": {
     "ticker": "RMS.AX",
     "company": "RAMELIUS RESOURCES LTD",
-    "price": 3.7899999618530273,
-    "date": "2026-09-29",
+    "price": 3.9800000190734863,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-17",
@@ -1563,69 +1650,11 @@
     ],
     "median_turnover": 34333529.329174995
   },
-  "JBH.AX": {
-    "ticker": "JBH.AX",
-    "company": "JB HI-FI LTD",
-    "price": 67.0999984741211,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-02-20",
-        "dividend": 1.7,
-        "split": 0
-      },
-      {
-        "date": "2025-08-21",
-        "dividend": 2.05,
-        "split": 0
-      },
-      {
-        "date": "2026-02-26",
-        "dividend": 2.1,
-        "split": 0
-      },
-      {
-        "date": "2026-08-27",
-        "dividend": 1.27,
-        "split": 0
-      }
-    ],
-    "median_turnover": 33427439.541088104
-  },
-  "SGH.AX": {
-    "ticker": "SGH.AX",
-    "company": "SGH LTD",
-    "price": 36.25,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-10",
-        "dividend": 0.3,
-        "split": 0
-      },
-      {
-        "date": "2025-09-11",
-        "dividend": 0.32,
-        "split": 0
-      },
-      {
-        "date": "2026-03-04",
-        "dividend": 0.32,
-        "split": 0
-      },
-      {
-        "date": "2026-09-10",
-        "dividend": 0.32,
-        "split": 0
-      }
-    ],
-    "median_turnover": 23391447.017822266
-  },
   "REA.AX": {
     "ticker": "REA.AX",
     "company": "REA GROUP LTD",
-    "price": 148.52000427246094,
-    "date": "2026-09-29",
+    "price": 153.4499969482422,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-04",
@@ -1648,225 +1677,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 35570085.23983002
-  },
-  "MGR.AX": {
-    "ticker": "MGR.AX",
-    "company": "MIRVAC GROUP",
-    "price": 1.75,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2024-12-30",
-        "dividend": 0.045,
-        "split": 0
-      },
-      {
-        "date": "2025-06-27",
-        "dividend": 0.045,
-        "split": 0
-      },
-      {
-        "date": "2025-12-30",
-        "dividend": 0.047,
-        "split": 0
-      },
-      {
-        "date": "2026-06-29",
-        "dividend": 0.048,
-        "split": 0
-      }
-    ],
-    "median_turnover": 29059451.771006107
-  },
-  "VAU.AX": {
-    "ticker": "VAU.AX",
-    "company": "VAULT MINERALS LTD",
-    "price": 5.989999771118164,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-11-18",
-        "dividend": 0,
-        "split": 0.15384615384615385
-      },
-      {
-        "date": "2026-03-10",
-        "dividend": 0.07,
-        "split": 0
-      }
-    ],
-    "median_turnover": 27928054.76478052
-  },
-  "AZJ.AX": {
-    "ticker": "AZJ.AX",
-    "company": "AURIZON HOLDINGS LTD",
-    "price": 3.6549999713897705,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-03",
-        "dividend": 0.092,
-        "split": 0
-      },
-      {
-        "date": "2025-09-01",
-        "dividend": 0.065,
-        "split": 0
-      },
-      {
-        "date": "2026-03-02",
-        "dividend": 0.125,
-        "split": 0
-      },
-      {
-        "date": "2026-08-31",
-        "dividend": 0.105,
-        "split": 0
-      }
-    ],
-    "median_turnover": 22567439.63762641
-  },
-  "CMM.AX": {
-    "ticker": "CMM.AX",
-    "company": "CAPRICORN METALS LTD",
-    "price": 14.755000114440918,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2026-03-16",
-        "dividend": 0.05,
-        "split": 0
-      },
-      {
-        "date": "2026-09-16",
-        "dividend": 0.05,
-        "split": 0
-      }
-    ],
-    "median_turnover": 30193985.96152258
-  },
-  "DNL.AX": {
-    "ticker": "DNL.AX",
-    "company": "DYNO NOBEL LTD",
-    "price": 3.9600000381469727,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2024-12-03",
-        "dividend": 0.063,
-        "split": 0
-      },
-      {
-        "date": "2025-06-13",
-        "dividend": 0.024,
-        "split": 0
-      },
-      {
-        "date": "2025-12-01",
-        "dividend": 0.095,
-        "split": 0
-      },
-      {
-        "date": "2026-06-12",
-        "dividend": 0.046,
-        "split": 0
-      }
-    ],
-    "median_turnover": 19550017.565863132
-  },
-  "AMP.AX": {
-    "ticker": "AMP.AX",
-    "company": "AMP LTD",
-    "price": 2.575000047683716,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-02-28",
-        "dividend": 0.01,
-        "split": 0
-      },
-      {
-        "date": "2025-08-21",
-        "dividend": 0.02,
-        "split": 0
-      },
-      {
-        "date": "2026-02-27",
-        "dividend": 0.02,
-        "split": 0
-      },
-      {
-        "date": "2026-08-20",
-        "dividend": 0.03,
-        "split": 0
-      }
-    ],
-    "median_turnover": 27456740.041154623
-  },
-  "ANN.AX": {
-    "ticker": "ANN.AX",
-    "company": "ANSELL LTD",
-    "price": 44.349998474121094,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-02-14",
-        "dividend": 0.3486,
-        "split": 0
-      },
-      {
-        "date": "2025-08-29",
-        "dividend": 0.4279,
-        "split": 0
-      },
-      {
-        "date": "2026-02-23",
-        "dividend": 0.3768,
-        "split": 0
-      },
-      {
-        "date": "2026-08-31",
-        "dividend": 0.5788,
-        "split": 0
-      }
-    ],
-    "median_turnover": 19556781.550195694
-  },
-  "SDF.AX": {
-    "ticker": "SDF.AX",
-    "company": "STEADFAST GROUP LTD",
-    "price": 5.75,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-03",
-        "dividend": 0.078,
-        "split": 0
-      },
-      {
-        "date": "2025-09-03",
-        "dividend": 0.117,
-        "split": 0
-      },
-      {
-        "date": "2026-03-02",
-        "dividend": 0.082,
-        "split": 0
-      },
-      {
-        "date": "2026-09-02",
-        "dividend": 0.1275,
-        "split": 0
-      }
-    ],
-    "median_turnover": 41496339.45510721
+    "median_turnover": 34729931.093818665
   },
   "WTC.AX": {
     "ticker": "WTC.AX",
     "company": "WISETECH GLOBAL LTD",
-    "price": 32.290000915527344,
-    "date": "2026-09-29",
+    "price": 32.689998626708984,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-14",
@@ -1889,13 +1706,196 @@
         "split": 0
       }
     ],
-    "median_turnover": 47064967.62439728
+    "median_turnover": 46903116.32772446
+  },
+  "AZJ.AX": {
+    "ticker": "AZJ.AX",
+    "company": "AURIZON HOLDINGS LTD",
+    "price": 3.6549999713897705,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-03",
+        "dividend": 0.092,
+        "split": 0
+      },
+      {
+        "date": "2025-09-01",
+        "dividend": 0.065,
+        "split": 0
+      },
+      {
+        "date": "2026-03-02",
+        "dividend": 0.125,
+        "split": 0
+      },
+      {
+        "date": "2026-08-31",
+        "dividend": 0.105,
+        "split": 0
+      }
+    ],
+    "median_turnover": 19788880.632515788
+  },
+  "DNL.AX": {
+    "ticker": "DNL.AX",
+    "company": "DYNO NOBEL LTD",
+    "price": 4.014999866485596,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2024-12-03",
+        "dividend": 0.063,
+        "split": 0
+      },
+      {
+        "date": "2025-06-13",
+        "dividend": 0.024,
+        "split": 0
+      },
+      {
+        "date": "2025-12-01",
+        "dividend": 0.095,
+        "split": 0
+      },
+      {
+        "date": "2026-06-12",
+        "dividend": 0.046,
+        "split": 0
+      }
+    ],
+    "median_turnover": 20332361.55944872
+  },
+  "AMP.AX": {
+    "ticker": "AMP.AX",
+    "company": "AMP LTD",
+    "price": 2.565000057220459,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-02-28",
+        "dividend": 0.01,
+        "split": 0
+      },
+      {
+        "date": "2025-08-21",
+        "dividend": 0.02,
+        "split": 0
+      },
+      {
+        "date": "2026-02-27",
+        "dividend": 0.02,
+        "split": 0
+      },
+      {
+        "date": "2026-08-20",
+        "dividend": 0.03,
+        "split": 0
+      }
+    ],
+    "median_turnover": 26183232.448704362
+  },
+  "ANN.AX": {
+    "ticker": "ANN.AX",
+    "company": "ANSELL LTD",
+    "price": 44.685001373291016,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-02-14",
+        "dividend": 0.3486,
+        "split": 0
+      },
+      {
+        "date": "2025-08-29",
+        "dividend": 0.4279,
+        "split": 0
+      },
+      {
+        "date": "2026-02-23",
+        "dividend": 0.3768,
+        "split": 0
+      },
+      {
+        "date": "2026-08-31",
+        "dividend": 0.5788,
+        "split": 0
+      }
+    ],
+    "median_turnover": 19501647.105197906
+  },
+  "SDF.AX": {
+    "ticker": "SDF.AX",
+    "company": "STEADFAST GROUP LTD",
+    "price": 5.755000114440918,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-03",
+        "dividend": 0.078,
+        "split": 0
+      },
+      {
+        "date": "2025-09-03",
+        "dividend": 0.117,
+        "split": 0
+      },
+      {
+        "date": "2026-03-02",
+        "dividend": 0.082,
+        "split": 0
+      },
+      {
+        "date": "2026-09-02",
+        "dividend": 0.1275,
+        "split": 0
+      }
+    ],
+    "median_turnover": 47681543.872549534
+  },
+  "CMM.AX": {
+    "ticker": "CMM.AX",
+    "company": "CAPRICORN METALS LTD",
+    "price": 15.180000305175781,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2026-03-16",
+        "dividend": 0.05,
+        "split": 0
+      },
+      {
+        "date": "2026-09-16",
+        "dividend": 0.05,
+        "split": 0
+      }
+    ],
+    "median_turnover": 26928202.433015347
+  },
+  "VAU.AX": {
+    "ticker": "VAU.AX",
+    "company": "VAULT MINERALS LTD",
+    "price": 6.125,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-11-18",
+        "dividend": 0,
+        "split": 0.15384615384615385
+      },
+      {
+        "date": "2026-03-10",
+        "dividend": 0.07,
+        "split": 0
+      }
+    ],
+    "median_turnover": 27443258.847206593
   },
   "CDA.AX": {
     "ticker": "CDA.AX",
     "company": "CODAN LTD",
-    "price": 60.560001373291016,
-    "date": "2026-09-29",
+    "price": 68.30999755859375,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-28",
@@ -1918,13 +1918,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 30065705.90084839
+    "median_turnover": 30804516.392742157
   },
   "BEN.AX": {
     "ticker": "BEN.AX",
     "company": "BENDIGO AND ADELAIDE BANK",
-    "price": 10.319999694824219,
-    "date": "2026-09-29",
+    "price": 10.260000228881836,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-26",
@@ -1947,13 +1947,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 11953039.575415134
+    "median_turnover": 11902780.017940521
   },
   "DXS.AX": {
     "ticker": "DXS.AX",
     "company": "DEXUS/AU",
-    "price": 5.5,
-    "date": "2026-09-29",
+    "price": 5.590000152587891,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -1976,37 +1976,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 17374114.324522734
-  },
-  "RRL.AX": {
-    "ticker": "RRL.AX",
-    "company": "REGIS RESOURCES LTD",
-    "price": 7.349999904632568,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-09-10",
-        "dividend": 0.05,
-        "split": 0
-      },
-      {
-        "date": "2026-03-12",
-        "dividend": 0.15,
-        "split": 0
-      },
-      {
-        "date": "2026-09-10",
-        "dividend": 0.2,
-        "split": 0
-      }
-    ],
-    "median_turnover": 24423024.7448442
+    "median_turnover": 16973817.638064623
   },
   "WHC.AX": {
     "ticker": "WHC.AX",
     "company": "WHITEHAVEN COAL LTD",
-    "price": 7.380000114440918,
-    "date": "2026-09-29",
+    "price": 7.489999771118164,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-27",
@@ -2029,13 +2005,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 33019365.22919178
+    "median_turnover": 32311748.715207577
   },
   "CWY.AX": {
     "ticker": "CWY.AX",
     "company": "CLEANAWAY WASTE MANAGEMENT L",
-    "price": 2.5950000286102295,
-    "date": "2026-09-29",
+    "price": 2.609999895095825,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -2060,19 +2036,43 @@
     ],
     "median_turnover": 31954450.912268758
   },
+  "RRL.AX": {
+    "ticker": "RRL.AX",
+    "company": "REGIS RESOURCES LTD",
+    "price": 7.614999771118164,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-09-10",
+        "dividend": 0.05,
+        "split": 0
+      },
+      {
+        "date": "2026-03-12",
+        "dividend": 0.15,
+        "split": 0
+      },
+      {
+        "date": "2026-09-10",
+        "dividend": 0.2,
+        "split": 0
+      }
+    ],
+    "median_turnover": 23211480.410150528
+  },
   "GGP.AX": {
     "ticker": "GGP.AX",
     "company": "GREATLAND RESOURCES LTD",
-    "price": 10.289999961853027,
-    "date": "2026-09-29",
+    "price": 10.6899995803833,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 14585152.342636585
+    "median_turnover": 14367567.54883194
   },
   "CGF.AX": {
     "ticker": "CGF.AX",
     "company": "CHALLENGER LTD",
-    "price": 10.300000190734863,
-    "date": "2026-09-29",
+    "price": 10.149999618530273,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -2095,13 +2095,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 17474487.343236923
+    "median_turnover": 16644676.545886517
   },
   "WGX.AX": {
     "ticker": "WGX.AX",
     "company": "WESTGOLD RESOURCES LTD",
-    "price": 5.300000190734863,
-    "date": "2026-09-29",
+    "price": 5.465000152587891,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-09-11",
@@ -2119,8 +2119,8 @@
   "AGL.AX": {
     "ticker": "AGL.AX",
     "company": "AGL ENERGY LTD",
-    "price": 8.130000114440918,
-    "date": "2026-09-29",
+    "price": 8.079999923706055,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -2143,13 +2143,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 18689164.839925766
+    "median_turnover": 17614642.549905777
   },
   "HUB.AX": {
     "ticker": "HUB.AX",
     "company": "HUB24 LTD",
-    "price": 63.810001373291016,
-    "date": "2026-09-29",
+    "price": 64.0,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-17",
@@ -2174,19 +2174,11 @@
     ],
     "median_turnover": 24181604.62007141
   },
-  "MP1.AX": {
-    "ticker": "MP1.AX",
-    "company": "MEGAPORT LTD",
-    "price": 21.450000762939453,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 24252390.7360878
-  },
   "VNT.AX": {
     "ticker": "VNT.AX",
     "company": "VENTIA SERVICES GROUP PTY LT",
-    "price": 6.019999980926514,
-    "date": "2026-09-29",
+    "price": 6.034999847412109,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-27",
@@ -2211,11 +2203,40 @@
     ],
     "median_turnover": 13552191.961689472
   },
+  "EDV.AX": {
+    "ticker": "EDV.AX",
+    "company": "ENDEAVOUR GROUP LTD/AUSTRALI",
+    "price": 3.005000114440918,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-07",
+        "dividend": 0.125,
+        "split": 0
+      },
+      {
+        "date": "2025-09-02",
+        "dividend": 0.063,
+        "split": 0
+      },
+      {
+        "date": "2026-03-12",
+        "dividend": 0.108,
+        "split": 0
+      },
+      {
+        "date": "2026-09-01",
+        "dividend": 0.012,
+        "split": 0
+      }
+    ],
+    "median_turnover": 10624469.7477386
+  },
   "A2M.AX": {
     "ticker": "A2M.AX",
     "company": "A2 MILK CO LTD",
-    "price": 6.590000152587891,
-    "date": "2026-09-29",
+    "price": 6.519999980926514,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-20",
@@ -2243,13 +2264,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 12023530.992404938
+    "median_turnover": 11938646.800387144
   },
   "IGO.AX": {
     "ticker": "IGO.AX",
     "company": "IGO LTD",
-    "price": 6.539999961853027,
-    "date": "2026-09-29",
+    "price": 6.585000038146973,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-09-09",
@@ -2257,13 +2278,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 24016599.924939394
+    "median_turnover": 23778680.35419774
   },
   "DOW.AX": {
     "ticker": "DOW.AX",
     "company": "DOWNER EDI LTD",
-    "price": 6.644999980926514,
-    "date": "2026-09-29",
+    "price": 6.679999828338623,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-26",
@@ -2288,40 +2309,11 @@
     ],
     "median_turnover": 16366377.71750021
   },
-  "EDV.AX": {
-    "ticker": "EDV.AX",
-    "company": "ENDEAVOUR GROUP LTD/AUSTRALI",
-    "price": 3.0299999713897705,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-07",
-        "dividend": 0.125,
-        "split": 0
-      },
-      {
-        "date": "2025-09-02",
-        "dividend": 0.063,
-        "split": 0
-      },
-      {
-        "date": "2026-03-12",
-        "dividend": 0.108,
-        "split": 0
-      },
-      {
-        "date": "2026-09-01",
-        "dividend": 0.012,
-        "split": 0
-      }
-    ],
-    "median_turnover": 10624469.7477386
-  },
   "WOR.AX": {
     "ticker": "WOR.AX",
     "company": "WORLEY LTD",
     "price": 9.59000015258789,
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-04",
@@ -2344,21 +2336,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 15397800.344355583
+    "median_turnover": 14272502.40871048
   },
-  "TLX.AX": {
-    "ticker": "TLX.AX",
-    "company": "TELIX PHARMACEUTICALS LTD",
-    "price": 16.09000015258789,
-    "date": "2026-09-29",
+  "MP1.AX": {
+    "ticker": "MP1.AX",
+    "company": "MEGAPORT LTD",
+    "price": 20.799999237060547,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 31487209.16703224
+    "median_turnover": 24349346.879867554
   },
   "BOQ.AX": {
     "ticker": "BOQ.AX",
     "company": "BANK OF QUEENSLAND LTD",
-    "price": 6.579999923706055,
-    "date": "2026-09-29",
+    "price": 6.550000190734863,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-25",
@@ -2388,11 +2380,19 @@
     ],
     "median_turnover": 8822437.390892982
   },
+  "TLX.AX": {
+    "ticker": "TLX.AX",
+    "company": "TELIX PHARMACEUTICALS LTD",
+    "price": 15.869999885559082,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 32696323.698695183
+  },
   "REH.AX": {
     "ticker": "REH.AX",
     "company": "REECE LTD",
-    "price": 16.709999084472656,
-    "date": "2026-09-29",
+    "price": 16.854999542236328,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-08",
@@ -2415,13 +2415,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 7640228.881083488
+    "median_turnover": 7418154.369502068
   },
   "SGM.AX": {
     "ticker": "SGM.AX",
     "company": "SIMS LTD",
-    "price": 24.09000015258789,
-    "date": "2026-09-29",
+    "price": 23.549999237060547,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-01",
@@ -2442,23 +2442,28 @@
         "date": "2026-03-03",
         "dividend": 0.14,
         "split": 0
+      },
+      {
+        "date": "2026-09-30",
+        "dividend": 0.2,
+        "split": 0
       }
     ],
-    "median_turnover": 16316497.671875
+    "median_turnover": 16015594.196494102
   },
   "PDN.AX": {
     "ticker": "PDN.AX",
     "company": "PALADIN ENERGY LTD",
-    "price": 9.449999809265137,
-    "date": "2026-09-29",
+    "price": 9.350000381469727,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 24952102.405653
   },
   "TWE.AX": {
     "ticker": "TWE.AX",
     "company": "TREASURY WINE ESTATES LTD",
-    "price": 5.385000228881836,
-    "date": "2026-09-29",
+    "price": 5.449999809265137,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -2476,16 +2481,16 @@
   "EMR.AX": {
     "ticker": "EMR.AX",
     "company": "EMERALD RESOURCES NL",
-    "price": 6.820000171661377,
-    "date": "2026-09-29",
+    "price": 7.03000020980835,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 8972232.849777699
+    "median_turnover": 8092654.217822075
   },
   "SEK.AX": {
     "ticker": "SEK.AX",
     "company": "SEEK LTD",
-    "price": 11.260000228881836,
-    "date": "2026-09-29",
+    "price": 11.600000381469727,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-18",
@@ -2513,8 +2518,8 @@
   "PDI.AX": {
     "ticker": "PDI.AX",
     "company": "PREDICTIVE DISCOVERY LTD",
-    "price": 4.599999904632568,
-    "date": "2026-09-29",
+    "price": 4.914999961853027,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-08-26",
@@ -2524,35 +2529,11 @@
     ],
     "median_turnover": 8081095.340481758
   },
-  "NWH.AX": {
-    "ticker": "NWH.AX",
-    "company": "NRW HOLDINGS LTD",
-    "price": 7.880000114440918,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-24",
-        "dividend": 0.07,
-        "split": 0
-      },
-      {
-        "date": "2025-09-18",
-        "dividend": 0.095,
-        "split": 0
-      },
-      {
-        "date": "2026-03-23",
-        "dividend": 0.085,
-        "split": 0
-      }
-    ],
-    "median_turnover": 8534269.865705013
-  },
   "RWC.AX": {
     "ticker": "RWC.AX",
     "company": "RELIANCE WORLDWIDE CORP LTD",
-    "price": 4.739999771118164,
-    "date": "2026-09-29",
+    "price": 4.735000133514404,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -2570,13 +2551,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 14918866.486647606
+    "median_turnover": 15453814.70834446
   },
   "VEA.AX": {
     "ticker": "VEA.AX",
     "company": "VIVA ENERGY GROUP LTD",
-    "price": 3.115000009536743,
-    "date": "2026-09-29",
+    "price": 3.1050000190734863,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-07",
@@ -2599,13 +2580,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 21666466.067470074
+    "median_turnover": 20507767.522227764
   },
   "AUB.AX": {
     "ticker": "AUB.AX",
     "company": "AUB GROUP LTD",
-    "price": 26.979999542236328,
-    "date": "2026-09-29",
+    "price": 26.75,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -2628,13 +2609,37 @@
         "split": 0
       }
     ],
-    "median_turnover": 17617991.003870964
+    "median_turnover": 18401232.238173485
+  },
+  "NWH.AX": {
+    "ticker": "NWH.AX",
+    "company": "NRW HOLDINGS LTD",
+    "price": 7.960000038146973,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-24",
+        "dividend": 0.07,
+        "split": 0
+      },
+      {
+        "date": "2025-09-18",
+        "dividend": 0.095,
+        "split": 0
+      },
+      {
+        "date": "2026-03-23",
+        "dividend": 0.085,
+        "split": 0
+      }
+    ],
+    "median_turnover": 8315806.674550533
   },
   "APE.AX": {
     "ticker": "APE.AX",
     "company": "EAGERS AUTOMOTIVE LTD",
-    "price": 18.309999465942383,
-    "date": "2026-09-29",
+    "price": 18.235000610351562,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-27",
@@ -2657,13 +2662,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 14778161.808698654
+    "median_turnover": 13716793.393915176
   },
   "NHF.AX": {
     "ticker": "NHF.AX",
     "company": "NIB HOLDINGS LTD",
-    "price": 6.489999771118164,
-    "date": "2026-09-29",
+    "price": 6.420000076293945,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -2686,13 +2691,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4927375.534942389
+    "median_turnover": 4603433.949025154
   },
   "MTS.AX": {
     "ticker": "MTS.AX",
     "company": "METCASH LTD",
-    "price": 2.884999990463257,
-    "date": "2026-09-29",
+    "price": 2.875,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-13",
@@ -2715,13 +2720,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 7657226.22858274
+    "median_turnover": 7508986.753062844
   },
   "MND.AX": {
     "ticker": "MND.AX",
     "company": "MONADELPHOUS GROUP LTD",
-    "price": 30.3799991607666,
-    "date": "2026-09-29",
+    "price": 30.514999389648438,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -2749,8 +2754,8 @@
   "BRG.AX": {
     "ticker": "BRG.AX",
     "company": "BREVILLE GROUP LTD",
-    "price": 29.8700008392334,
-    "date": "2026-09-29",
+    "price": 29.905000686645508,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-12",
@@ -2778,8 +2783,8 @@
   "NHC.AX": {
     "ticker": "NHC.AX",
     "company": "NEW HOPE CORP LTD",
-    "price": 5.679999828338623,
-    "date": "2026-09-29",
+    "price": 5.684999942779541,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-03",
@@ -2812,8 +2817,8 @@
   "CNU.AX": {
     "ticker": "CNU.AX",
     "company": "CHORUS LTD",
-    "price": 6.679999828338623,
-    "date": "2026-09-29",
+    "price": 6.710000038146973,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-17",
@@ -2836,13 +2841,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 3805429.107909918
+    "median_turnover": 3485999.7641630173
   },
   "RGN.AX": {
     "ticker": "RGN.AX",
     "company": "REGION GROUP",
-    "price": 2.184999942779541,
-    "date": "2026-09-29",
+    "price": 2.2049999237060547,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -2865,13 +2870,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4877028.576438189
+    "median_turnover": 4722188.820104599
   },
   "ILU.AX": {
     "ticker": "ILU.AX",
     "company": "ILUKA RESOURCES LTD",
-    "price": 5.96999979019165,
-    "date": "2026-09-29",
+    "price": 5.965000152587891,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-04",
@@ -2894,13 +2899,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 10209426.268525124
+    "median_turnover": 10040475.297247648
   },
   "DBI.AX": {
     "ticker": "DBI.AX",
     "company": "DALRYMPLE BAY INFRASTRUCTURE",
-    "price": 5.414999961853027,
-    "date": "2026-09-29",
+    "price": 5.375,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-03",
@@ -2945,33 +2950,11 @@
     ],
     "median_turnover": 5816613.468953848
   },
-  "RSG.AX": {
-    "ticker": "RSG.AX",
-    "company": "RESOLUTE MINING LTD",
-    "price": 1.159999966621399,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 8756125.030715406
-  },
-  "NEU.AX": {
-    "ticker": "NEU.AX",
-    "company": "NEUREN PHARMACEUTICALS LTD",
-    "price": 20.149999618530273,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2026-09-15",
-        "dividend": 0.15,
-        "split": 0
-      }
-    ],
-    "median_turnover": 6831012.224697113
-  },
   "CLW.AX": {
     "ticker": "CLW.AX",
     "company": "CHARTER HALL LONG WALE REIT",
-    "price": 3.25,
-    "date": "2026-09-29",
+    "price": 3.2799999713897705,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -3019,16 +3002,16 @@
   "ZIP.AX": {
     "ticker": "ZIP.AX",
     "company": "ZIP CO LTD",
-    "price": 2.049999952316284,
-    "date": "2026-09-29",
+    "price": 2.0250000953674316,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 35217595.22924948
+    "median_turnover": 33357398.70385194
   },
   "TPG.AX": {
     "ticker": "TPG.AX",
     "company": "TPG TELECOM LTD",
-    "price": 3.799999952316284,
-    "date": "2026-09-29",
+    "price": 3.815000057220459,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -3056,24 +3039,61 @@
   "EOS.AX": {
     "ticker": "EOS.AX",
     "company": "ELECTRO OPTIC SYSTEMS HOLDIN",
-    "price": 11.130000114440918,
-    "date": "2026-09-29",
+    "price": 11.350000381469727,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 20088417.116508484
   },
   "BGL.AX": {
     "ticker": "BGL.AX",
     "company": "BELLEVUE GOLD LTD",
-    "price": 1.559999942779541,
-    "date": "2026-09-29",
+    "price": 1.6269999742507935,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 9698867.64541465
+    "median_turnover": 9112804.410727084
+  },
+  "YAL.AX": {
+    "ticker": "YAL.AX",
+    "company": "YANCOAL AUSTRALIA LTD",
+    "price": 5.760000228881836,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-13",
+        "dividend": 0.52,
+        "split": 0
+      },
+      {
+        "date": "2025-09-04",
+        "dividend": 0.062,
+        "split": 0
+      },
+      {
+        "date": "2026-03-19",
+        "dividend": 0.122,
+        "split": 0
+      },
+      {
+        "date": "2026-09-02",
+        "dividend": 0.07,
+        "split": 0
+      }
+    ],
+    "median_turnover": 17281565.55662942
+  },
+  "RSG.AX": {
+    "ticker": "RSG.AX",
+    "company": "RESOLUTE MINING LTD",
+    "price": 1.190000057220459,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 8630703.029373288
   },
   "SRG.AX": {
     "ticker": "SRG.AX",
     "company": "SRG GLOBAL LTD",
-    "price": 3.9749999046325684,
-    "date": "2026-09-29",
+    "price": 3.9600000381469727,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-13",
@@ -3096,21 +3116,35 @@
         "split": 0
       }
     ],
-    "median_turnover": 7533215.44675982
+    "median_turnover": 6994303.625688434
   },
   "4DX.AX": {
     "ticker": "4DX.AX",
     "company": "4DMEDICAL LTD",
-    "price": 4.105000019073486,
-    "date": "2026-09-29",
+    "price": 3.9700000286102295,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 12589457.785020113
+    "median_turnover": 12520359.076826096
+  },
+  "NEU.AX": {
+    "ticker": "NEU.AX",
+    "company": "NEUREN PHARMACEUTICALS LTD",
+    "price": 19.93000030517578,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2026-09-15",
+        "dividend": 0.15,
+        "split": 0
+      }
+    ],
+    "median_turnover": 6447874.151640892
   },
   "NWL.AX": {
     "ticker": "NWL.AX",
     "company": "NETWEALTH GROUP LTD",
-    "price": 17.09000015258789,
-    "date": "2026-09-29",
+    "price": 17.100000381469727,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -3133,13 +3167,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 14462936.984583855
+    "median_turnover": 13513657.671333313
   },
   "HVN.AX": {
     "ticker": "HVN.AX",
     "company": "HARVEY NORMAN HOLDINGS LTD",
-    "price": 4.190000057220459,
-    "date": "2026-09-29",
+    "price": 4.159999847412109,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-15",
@@ -3167,8 +3201,8 @@
   "CQR.AX": {
     "ticker": "CQR.AX",
     "company": "CHARTER HALL RETAIL REIT",
-    "price": 3.490000009536743,
-    "date": "2026-09-29",
+    "price": 3.5,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-24",
@@ -3208,27 +3242,11 @@
     ],
     "median_turnover": 5095620.1000669
   },
-  "LTR.AX": {
-    "ticker": "LTR.AX",
-    "company": "LIONTOWN LTD",
-    "price": 0.9449999928474426,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 45178268.68913853
-  },
-  "SRL.AX": {
-    "ticker": "SRL.AX",
-    "company": "SUNRISE ENERGY METALS LTD",
-    "price": 21.809999465942383,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 14206166.533005714
-  },
   "PNI.AX": {
     "ticker": "PNI.AX",
     "company": "PINNACLE INVESTMENT MANAGEME",
-    "price": 14.09000015258789,
-    "date": "2026-09-29",
+    "price": 13.770000457763672,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -3253,48 +3271,11 @@
     ],
     "median_turnover": 17759322.228148937
   },
-  "YAL.AX": {
-    "ticker": "YAL.AX",
-    "company": "YANCOAL AUSTRALIA LTD",
-    "price": 5.699999809265137,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-13",
-        "dividend": 0.52,
-        "split": 0
-      },
-      {
-        "date": "2025-09-04",
-        "dividend": 0.062,
-        "split": 0
-      },
-      {
-        "date": "2026-03-19",
-        "dividend": 0.122,
-        "split": 0
-      },
-      {
-        "date": "2026-09-02",
-        "dividend": 0.07,
-        "split": 0
-      }
-    ],
-    "median_turnover": 17609626.7875731
-  },
-  "OBM.AX": {
-    "ticker": "OBM.AX",
-    "company": "ORA BANDA MINING LTD",
-    "price": 1.4450000524520874,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 11248760.633710384
-  },
   "BWP.AX": {
     "ticker": "BWP.AX",
     "company": "BWP PROPERTY GROUP LTD",
-    "price": 3.569999933242798,
-    "date": "2026-09-29",
+    "price": 3.5899999141693115,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -3319,11 +3300,40 @@
     ],
     "median_turnover": 2799236.5825219154
   },
+  "SUL.AX": {
+    "ticker": "SUL.AX",
+    "company": "SUPER RETAIL GROUP LTD",
+    "price": 12.720000267028809,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-10",
+        "dividend": 0.32,
+        "split": 0
+      },
+      {
+        "date": "2025-09-08",
+        "dividend": 0.64,
+        "split": 0
+      },
+      {
+        "date": "2026-03-12",
+        "dividend": 0.32,
+        "split": 0
+      },
+      {
+        "date": "2026-09-07",
+        "dividend": 0.33,
+        "split": 0
+      }
+    ],
+    "median_turnover": 8110149.221822739
+  },
   "TAH.AX": {
     "ticker": "TAH.AX",
     "company": "TABCORP HOLDINGS LTD",
-    "price": 0.9049999713897705,
-    "date": "2026-09-29",
+    "price": 0.8920000195503235,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -3346,21 +3356,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4559712.205333799
-  },
-  "MI6.AX": {
-    "ticker": "MI6.AX",
-    "company": "MINERALS 260 LTD",
-    "price": 0.8700000047683716,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 6858021.191417247
+    "median_turnover": 4363575.559454322
   },
   "ALK.AX": {
     "ticker": "ALK.AX",
     "company": "ALKANE RESOURCES LTD",
-    "price": 1.840000033378601,
-    "date": "2026-09-29",
+    "price": 1.8969999551773071,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-09-07",
@@ -3368,13 +3370,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 11726507.762654006
+    "median_turnover": 11427133.290116787
   },
   "PYC.AX": {
     "ticker": "PYC.AX",
     "company": "PYC THERAPEUTICS LTD",
-    "price": 2.819999933242798,
-    "date": "2026-09-29",
+    "price": 2.759999990463257,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-15",
@@ -3387,8 +3389,8 @@
   "PRN.AX": {
     "ticker": "PRN.AX",
     "company": "PERENTI LTD",
-    "price": 2.1549999713897705,
-    "date": "2026-09-29",
+    "price": 2.309999942779541,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-08",
@@ -3413,11 +3415,19 @@
     ],
     "median_turnover": 3747683.6608604193
   },
+  "OBM.AX": {
+    "ticker": "OBM.AX",
+    "company": "ORA BANDA MINING LTD",
+    "price": 1.5049999952316284,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 11248760.633710384
+  },
   "CIP.AX": {
     "ticker": "CIP.AX",
     "company": "CENTURIA INDUSTRIAL REIT",
-    "price": 2.765000104904175,
-    "date": "2026-09-29",
+    "price": 2.805000066757202,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -3460,13 +3470,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4429330.172531366
+    "median_turnover": 4501699.477854729
   },
   "PPT.AX": {
     "ticker": "PPT.AX",
     "company": "PERPETUAL LTD",
-    "price": 17.0,
-    "date": "2026-09-29",
+    "price": 17.209999084472656,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-13",
@@ -3489,42 +3499,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 5744140.185811043
-  },
-  "SUL.AX": {
-    "ticker": "SUL.AX",
-    "company": "SUPER RETAIL GROUP LTD",
-    "price": 12.670000076293945,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-10",
-        "dividend": 0.32,
-        "split": 0
-      },
-      {
-        "date": "2025-09-08",
-        "dividend": 0.64,
-        "split": 0
-      },
-      {
-        "date": "2026-03-12",
-        "dividend": 0.32,
-        "split": 0
-      },
-      {
-        "date": "2026-09-07",
-        "dividend": 0.33,
-        "split": 0
-      }
-    ],
-    "median_turnover": 8110149.221822739
+    "median_turnover": 6160867.858959198
   },
   "ALX.AX": {
     "ticker": "ALX.AX",
     "company": "ATLAS ARTERIA",
-    "price": 3.740000009536743,
-    "date": "2026-09-29",
+    "price": 3.7699999809265137,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-25",
@@ -3552,8 +3533,8 @@
   "DDR.AX": {
     "ticker": "DDR.AX",
     "company": "DICKER DATA LTD",
-    "price": 15.039999961853027,
-    "date": "2026-09-29",
+    "price": 15.109999656677246,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-14",
@@ -3596,13 +3577,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 6518431.53730011
+    "median_turnover": 6049439.106969833
   },
   "DRR.AX": {
     "ticker": "DRR.AX",
     "company": "DETERRA ROYALTIES LTD",
-    "price": 4.085000038146973,
-    "date": "2026-09-29",
+    "price": 4.050000190734863,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -3625,21 +3606,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 6548020.259065151
+    "median_turnover": 6959337.8937289715
   },
-  "MSB.AX": {
-    "ticker": "MSB.AX",
-    "company": "MESOBLAST LTD",
-    "price": 2.0999999046325684,
-    "date": "2026-09-29",
+  "LTR.AX": {
+    "ticker": "LTR.AX",
+    "company": "LIONTOWN LTD",
+    "price": 0.9470000267028809,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 4991335.262397289
+    "median_turnover": 44614095.96246612
   },
   "NIC.AX": {
     "ticker": "NIC.AX",
     "company": "NICKEL INDUSTRIES LTD",
-    "price": 0.800000011920929,
-    "date": "2026-09-29",
+    "price": 0.8019999861717224,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-27",
@@ -3647,13 +3628,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 5148059.31935963
+    "median_turnover": 4779683.597839087
   },
   "HDN.AX": {
     "ticker": "HDN.AX",
     "company": "HOMECO DAILY NEEDS REIT",
-    "price": 1.0420000553131104,
-    "date": "2026-09-29",
+    "price": 1.0700000524520874,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -3696,13 +3677,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 3484961.6061094403
+    "median_turnover": 3422267.392801583
+  },
+  "SRL.AX": {
+    "ticker": "SRL.AX",
+    "company": "SUNRISE ENERGY METALS LTD",
+    "price": 22.950000762939453,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 14206166.533005714
   },
   "INA.AX": {
     "ticker": "INA.AX",
     "company": "INGENIA COMMUNITIES GROUP",
-    "price": 4.650000095367432,
-    "date": "2026-09-29",
+    "price": 4.760000228881836,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-28",
@@ -3725,13 +3714,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 10009524.683605194
+    "median_turnover": 10453686.3489542
   },
   "ORA.AX": {
     "ticker": "ORA.AX",
     "company": "ORORA LTD",
-    "price": 1.409999966621399,
-    "date": "2026-09-29",
+    "price": 1.4019999504089355,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-28",
@@ -3754,21 +3743,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4630080.644063234
-  },
-  "CYL.AX": {
-    "ticker": "CYL.AX",
-    "company": "CATALYST METALS LTD",
-    "price": 5.739999771118164,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 9201010.169020176
+    "median_turnover": 4431281.644506574
   },
   "LOV.AX": {
     "ticker": "LOV.AX",
     "company": "LOVISA HOLDINGS LTD",
-    "price": 24.350000381469727,
-    "date": "2026-09-29",
+    "price": 24.06999969482422,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -3791,13 +3772,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 10357816.731012344
+    "median_turnover": 10358136.691558838
   },
   "FLT.AX": {
     "ticker": "FLT.AX",
     "company": "FLIGHT CENTRE TRAVEL GROUP L",
-    "price": 10.210000038146973,
-    "date": "2026-09-29",
+    "price": 10.305000305175781,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-26",
@@ -3820,13 +3801,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 11792547.72427082
+    "median_turnover": 11701535.496908665
   },
   "IMD.AX": {
     "ticker": "IMD.AX",
     "company": "IMDEX LTD",
-    "price": 3.259999990463257,
-    "date": "2026-09-29",
+    "price": 3.319999933242798,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -3851,267 +3832,11 @@
     ],
     "median_turnover": 4069419.9768710136
   },
-  "BGA.AX": {
-    "ticker": "BGA.AX",
-    "company": "BEGA CHEESE LTD",
-    "price": 6.070000171661377,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-02-25",
-        "dividend": 0.06,
-        "split": 0
-      },
-      {
-        "date": "2025-08-26",
-        "dividend": 0.06,
-        "split": 0
-      },
-      {
-        "date": "2026-02-24",
-        "dividend": 0.07,
-        "split": 0
-      },
-      {
-        "date": "2026-08-25",
-        "dividend": 0.075,
-        "split": 0
-      }
-    ],
-    "median_turnover": 2405667.2974586487
-  },
-  "EVT.AX": {
-    "ticker": "EVT.AX",
-    "company": "EVT LTD",
-    "price": 13.710000038146973,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-05",
-        "dividend": 0.16,
-        "split": 0
-      },
-      {
-        "date": "2025-09-10",
-        "dividend": 0.22,
-        "split": 0
-      },
-      {
-        "date": "2026-03-04",
-        "dividend": 0.18,
-        "split": 0
-      },
-      {
-        "date": "2026-09-09",
-        "dividend": 0.23,
-        "split": 0
-      }
-    ],
-    "median_turnover": 2774508.9995713234
-  },
-  "DTL.AX": {
-    "ticker": "DTL.AX",
-    "company": "DATA#3 LTD",
-    "price": 11.149999618530273,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-14",
-        "dividend": 0.131,
-        "split": 0
-      },
-      {
-        "date": "2025-09-15",
-        "dividend": 0.15,
-        "split": 0
-      },
-      {
-        "date": "2026-03-16",
-        "dividend": 0.135,
-        "split": 0
-      },
-      {
-        "date": "2026-09-15",
-        "dividend": 0.1825,
-        "split": 0
-      }
-    ],
-    "median_turnover": 3814309.657581806
-  },
-  "MLX.AX": {
-    "ticker": "MLX.AX",
-    "company": "METALS X LTD",
-    "price": 2.0799999237060547,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 4923095.467633605
-  },
-  "GNC.AX": {
-    "ticker": "GNC.AX",
-    "company": "GRAINCORP LTD-A",
-    "price": 6.679999828338623,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2024-11-27",
-        "dividend": 0.24,
-        "split": 0
-      },
-      {
-        "date": "2025-07-02",
-        "dividend": 0.24,
-        "split": 0
-      },
-      {
-        "date": "2025-11-26",
-        "dividend": 0.24,
-        "split": 0
-      },
-      {
-        "date": "2026-07-01",
-        "dividend": 0.14,
-        "split": 0
-      }
-    ],
-    "median_turnover": 11209538.107048035
-  },
-  "LLC.AX": {
-    "ticker": "LLC.AX",
-    "company": "LENDLEASE GROUP",
-    "price": 2.390000104904175,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-02-21",
-        "dividend": 0.06044,
-        "split": 0
-      },
-      {
-        "date": "2025-08-22",
-        "dividend": 0.16956,
-        "split": 0
-      },
-      {
-        "date": "2026-02-27",
-        "dividend": 0.062046,
-        "split": 0
-      },
-      {
-        "date": "2026-08-21",
-        "dividend": 0.095478,
-        "split": 0
-      }
-    ],
-    "median_turnover": 6782797.050384283
-  },
-  "EQR.AX": {
-    "ticker": "EQR.AX",
-    "company": "EQ RESOURCES LTD",
-    "price": 0.41499999165534973,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 15686920.503290176
-  },
-  "SIQ.AX": {
-    "ticker": "SIQ.AX",
-    "company": "SMARTGROUP CORP LTD",
-    "price": 11.260000228881836,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-06",
-        "dividend": 0.31,
-        "split": 0
-      },
-      {
-        "date": "2025-09-08",
-        "dividend": 0.195,
-        "split": 0
-      },
-      {
-        "date": "2026-03-05",
-        "dividend": 0.335,
-        "split": 0
-      },
-      {
-        "date": "2026-09-08",
-        "dividend": 0.215,
-        "split": 0
-      }
-    ],
-    "median_turnover": 5623500.530344486
-  },
-  "SSM.AX": {
-    "ticker": "SSM.AX",
-    "company": "SERVICE STREAM LTD",
-    "price": 2.4200000762939453,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-20",
-        "dividend": 0.025,
-        "split": 0
-      },
-      {
-        "date": "2025-09-17",
-        "dividend": 0.03,
-        "split": 0
-      },
-      {
-        "date": "2026-03-25",
-        "dividend": 0.03,
-        "split": 0
-      },
-      {
-        "date": "2026-09-16",
-        "dividend": 0.035,
-        "split": 0
-      }
-    ],
-    "median_turnover": 3464802.1523667574
-  },
-  "ASB.AX": {
-    "ticker": "ASB.AX",
-    "company": "AUSTAL LTD",
-    "price": 4.289999961853027,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 9395645.901386023
-  },
-  "BPT.AX": {
-    "ticker": "BPT.AX",
-    "company": "BEACH ENERGY LTD",
-    "price": 0.8169999718666077,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-02-27",
-        "dividend": 0.03,
-        "split": 0
-      },
-      {
-        "date": "2025-08-28",
-        "dividend": 0.06,
-        "split": 0
-      },
-      {
-        "date": "2026-02-26",
-        "dividend": 0.01,
-        "split": 0
-      },
-      {
-        "date": "2026-08-28",
-        "dividend": 0.02,
-        "split": 0
-      }
-    ],
-    "median_turnover": 8585732.964166284
-  },
   "WPR.AX": {
     "ticker": "WPR.AX",
     "company": "WAYPOINT REIT",
-    "price": 2.1549999713897705,
-    "date": "2026-09-29",
+    "price": 2.1700000762939453,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -4154,21 +3879,280 @@
         "split": 0
       }
     ],
-    "median_turnover": 3351136.0536289215
+    "median_turnover": 3449943.3873693943
+  },
+  "MI6.AX": {
+    "ticker": "MI6.AX",
+    "company": "MINERALS 260 LTD",
+    "price": 0.8999999761581421,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 6858021.191417247
+  },
+  "BGA.AX": {
+    "ticker": "BGA.AX",
+    "company": "BEGA CHEESE LTD",
+    "price": 6.289999961853027,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-02-25",
+        "dividend": 0.06,
+        "split": 0
+      },
+      {
+        "date": "2025-08-26",
+        "dividend": 0.06,
+        "split": 0
+      },
+      {
+        "date": "2026-02-24",
+        "dividend": 0.07,
+        "split": 0
+      },
+      {
+        "date": "2026-08-25",
+        "dividend": 0.075,
+        "split": 0
+      }
+    ],
+    "median_turnover": 2405667.2974586487
+  },
+  "EVT.AX": {
+    "ticker": "EVT.AX",
+    "company": "EVT LTD",
+    "price": 13.744999885559082,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-05",
+        "dividend": 0.16,
+        "split": 0
+      },
+      {
+        "date": "2025-09-10",
+        "dividend": 0.22,
+        "split": 0
+      },
+      {
+        "date": "2026-03-04",
+        "dividend": 0.18,
+        "split": 0
+      },
+      {
+        "date": "2026-09-09",
+        "dividend": 0.23,
+        "split": 0
+      }
+    ],
+    "median_turnover": 2631528.712787628
+  },
+  "DTL.AX": {
+    "ticker": "DTL.AX",
+    "company": "DATA#3 LTD",
+    "price": 11.020000457763672,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-14",
+        "dividend": 0.131,
+        "split": 0
+      },
+      {
+        "date": "2025-09-15",
+        "dividend": 0.15,
+        "split": 0
+      },
+      {
+        "date": "2026-03-16",
+        "dividend": 0.135,
+        "split": 0
+      },
+      {
+        "date": "2026-09-15",
+        "dividend": 0.1825,
+        "split": 0
+      }
+    ],
+    "median_turnover": 3569836.9144186974
+  },
+  "MLX.AX": {
+    "ticker": "MLX.AX",
+    "company": "METALS X LTD",
+    "price": 2.1500000953674316,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 4923095.467633605
+  },
+  "GNC.AX": {
+    "ticker": "GNC.AX",
+    "company": "GRAINCORP LTD-A",
+    "price": 6.800000190734863,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2024-11-27",
+        "dividend": 0.24,
+        "split": 0
+      },
+      {
+        "date": "2025-07-02",
+        "dividend": 0.24,
+        "split": 0
+      },
+      {
+        "date": "2025-11-26",
+        "dividend": 0.24,
+        "split": 0
+      },
+      {
+        "date": "2026-07-01",
+        "dividend": 0.14,
+        "split": 0
+      }
+    ],
+    "median_turnover": 10250136.061427593
+  },
+  "LLC.AX": {
+    "ticker": "LLC.AX",
+    "company": "LENDLEASE GROUP",
+    "price": 2.440000057220459,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-02-21",
+        "dividend": 0.06044,
+        "split": 0
+      },
+      {
+        "date": "2025-08-22",
+        "dividend": 0.16956,
+        "split": 0
+      },
+      {
+        "date": "2026-02-27",
+        "dividend": 0.062046,
+        "split": 0
+      },
+      {
+        "date": "2026-08-21",
+        "dividend": 0.095478,
+        "split": 0
+      }
+    ],
+    "median_turnover": 6147357.068148255
+  },
+  "MSB.AX": {
+    "ticker": "MSB.AX",
+    "company": "MESOBLAST LTD",
+    "price": 2.119999885559082,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 4819095.984750748
+  },
+  "EQR.AX": {
+    "ticker": "EQR.AX",
+    "company": "EQ RESOURCES LTD",
+    "price": 0.4020000100135803,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 15686920.503290176
+  },
+  "SIQ.AX": {
+    "ticker": "SIQ.AX",
+    "company": "SMARTGROUP CORP LTD",
+    "price": 11.220000267028809,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-06",
+        "dividend": 0.31,
+        "split": 0
+      },
+      {
+        "date": "2025-09-08",
+        "dividend": 0.195,
+        "split": 0
+      },
+      {
+        "date": "2026-03-05",
+        "dividend": 0.335,
+        "split": 0
+      },
+      {
+        "date": "2026-09-08",
+        "dividend": 0.215,
+        "split": 0
+      }
+    ],
+    "median_turnover": 5616089.404999256
+  },
+  "ASB.AX": {
+    "ticker": "ASB.AX",
+    "company": "AUSTAL LTD",
+    "price": 4.5,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 9158913.5110116
+  },
+  "BPT.AX": {
+    "ticker": "BPT.AX",
+    "company": "BEACH ENERGY LTD",
+    "price": 0.8450000286102295,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-02-27",
+        "dividend": 0.03,
+        "split": 0
+      },
+      {
+        "date": "2025-08-28",
+        "dividend": 0.06,
+        "split": 0
+      },
+      {
+        "date": "2026-02-26",
+        "dividend": 0.01,
+        "split": 0
+      },
+      {
+        "date": "2026-08-28",
+        "dividend": 0.02,
+        "split": 0
+      }
+    ],
+    "median_turnover": 8146505.914542973
+  },
+  "WEB.AX": {
+    "ticker": "WEB.AX",
+    "company": "WEB TRAVEL GROUP LTD",
+    "price": 3.4100000858306885,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 4978077.282219291
+  },
+  "CYL.AX": {
+    "ticker": "CYL.AX",
+    "company": "CATALYST METALS LTD",
+    "price": 5.985000133514404,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 9201010.169020176
   },
   "SLC.AX": {
     "ticker": "SLC.AX",
     "company": "SUPERLOOP LTD",
-    "price": 2.5199999809265137,
-    "date": "2026-09-29",
+    "price": 2.5299999713897705,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 3652257.4913340807
   },
   "ARB.AX": {
     "ticker": "ARB.AX",
     "company": "ARB CORP LTD",
-    "price": 17.809999465942383,
-    "date": "2026-09-29",
+    "price": 18.360000610351562,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-03",
@@ -4201,8 +4185,8 @@
   "KCN.AX": {
     "ticker": "KCN.AX",
     "company": "KINGSGATE CONSOLIDATED LTD",
-    "price": 4.920000076293945,
-    "date": "2026-09-29",
+    "price": 5.050000190734863,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-03-16",
@@ -4210,29 +4194,29 @@
         "split": 0
       }
     ],
-    "median_turnover": 6656042.970447302
+    "median_turnover": 6183878.437473774
   },
   "DRO.AX": {
     "ticker": "DRO.AX",
     "company": "DRONESHIELD LTD",
-    "price": 1.5850000381469727,
-    "date": "2026-09-29",
+    "price": 1.7549999952316284,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 11511346.744429588
   },
   "FFM.AX": {
     "ticker": "FFM.AX",
     "company": "FIREFLY METALS LTD",
-    "price": 1.6349999904632568,
-    "date": "2026-09-29",
+    "price": 1.6649999618530273,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 7607904.254317582
   },
   "ELD.AX": {
     "ticker": "ELD.AX",
     "company": "ELDERS LTD",
-    "price": 6.380000114440918,
-    "date": "2026-09-29",
+    "price": 6.429999828338623,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-17",
@@ -4255,42 +4239,42 @@
         "split": 0
       }
     ],
-    "median_turnover": 5255813.049567461
+    "median_turnover": 5150171.666319609
   },
-  "KAR.AX": {
-    "ticker": "KAR.AX",
-    "company": "KAROON ENERGY LTD",
-    "price": 1.4420000314712524,
-    "date": "2026-09-29",
+  "SSM.AX": {
+    "ticker": "SSM.AX",
+    "company": "SERVICE STREAM LTD",
+    "price": 2.390000104904175,
+    "date": "2026-09-30",
     "actions": [
       {
-        "date": "2025-03-04",
-        "dividend": 0.05,
+        "date": "2025-03-20",
+        "dividend": 0.025,
         "split": 0
       },
       {
-        "date": "2025-09-01",
-        "dividend": 0.024,
+        "date": "2025-09-17",
+        "dividend": 0.03,
         "split": 0
       },
       {
-        "date": "2026-03-05",
-        "dividend": 0.031,
+        "date": "2026-03-25",
+        "dividend": 0.03,
         "split": 0
       },
       {
-        "date": "2026-09-02",
-        "dividend": 0.012,
+        "date": "2026-09-16",
+        "dividend": 0.035,
         "split": 0
       }
     ],
-    "median_turnover": 9833079.190493345
+    "median_turnover": 3464802.1523667574
   },
   "GYG.AX": {
     "ticker": "GYG.AX",
     "company": "GUZMAN Y GOMEZ LTD",
-    "price": 24.899999618530273,
-    "date": "2026-09-29",
+    "price": 24.84000015258789,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-09-15",
@@ -4308,13 +4292,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 6487709.498760223
+    "median_turnover": 6291035.828287125
   },
   "CIA.AX": {
     "ticker": "CIA.AX",
     "company": "CHAMPION IRON LTD",
-    "price": 3.065000057220459,
-    "date": "2026-09-29",
+    "price": 3.055000066757202,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-11",
@@ -4343,7 +4327,7 @@
     "ticker": "HLI.AX",
     "company": "HELIA GROUP LTD",
     "price": 5.28000020980835,
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-19",
@@ -4366,13 +4350,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4399544.042459488
+    "median_turnover": 4151746.1831264496
   },
   "SXE.AX": {
     "ticker": "SXE.AX",
     "company": "SOUTHERN CROSS ELECTRICAL",
-    "price": 4.860000133514404,
-    "date": "2026-09-29",
+    "price": 4.889999866485596,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-25",
@@ -4395,13 +4379,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 6769471.165652871
+    "median_turnover": 7480785.70157671
   },
   "MFG.AX": {
     "ticker": "MFG.AX",
     "company": "MAGELLAN FINANCIAL GROUP LTD",
-    "price": 8.300000190734863,
-    "date": "2026-09-29",
+    "price": 8.319999694824219,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -4424,58 +4408,29 @@
         "split": 0
       }
     ],
-    "median_turnover": 8767517.431016922
+    "median_turnover": 8282274.380892277
   },
   "DVP.AX": {
     "ticker": "DVP.AX",
     "company": "DEVELOP GLOBAL LTD",
-    "price": 4.965000152587891,
-    "date": "2026-09-29",
+    "price": 4.679999828338623,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 4530798.769792557
-  },
-  "MAH.AX": {
-    "ticker": "MAH.AX",
-    "company": "MACMAHON HOLDINGS LTD",
-    "price": 1.1100000143051147,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-19",
-        "dividend": 0.0055,
-        "split": 0
-      },
-      {
-        "date": "2025-09-18",
-        "dividend": 0.0095,
-        "split": 0
-      },
-      {
-        "date": "2026-03-19",
-        "dividend": 0.0095,
-        "split": 0
-      },
-      {
-        "date": "2026-09-18",
-        "dividend": 0.0125,
-        "split": 0
-      }
-    ],
-    "median_turnover": 6226817.286825776
+    "median_turnover": 4676463.061966419
   },
   "NUF.AX": {
     "ticker": "NUF.AX",
     "company": "NUFARM LTD",
-    "price": 3.0999999046325684,
-    "date": "2026-09-29",
+    "price": 3.1700000762939453,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 3245065.528224826
   },
   "GDG.AX": {
     "ticker": "GDG.AX",
     "company": "GENERATION DEVELOPMENT GROUP",
-    "price": 2.7300000190734863,
-    "date": "2026-09-29",
+    "price": 2.7249999046325684,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-10",
@@ -4498,13 +4453,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 5861113.881949663
+    "median_turnover": 5356959.815726757
   },
   "IRE.AX": {
     "ticker": "IRE.AX",
     "company": "IRESS LTD",
-    "price": 5.289999961853027,
-    "date": "2026-09-29",
+    "price": 5.429999828338623,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-10",
@@ -4529,19 +4484,48 @@
     ],
     "median_turnover": 6182542.568190575
   },
+  "MAH.AX": {
+    "ticker": "MAH.AX",
+    "company": "MACMAHON HOLDINGS LTD",
+    "price": 1.1169999837875366,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-19",
+        "dividend": 0.0055,
+        "split": 0
+      },
+      {
+        "date": "2025-09-18",
+        "dividend": 0.0095,
+        "split": 0
+      },
+      {
+        "date": "2026-03-19",
+        "dividend": 0.0095,
+        "split": 0
+      },
+      {
+        "date": "2026-09-18",
+        "dividend": 0.0125,
+        "split": 0
+      }
+    ],
+    "median_turnover": 6312466.5182362795
+  },
   "DYL.AX": {
     "ticker": "DYL.AX",
     "company": "DEEP YELLOW LTD",
-    "price": 1.2200000286102295,
-    "date": "2026-09-29",
+    "price": 1.222000002861023,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 6660963.035595119
   },
   "CBO.AX": {
     "ticker": "CBO.AX",
     "company": "COBRAM ESTATE OLIVES LTD",
-    "price": 2.7699999809265137,
-    "date": "2026-09-29",
+    "price": 2.7799999713897705,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-11-07",
@@ -4559,8 +4543,8 @@
   "TEA.AX": {
     "ticker": "TEA.AX",
     "company": "TASMEA LTD",
-    "price": 10.770000457763672,
-    "date": "2026-09-29",
+    "price": 10.720000267028809,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-04-29",
@@ -4598,8 +4582,8 @@
   "MGH.AX": {
     "ticker": "MGH.AX",
     "company": "MAAS GROUP HOLDINGS LTD",
-    "price": 6.989999771118164,
-    "date": "2026-09-29",
+    "price": 6.900000095367432,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-27",
@@ -4617,13 +4601,42 @@
         "split": 0
       }
     ],
-    "median_turnover": 9753638.012930155
+    "median_turnover": 10854309.095461607
+  },
+  "KAR.AX": {
+    "ticker": "KAR.AX",
+    "company": "KAROON ENERGY LTD",
+    "price": 1.5119999647140503,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-04",
+        "dividend": 0.05,
+        "split": 0
+      },
+      {
+        "date": "2025-09-01",
+        "dividend": 0.024,
+        "split": 0
+      },
+      {
+        "date": "2026-03-05",
+        "dividend": 0.031,
+        "split": 0
+      },
+      {
+        "date": "2026-09-02",
+        "dividend": 0.012,
+        "split": 0
+      }
+    ],
+    "median_turnover": 9833079.190493345
   },
   "PMV.AX": {
     "ticker": "PMV.AX",
     "company": "PREMIER INVESTMENTS LTD",
-    "price": 11.6899995803833,
-    "date": "2026-09-29",
+    "price": 12.069999694824219,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-10",
@@ -4646,8 +4659,8 @@
   "DMP.AX": {
     "ticker": "DMP.AX",
     "company": "DOMINO'S PIZZA ENTERPRISES L",
-    "price": 19.450000762939453,
-    "date": "2026-09-29",
+    "price": 19.459999084472656,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-03",
@@ -4670,13 +4683,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 5834875.0279483795
+    "median_turnover": 5567616.421294212
   },
   "NCK.AX": {
     "ticker": "NCK.AX",
     "company": "NICK SCALI LTD",
-    "price": 14.050000190734863,
-    "date": "2026-09-29",
+    "price": 13.649999618530273,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-04",
@@ -4692,15 +4705,20 @@
         "date": "2026-03-02",
         "dividend": 0.39,
         "split": 0
+      },
+      {
+        "date": "2026-09-30",
+        "dividend": 0.39,
+        "split": 0
       }
     ],
-    "median_turnover": 3957474.469423294
+    "median_turnover": 3847622.8450655937
   },
   "BVS.AX": {
     "ticker": "BVS.AX",
     "company": "BRAVURA SOLUTIONS LTD",
-    "price": 3.1449999809265137,
-    "date": "2026-09-29",
+    "price": 3.0999999046325684,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-28",
@@ -4723,13 +4741,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 3225604.9718054533
+    "median_turnover": 3358498.0586972237
   },
   "PNR.AX": {
     "ticker": "PNR.AX",
     "company": "PANTORO GOLD LTD",
-    "price": 2.825000047683716,
-    "date": "2026-09-29",
+    "price": 3.0950000286102295,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-04-04",
@@ -4737,13 +4755,13 @@
         "split": 0.058823529411764705
       }
     ],
-    "median_turnover": 8309022.638323784
+    "median_turnover": 8204555.015170336
   },
   "CNI.AX": {
     "ticker": "CNI.AX",
     "company": "CENTURIA CAPITAL GROUP",
-    "price": 1.2200000286102295,
-    "date": "2026-09-29",
+    "price": 1.2549999952316284,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -4766,13 +4784,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4881577.242859364
+    "median_turnover": 4737888.286071062
   },
   "MMS.AX": {
     "ticker": "MMS.AX",
     "company": "MCMILLAN SHAKESPEARE LTD",
-    "price": 18.700000762939453,
-    "date": "2026-09-29",
+    "price": 17.790000915527344,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-13",
@@ -4795,13 +4813,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 5308198.060617447
+    "median_turnover": 5053916.401844025
   },
   "CCL.AX": {
     "ticker": "CCL.AX",
     "company": "CUSCAL LTD",
-    "price": 6.050000190734863,
-    "date": "2026-09-29",
+    "price": 6.054999828338623,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-08-28",
@@ -4824,8 +4842,8 @@
   "ABB.AX": {
     "ticker": "ABB.AX",
     "company": "AUSSIE BROADBAND LTD",
-    "price": 4.179999828338623,
-    "date": "2026-09-29",
+    "price": 4.289999961853027,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-07",
@@ -4850,27 +4868,19 @@
     ],
     "median_turnover": 4688147.505595207
   },
-  "WEB.AX": {
-    "ticker": "WEB.AX",
-    "company": "WEB TRAVEL GROUP LTD",
-    "price": 3.4000000953674316,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 5137086.811042428
-  },
   "JDO.AX": {
     "ticker": "JDO.AX",
     "company": "JUDO CAPITAL HOLDINGS LTD",
-    "price": 0.925000011920929,
-    "date": "2026-09-29",
+    "price": 0.9169999957084656,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 5868579.959557354
+    "median_turnover": 5709121.010728806
   },
   "SBM.AX": {
     "ticker": "SBM.AX",
     "company": "ST BARBARA LTD",
-    "price": 0.8199999928474426,
-    "date": "2026-09-29",
+    "price": 0.8399999737739563,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-09-23",
@@ -4883,16 +4893,16 @@
   "SLX.AX": {
     "ticker": "SLX.AX",
     "company": "SILEX SYSTEMS LTD",
-    "price": 4.300000190734863,
-    "date": "2026-09-29",
+    "price": 4.380000114440918,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 5105095.335084438
+    "median_turnover": 4945599.674291611
   },
   "DGT.AX": {
     "ticker": "DGT.AX",
     "company": "DIGICO INFRASTRUCTURE REIT",
-    "price": 2.4700000286102295,
-    "date": "2026-09-29",
+    "price": 2.440000057220459,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-06-27",
@@ -4910,29 +4920,29 @@
         "split": 0
       }
     ],
-    "median_turnover": 3461762.2250726223
+    "median_turnover": 3502015.881096363
   },
   "ELS.AX": {
     "ticker": "ELS.AX",
     "company": "ELSIGHT LTD",
-    "price": 4.849999904632568,
-    "date": "2026-09-29",
+    "price": 5.130000114440918,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 7020876.769263506
   },
   "CXO.AX": {
     "ticker": "CXO.AX",
     "company": "CORE LITHIUM LTD",
-    "price": 0.3149999976158142,
-    "date": "2026-09-29",
+    "price": 0.31200000643730164,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 11557869.594483376
+    "median_turnover": 11475101.382245183
   },
   "SMR.AX": {
     "ticker": "SMR.AX",
     "company": "STANMORE RESOURCES LTD",
-    "price": 2.6649999618530273,
-    "date": "2026-09-29",
+    "price": 2.6500000953674316,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-27",
@@ -4945,13 +4955,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4376092.402109385
+    "median_turnover": 4328125.508801937
   },
   "IDX.AX": {
     "ticker": "IDX.AX",
     "company": "INTEGRAL DIAGNOSTICS LTD",
-    "price": 2.1700000762939453,
-    "date": "2026-09-29",
+    "price": 2.200000047683716,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -4974,53 +4984,45 @@
         "split": 0
       }
     ],
-    "median_turnover": 1768379.316279173
+    "median_turnover": 1749647.975219965
   },
   "IPX.AX": {
     "ticker": "IPX.AX",
     "company": "IPERIONX LTD",
-    "price": 2.625,
-    "date": "2026-09-29",
+    "price": 2.484999895095825,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 4555614.304535508
+    "median_turnover": 4476331.934665084
   },
   "CAT.AX": {
     "ticker": "CAT.AX",
     "company": "CATAPULT SPORTS LTD",
-    "price": 3.180000066757202,
-    "date": "2026-09-29",
+    "price": 3.130000114440918,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 2462299.924660206
   },
   "A4N.AX": {
     "ticker": "A4N.AX",
     "company": "ALPHA HPA LTD",
-    "price": 0.597000002861023,
-    "date": "2026-09-29",
+    "price": 0.6119999885559082,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 3598272.2043397427
+    "median_turnover": 3462980.7360209823
   },
   "LIN.AX": {
     "ticker": "LIN.AX",
     "company": "LINDIAN RESOURCES LTD",
-    "price": 0.5950000286102295,
-    "date": "2026-09-28",
+    "price": 0.5249999761581421,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 7299046.644743532
-  },
-  "VUL.AX": {
-    "ticker": "VUL.AX",
-    "company": "VULCAN ENERGY RESOURCES LTD",
-    "price": 1.8650000095367432,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 6144856.513619423
   },
   "CQE.AX": {
     "ticker": "CQE.AX",
     "company": "CHARTER HALL SOCIAL INFRASTR",
-    "price": 2.255000114440918,
-    "date": "2026-09-29",
+    "price": 2.259999990463257,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -5068,8 +5070,8 @@
   "MYS.AX": {
     "ticker": "MYS.AX",
     "company": "MYSTATE LTD",
-    "price": 4.954999923706055,
-    "date": "2026-09-29",
+    "price": 4.889999866485596,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-04",
@@ -5097,8 +5099,8 @@
   "L1G.AX": {
     "ticker": "L1G.AX",
     "company": "L1 GROUP LTD",
-    "price": 1.1720000505447388,
-    "date": "2026-09-29",
+    "price": 1.1649999618530273,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-03-05",
@@ -5111,13 +5113,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 2590630.085796535
+    "median_turnover": 2412863.3991199136
   },
   "RFF.AX": {
     "ticker": "RFF.AX",
     "company": "RURAL FUNDS TRUST",
-    "price": 1.899999976158142,
-    "date": "2026-09-29",
+    "price": 1.909999966621399,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -5165,8 +5167,8 @@
   "DXI.AX": {
     "ticker": "DXI.AX",
     "company": "DEXUS INDUSTRIA REIT",
-    "price": 2.265000104904175,
-    "date": "2026-09-29",
+    "price": 2.299999952316284,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -5214,8 +5216,8 @@
   "ING.AX": {
     "ticker": "ING.AX",
     "company": "INGHAMS GROUP LTD",
-    "price": 2.049999952316284,
-    "date": "2026-09-29",
+    "price": 2.069999933242798,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-13",
@@ -5243,8 +5245,8 @@
   "PWH.AX": {
     "ticker": "PWH.AX",
     "company": "PWR HOLDINGS LTD",
-    "price": 10.180000305175781,
-    "date": "2026-09-29",
+    "price": 10.0600004196167,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-13",
@@ -5267,13 +5269,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1270426.6993575096
+    "median_turnover": 1189577.475083828
   },
   "APZ.AX": {
     "ticker": "APZ.AX",
     "company": "ASPEN GROUP",
-    "price": 4.400000095367432,
-    "date": "2026-09-29",
+    "price": 4.389999866485596,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -5298,25 +5300,11 @@
     ],
     "median_turnover": 1858892.0318136215
   },
-  "VGN.AX": {
-    "ticker": "VGN.AX",
-    "company": "VIRGIN AUSTRALIA HOLDINGS LT",
-    "price": 2.8350000381469727,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2026-09-14",
-        "dividend": 0.076,
-        "split": 0
-      }
-    ],
-    "median_turnover": 3028634.8175576925
-  },
   "CKF.AX": {
     "ticker": "CKF.AX",
     "company": "COLLINS FOODS LTD",
-    "price": 7.760000228881836,
-    "date": "2026-09-29",
+    "price": 7.940000057220459,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-06",
@@ -5339,21 +5327,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 1804965.5695433617
+    "median_turnover": 1729555.1776390076
   },
   "NAN.AX": {
     "ticker": "NAN.AX",
     "company": "NANOSONICS LTD",
-    "price": 2.880000114440918,
-    "date": "2026-09-29",
+    "price": 2.930000066757202,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 3060462.0044665337
   },
   "KLS.AX": {
     "ticker": "KLS.AX",
     "company": "KELSIAN GROUP LTD",
-    "price": 3.869999885559082,
-    "date": "2026-09-29",
+    "price": 3.8499999046325684,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-20",
@@ -5381,8 +5369,8 @@
   "SNL.AX": {
     "ticker": "SNL.AX",
     "company": "SUPPLY NETWORK LTD",
-    "price": 34.86000061035156,
-    "date": "2026-09-29",
+    "price": 35.08000183105469,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-20",
@@ -5405,21 +5393,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 1474900.064611435
+    "median_turnover": 1410704.1860027313
   },
   "SDR.AX": {
     "ticker": "SDR.AX",
     "company": "SITEMINDER LTD",
-    "price": 2.630000114440918,
-    "date": "2026-09-29",
+    "price": 2.7249999046325684,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 3721189.616834402
+    "median_turnover": 3621160.292752266
   },
   "IPH.AX": {
     "ticker": "IPH.AX",
     "company": "IPH LTD",
     "price": 3.369999885559082,
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -5442,13 +5430,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 3048964.057023287
+    "median_turnover": 3090273.0326037407
   },
   "OML.AX": {
     "ticker": "OML.AX",
     "company": "OOH!MEDIA LTD",
-    "price": 1.6649999618530273,
-    "date": "2026-09-29",
+    "price": 1.6619999408721924,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -5476,8 +5464,8 @@
   "WBT.AX": {
     "ticker": "WBT.AX",
     "company": "WEEBIT NANO LTD",
-    "price": 3.5999999046325684,
-    "date": "2026-09-29",
+    "price": 3.950000047683716,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 5998706.645018935
   },
@@ -5485,31 +5473,31 @@
     "ticker": "BMN.AX",
     "company": "BANNERMAN ENERGY LTD",
     "price": 3.5399999618530273,
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 4861764.817505121
+    "median_turnover": 4626760.904026508
   },
   "PXA.AX": {
     "ticker": "PXA.AX",
     "company": "PEXA GROUP LTD",
-    "price": 6.539999961853027,
-    "date": "2026-09-29",
+    "price": 6.579999923706055,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 4494978.737812042
+    "median_turnover": 4178256.2249777317
   },
   "ARU.AX": {
     "ticker": "ARU.AX",
     "company": "ARAFURA RARE EARTHS LTD",
-    "price": 0.17499999701976776,
-    "date": "2026-09-29",
+    "price": 0.1770000010728836,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 5253608.279520161
   },
   "REG.AX": {
     "ticker": "REG.AX",
     "company": "REGIS HEALTHCARE LTD",
-    "price": 4.449999809265137,
-    "date": "2026-09-29",
+    "price": 4.360000133514404,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-13",
@@ -5532,13 +5520,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4602298.374442577
+    "median_turnover": 4878519.618455887
   },
   "GNP.AX": {
     "ticker": "GNP.AX",
     "company": "GENUSPLUS GROUP LTD",
-    "price": 9.380000114440918,
-    "date": "2026-09-29",
+    "price": 9.329999923706055,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-01",
@@ -5554,23 +5542,20 @@
         "date": "2026-03-31",
         "dividend": 0.02,
         "split": 0
+      },
+      {
+        "date": "2026-09-30",
+        "dividend": 0.036,
+        "split": 0
       }
     ],
-    "median_turnover": 5523770.978292465
-  },
-  "CU6.AX": {
-    "ticker": "CU6.AX",
-    "company": "CLARITY PHARMACEUTICALS LTD",
-    "price": 2.069999933242798,
-    "date": "2026-09-29",
-    "actions": [],
-    "median_turnover": 3762523.930889368
+    "median_turnover": 5502411.819715977
   },
   "CCP.AX": {
     "ticker": "CCP.AX",
     "company": "CREDIT CORP GROUP LTD",
-    "price": 13.9399995803833,
-    "date": "2026-09-29",
+    "price": 13.979999542236328,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-18",
@@ -5593,13 +5578,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 3998666.9918723106
+    "median_turnover": 3774987.5450382233
   },
   "GLF.AX": {
     "ticker": "GLF.AX",
     "company": "GEMLIFE COMMUNITIES GROUP",
-    "price": 4.5,
-    "date": "2026-09-29",
+    "price": 4.519999980926514,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-06-29",
@@ -5612,8 +5597,8 @@
   "AOV.AX": {
     "ticker": "AOV.AX",
     "company": "AMOTIV LTD",
-    "price": 5.539999961853027,
-    "date": "2026-09-29",
+    "price": 5.695000171661377,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-21",
@@ -5636,21 +5621,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 1699762.9485328197
+    "median_turnover": 1805557.9682896137
   },
   "BOE.AX": {
     "ticker": "BOE.AX",
     "company": "BOSS ENERGY LTD",
-    "price": 1.5920000076293945,
-    "date": "2026-09-29",
+    "price": 1.565000057220459,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 8944975.35136503
+    "median_turnover": 9092174.687646747
   },
   "ELV.AX": {
     "ticker": "ELV.AX",
     "company": "ELEVRA LITHIUM LTD",
-    "price": 5.860000133514404,
-    "date": "2026-09-29",
+    "price": 5.71999979019165,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-09-12",
@@ -5658,13 +5643,13 @@
         "split": 0.006666666666666667
       }
     ],
-    "median_turnover": 13302221.945079803
+    "median_turnover": 12974159.156392574
   },
   "FPR.AX": {
     "ticker": "FPR.AX",
     "company": "FLEETPARTNERS GROUP LTD",
-    "price": 4.610000133514404,
-    "date": "2026-09-29",
+    "price": 4.630000114440918,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-12-15",
@@ -5677,13 +5662,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 2021362.3525652885
+    "median_turnover": 2403668.8171157837
   },
   "RIC.AX": {
     "ticker": "RIC.AX",
     "company": "RIDLEY CORP LTD",
-    "price": 2.5299999713897705,
-    "date": "2026-09-29",
+    "price": 2.5350000858306885,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-07",
@@ -5706,13 +5691,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1970727.9131895304
+    "median_turnover": 1937533.539041996
   },
   "NEC.AX": {
     "ticker": "NEC.AX",
     "company": "NINE ENTERTAINMENT CO HOLDIN",
-    "price": 0.6650000214576721,
-    "date": "2026-09-29",
+    "price": 0.675000011920929,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-10",
@@ -5735,13 +5720,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 7094947.297224641
+    "median_turnover": 6652970.898297608
   },
   "ARF.AX": {
     "ticker": "ARF.AX",
     "company": "ARENA REIT",
-    "price": 2.0850000381469727,
-    "date": "2026-09-29",
+    "price": 2.115000009536743,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -5789,8 +5774,8 @@
   "HMC.AX": {
     "ticker": "HMC.AX",
     "company": "HMC CAPITAL LTD",
-    "price": 2.9600000381469727,
-    "date": "2026-09-29",
+    "price": 2.994999885559082,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -5813,21 +5798,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 3929891.5095922947
+    "median_turnover": 3763348.853586912
   },
   "MAQ.AX": {
     "ticker": "MAQ.AX",
     "company": "MACQUARIE TECHNOLOGY GROUP L",
-    "price": 53.19499969482422,
-    "date": "2026-09-29",
+    "price": 54.369998931884766,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 2371336.632232666
+    "median_turnover": 2309095.1594696045
   },
   "VSL.AX": {
     "ticker": "VSL.AX",
     "company": "VULCAN STEEL LTD",
-    "price": 5.519999980926514,
-    "date": "2026-09-29",
+    "price": 5.570000171661377,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-13",
@@ -5845,13 +5830,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 350380.81188201904
+    "median_turnover": 333697.6120378971
   },
   "COF.AX": {
     "ticker": "COF.AX",
     "company": "CENTURIA OFFICE REIT",
-    "price": 0.8220000267028809,
-    "date": "2026-09-29",
+    "price": 0.8349999785423279,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -5894,13 +5879,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 725922.7079093158
+    "median_turnover": 720735.4628893137
   },
   "GOZ.AX": {
     "ticker": "GOZ.AX",
     "company": "GROWTHPOINT PROPERTIES AUSTR",
-    "price": 1.9450000524520874,
-    "date": "2026-09-29",
+    "price": 1.965000033378601,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -5923,13 +5908,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1000779.7627249956
+    "median_turnover": 1017593.3445224762
   },
   "IPG.AX": {
     "ticker": "IPG.AX",
     "company": "IPD GROUP LTD",
-    "price": 6.099999904632568,
-    "date": "2026-09-29",
+    "price": 6.059999942779541,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-27",
@@ -5957,8 +5942,8 @@
   "MAF.AX": {
     "ticker": "MAF.AX",
     "company": "MA FINANCIAL GROUP LTD",
-    "price": 4.75,
-    "date": "2026-09-29",
+    "price": 4.769999980926514,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-25",
@@ -5981,13 +5966,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 2094395.05062294
+    "median_turnover": 2072218.55987072
   },
   "CWP.AX": {
     "ticker": "CWP.AX",
     "company": "CEDAR WOODS PROPERTIES LTD",
-    "price": 6.489999771118164,
-    "date": "2026-09-29",
+    "price": 6.210000038146973,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-31",
@@ -6003,15 +5988,20 @@
         "date": "2026-03-23",
         "dividend": 0.14,
         "split": 0
+      },
+      {
+        "date": "2026-09-30",
+        "dividend": 0.25,
+        "split": 0
       }
     ],
-    "median_turnover": 1166391.77065444
+    "median_turnover": 1075730.2967739105
   },
   "HSN.AX": {
     "ticker": "HSN.AX",
     "company": "HANSEN TECHNOLOGIES LTD",
-    "price": 2.9800000190734863,
-    "date": "2026-09-29",
+    "price": 3.0799999237060547,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-24",
@@ -6039,8 +6029,8 @@
   "ACL.AX": {
     "ticker": "ACL.AX",
     "company": "AUSTRALIAN CLINICAL LABS LTD",
-    "price": 2.799999952316284,
-    "date": "2026-09-29",
+    "price": 2.8499999046325684,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-27",
@@ -6063,21 +6053,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 1153720.1384694576
+    "median_turnover": 1128760.5221600533
   },
   "NXL.AX": {
     "ticker": "NXL.AX",
     "company": "NUIX LTD",
-    "price": 1.8300000429153442,
-    "date": "2026-09-29",
+    "price": 1.8600000143051147,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 1756073.6900115013
+    "median_turnover": 1751069.6919890642
   },
   "GWA.AX": {
     "ticker": "GWA.AX",
     "company": "GWA GROUP LTD",
-    "price": 1.9769999980926514,
-    "date": "2026-09-29",
+    "price": 1.965000033378601,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-21",
@@ -6100,21 +6090,43 @@
         "split": 0
       }
     ],
-    "median_turnover": 555366.5860123634
+    "median_turnover": 520802.1918977499
+  },
+  "VGN.AX": {
+    "ticker": "VGN.AX",
+    "company": "VIRGIN AUSTRALIA HOLDINGS LT",
+    "price": 2.8949999809265137,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2026-09-14",
+        "dividend": 0.076,
+        "split": 0
+      }
+    ],
+    "median_turnover": 2907414.7308460474
   },
   "BRE.AX": {
     "ticker": "BRE.AX",
     "company": "BRAZILIAN RARE EARTHS LTD",
-    "price": 3.515000104904175,
-    "date": "2026-09-29",
+    "price": 3.690000057220459,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 2241039.5991256237
+  },
+  "VUL.AX": {
+    "ticker": "VUL.AX",
+    "company": "VULCAN ENERGY RESOURCES LTD",
+    "price": 1.8669999837875366,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 6144856.513619423
   },
   "RPL.AX": {
     "ticker": "RPL.AX",
     "company": "REGAL PARTNERS LTD",
-    "price": 2.3399999141693115,
-    "date": "2026-09-29",
+    "price": 2.315000057220459,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-03",
@@ -6142,16 +6154,16 @@
   "TPW.AX": {
     "ticker": "TPW.AX",
     "company": "TEMPLE & WEBSTER GROUP LTD",
-    "price": 4.264999866485596,
-    "date": "2026-09-29",
+    "price": 4.360000133514404,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 3500976.272847414
   },
   "RDX.AX": {
     "ticker": "RDX.AX",
     "company": "REDOX LTD/AUSTRALIA",
-    "price": 3.5299999713897705,
-    "date": "2026-09-29",
+    "price": 3.5799999237060547,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-03",
@@ -6174,13 +6186,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1918958.1861211061
+    "median_turnover": 2019348.4099810123
   },
   "SKS.AX": {
     "ticker": "SKS.AX",
     "company": "SKS TECHNOLOGIES GROUP LTD",
-    "price": 10.039999961853027,
-    "date": "2026-09-29",
+    "price": 10.199999809265137,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-17",
@@ -6203,13 +6215,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 2875714.4709644318
+    "median_turnover": 3316330.4868884087
   },
   "NGI.AX": {
     "ticker": "NGI.AX",
     "company": "NAVIGATOR GLOBAL INVESTMENTS",
-    "price": 2.4200000762939453,
-    "date": "2026-09-29",
+    "price": 2.450000047683716,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-09-11",
@@ -6217,13 +6229,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 2016047.7422225475
+    "median_turnover": 2302574.460101366
   },
   "WGN.AX": {
     "ticker": "WGN.AX",
     "company": "WAGNERS HOLDING CO LTD",
-    "price": 4.170000076293945,
-    "date": "2026-09-29",
+    "price": 4.409999847412109,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-09-09",
@@ -6241,16 +6253,16 @@
   "BC8.AX": {
     "ticker": "BC8.AX",
     "company": "BLACK CAT SYNDICATE LTD",
-    "price": 0.9449999928474426,
-    "date": "2026-09-29",
+    "price": 0.8349999785423279,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 3652657.018135786
+    "median_turnover": 3746762.435055375
   },
   "SKG.AX": {
     "ticker": "SKG.AX",
     "company": "STORAGE KING GROUP",
-    "price": 1.0750000476837158,
-    "date": "2026-09-29",
+    "price": 1.090000033378601,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -6273,13 +6285,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1627755.6369981766
+    "median_turnover": 1665337.125995636
   },
   "IEL.AX": {
     "ticker": "IEL.AX",
     "company": "IDP EDUCATION LTD",
-    "price": 1.9149999618530273,
-    "date": "2026-09-29",
+    "price": 2.0399999618530273,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -6302,13 +6314,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 4285048.675386488
+    "median_turnover": 4388268.620414317
   },
   "AEL.AX": {
     "ticker": "AEL.AX",
     "company": "AMPLITUDE ENERGY LTD",
-    "price": 1.7000000476837158,
-    "date": "2026-09-29",
+    "price": 1.7350000143051147,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-11-11",
@@ -6321,8 +6333,8 @@
   "GNG.AX": {
     "ticker": "GNG.AX",
     "company": "GR ENGINEERING SERVICES LTD",
-    "price": 7.389999866485596,
-    "date": "2026-09-29",
+    "price": 7.539999961853027,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-04",
@@ -6345,21 +6357,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 3704798.5444431305
+    "median_turnover": 3856366.214557886
   },
   "BCI.AX": {
     "ticker": "BCI.AX",
     "company": "BCI MINERALS LTD",
-    "price": 0.6000000238418579,
-    "date": "2026-09-29",
+    "price": 0.6100000143051147,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 932464.1892702878
+    "median_turnover": 839988.895755887
   },
   "CMW.AX": {
     "ticker": "CMW.AX",
     "company": "CROMWELL PROPERTY GROUP",
-    "price": 0.3370000123977661,
-    "date": "2026-09-29",
+    "price": 0.3400000035762787,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -6407,32 +6419,40 @@
   "CHN.AX": {
     "ticker": "CHN.AX",
     "company": "CHALICE MINING LTD",
-    "price": 1.121999979019165,
-    "date": "2026-09-29",
+    "price": 1.2000000476837158,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 1646927.4037681222
+    "median_turnover": 1683307.0391840339
+  },
+  "CU6.AX": {
+    "ticker": "CU6.AX",
+    "company": "CLARITY PHARMACEUTICALS LTD",
+    "price": 2.0899999141693115,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 3635565.899077177
   },
   "LIC.AX": {
     "ticker": "LIC.AX",
     "company": "LIFESTYLE COMMUNITIES LTD",
-    "price": 4.375,
-    "date": "2026-09-29",
+    "price": 4.429999828338623,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 640696.0905120373
+    "median_turnover": 620145.6612725258
   },
   "TUA.AX": {
     "ticker": "TUA.AX",
     "company": "TUAS LTD",
-    "price": 1.7070000171661377,
-    "date": "2026-09-29",
+    "price": 1.7599999904632568,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 3470557.195743084
+    "median_turnover": 3922909.722867608
   },
   "EQT.AX": {
     "ticker": "EQT.AX",
     "company": "EQT HOLDINGS LTD",
-    "price": 21.459999084472656,
-    "date": "2026-09-29",
+    "price": 21.139999389648438,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -6450,29 +6470,29 @@
         "split": 0
       }
     ],
-    "median_turnover": 1762495.182542801
+    "median_turnover": 1672143.0715560913
   },
   "WA1.AX": {
     "ticker": "WA1.AX",
     "company": "WA1 RESOURCES LTD",
-    "price": 10.270000457763672,
-    "date": "2026-09-29",
+    "price": 10.279999732971191,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 2062294.8989534378
+    "median_turnover": 2040273.9633722305
   },
   "PNV.AX": {
     "ticker": "PNV.AX",
     "company": "POLYNOVO LTD",
-    "price": 0.9350000023841858,
-    "date": "2026-09-29",
+    "price": 0.9150000214576721,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 1170325.7821816206
+    "median_turnover": 1143166.1743596196
   },
   "LYL.AX": {
     "ticker": "LYL.AX",
     "company": "LYCOPODIUM LTD",
-    "price": 23.34000015258789,
-    "date": "2026-09-29",
+    "price": 23.440000534057617,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-24",
@@ -6495,13 +6515,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1995357.3043870926
+    "median_turnover": 1755461.5355825424
   },
   "SHV.AX": {
     "ticker": "SHV.AX",
     "company": "SELECT HARVESTS LTD",
-    "price": 4.199999809265137,
-    "date": "2026-09-29",
+    "price": 4.210000038146973,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-06-17",
@@ -6509,13 +6529,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1734985.1888237
+    "median_turnover": 1905505.1320400238
   },
   "CVL.AX": {
     "ticker": "CVL.AX",
     "company": "CIVMEC LTD",
-    "price": 1.684999942779541,
-    "date": "2026-09-29",
+    "price": 1.6549999713897705,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-14",
@@ -6538,50 +6558,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 302620.8326230049
+    "median_turnover": 269584.97780770063
   },
   "C79.AX": {
     "ticker": "C79.AX",
     "company": "CHRYSOS CORP LTD",
-    "price": 6.590000152587891,
-    "date": "2026-09-29",
+    "price": 6.570000171661377,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 970274.1059041023
-  },
-  "AEF.AX": {
-    "ticker": "AEF.AX",
-    "company": "AUSTRALIAN ETHICAL INVT LTD",
-    "price": 4.119999885559082,
-    "date": "2026-09-29",
-    "actions": [
-      {
-        "date": "2025-03-05",
-        "dividend": 0.05,
-        "split": 0
-      },
-      {
-        "date": "2025-09-03",
-        "dividend": 0.09,
-        "split": 0
-      },
-      {
-        "date": "2026-03-05",
-        "dividend": 0.08,
-        "split": 0
-      },
-      {
-        "date": "2026-09-02",
-        "dividend": 0.1,
-        "split": 0
-      }
-    ],
-    "median_turnover": 489945.005466938
   },
   "OCL.AX": {
     "ticker": "OCL.AX",
     "company": "OBJECTIVE CORPORATION LTD",
-    "price": 5.789999961853027,
-    "date": "2026-09-29",
+    "price": 5.829999923706055,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -6609,13 +6600,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 932210.47712183
+    "median_turnover": 859662.8389949799
   },
   "JIN.AX": {
     "ticker": "JIN.AX",
     "company": "JUMBO INTERACTIVE LTD",
-    "price": 5.940000057220459,
-    "date": "2026-09-29",
+    "price": 5.869999885559082,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-02-27",
@@ -6638,13 +6629,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1720192.0064885616
+    "median_turnover": 1693726.5393323898
   },
   "BLX.AX": {
     "ticker": "BLX.AX",
     "company": "BEACON LIGHTING GROUP LTD",
-    "price": 1.7599999904632568,
-    "date": "2026-09-29",
+    "price": 1.7699999809265137,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -6672,8 +6663,8 @@
   "CUV.AX": {
     "ticker": "CUV.AX",
     "company": "CLINUVEL PHARMACEUTICALS LTD",
-    "price": 8.329999923706055,
-    "date": "2026-09-29",
+    "price": 8.40999984741211,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-09-04",
@@ -6691,16 +6682,16 @@
   "EHL.AX": {
     "ticker": "EHL.AX",
     "company": "EMECO HOLDINGS LTD",
-    "price": 1.2050000429153442,
-    "date": "2026-09-29",
+    "price": 1.2000000476837158,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 667229.3149700761
+    "median_turnover": 669532.132675767
   },
   "ABG.AX": {
     "ticker": "ABG.AX",
     "company": "ABACUS GROUP",
-    "price": 0.8199999928474426,
-    "date": "2026-09-29",
+    "price": 0.8349999785423279,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -6723,13 +6714,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1105135.5663411021
+    "median_turnover": 1035380.2599811256
   },
   "MYR.AX": {
     "ticker": "MYR.AX",
     "company": "MYER HOLDINGS LTD",
-    "price": 0.1850000023841858,
-    "date": "2026-09-29",
+    "price": 0.1899999976158142,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-10-03",
@@ -6742,13 +6733,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 2049866.0872861072
+    "median_turnover": 1813948.0306581184
   },
   "AX1.AX": {
     "ticker": "AX1.AX",
     "company": "ACCENT GROUP LTD",
-    "price": 0.6650000214576721,
-    "date": "2026-09-29",
+    "price": 0.6669999957084656,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-05",
@@ -6776,8 +6767,8 @@
   "PPM.AX": {
     "ticker": "PPM.AX",
     "company": "PEPPER MONEY LTD/AU",
-    "price": 1.7000000476837158,
-    "date": "2026-09-29",
+    "price": 1.7200000286102295,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-19",
@@ -6805,21 +6796,21 @@
         "split": 0
       }
     ],
-    "median_turnover": 336115.01218503714
+    "median_turnover": 283658.1150482297
   },
   "GTK.AX": {
     "ticker": "GTK.AX",
     "company": "GENTRACK GROUP LTD",
-    "price": 2.940000057220459,
-    "date": "2026-09-29",
+    "price": 2.9800000190734863,
+    "date": "2026-09-30",
     "actions": [],
-    "median_turnover": 1256843.0706300735
+    "median_turnover": 1205800.9913170338
   },
   "AFG.AX": {
     "ticker": "AFG.AX",
     "company": "AUSTRALIAN FINANCE GROUP LTD",
-    "price": 1.2699999809265137,
-    "date": "2026-09-29",
+    "price": 1.2949999570846558,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -6847,8 +6838,8 @@
   "FML.AX": {
     "ticker": "FML.AX",
     "company": "FOCUS MINERALS LTD",
-    "price": 1.8049999475479126,
-    "date": "2026-09-29",
+    "price": 1.8849999904632568,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2026-09-15",
@@ -6856,13 +6847,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 383036.32054543495
+    "median_turnover": 397671.8037111759
   },
   "JMS.AX": {
     "ticker": "JMS.AX",
     "company": "JUPITER MINES LTD",
-    "price": 0.24699999392032623,
-    "date": "2026-09-29",
+    "price": 0.25,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-06",
@@ -6890,8 +6881,8 @@
   "MAD.AX": {
     "ticker": "MAD.AX",
     "company": "MADER GROUP LTD",
-    "price": 6.400000095367432,
-    "date": "2026-09-29",
+    "price": 6.389999866485596,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-25",
@@ -6904,13 +6895,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 2454845.6600096226
+    "median_turnover": 2416698.3102817535
   },
   "EIQ.AX": {
     "ticker": "EIQ.AX",
     "company": "ECHOIQ LTD",
-    "price": 0.550000011920929,
-    "date": "2026-09-29",
+    "price": 0.5699999928474426,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 5888746.844945967
   },
@@ -6918,47 +6909,84 @@
     "ticker": "MGX.AX",
     "company": "MGX RESOURCES LTD",
     "price": 0.33000001311302185,
-    "date": "2026-09-28",
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 118710.58477662504
   },
   "AAC.AX": {
     "ticker": "AAC.AX",
     "company": "AUSTRALIAN AGRICULTURAL CO",
-    "price": 1.2949999570846558,
-    "date": "2026-09-29",
+    "price": 1.3070000410079956,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 215408.3696899414
+  },
+  "AEF.AX": {
+    "ticker": "AEF.AX",
+    "company": "AUSTRALIAN ETHICAL INVT LTD",
+    "price": 4.179999828338623,
+    "date": "2026-09-30",
+    "actions": [
+      {
+        "date": "2025-03-05",
+        "dividend": 0.05,
+        "split": 0
+      },
+      {
+        "date": "2025-09-03",
+        "dividend": 0.09,
+        "split": 0
+      },
+      {
+        "date": "2026-03-05",
+        "dividend": 0.08,
+        "split": 0
+      },
+      {
+        "date": "2026-09-02",
+        "dividend": 0.1,
+        "split": 0
+      }
+    ],
+    "median_turnover": 451759.7959830761
   },
   "TVN.AX": {
     "ticker": "TVN.AX",
     "company": "TIVAN LTD",
     "price": 0.18000000715255737,
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 274337.3677824214
   },
   "INR.AX": {
     "ticker": "INR.AX",
     "company": "IONEER LTD",
-    "price": 0.10999999940395355,
-    "date": "2026-09-29",
+    "price": 0.1120000034570694,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 371908.83281522244
+  },
+  "DTR.AX": {
+    "ticker": "DTR.AX",
+    "company": "DATELINE RESOURCES LTD",
+    "price": 0.125,
+    "date": "2026-09-30",
+    "actions": [],
+    "median_turnover": 1078036.2853021845
   },
   "TYR.AX": {
     "ticker": "TYR.AX",
     "company": "TYRO PAYMENTS LTD",
-    "price": 0.6949999928474426,
-    "date": "2026-09-29",
+    "price": 0.6970000267028809,
+    "date": "2026-09-30",
     "actions": [],
     "median_turnover": 858829.8143984377
   },
   "HCW.AX": {
     "ticker": "HCW.AX",
     "company": "HEALTHCO REIT",
-    "price": 0.7250000238418579,
-    "date": "2026-09-29",
+    "price": 0.7300000190734863,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2024-12-30",
@@ -6966,13 +6994,13 @@
         "split": 0
       }
     ],
-    "median_turnover": 1117458.364841938
+    "median_turnover": 1091996.6716890335
   },
   "QAL.AX": {
     "ticker": "QAL.AX",
     "company": "QUALITAS LTD",
-    "price": 2.200000047683716,
-    "date": "2026-09-29",
+    "price": 2.2699999809265137,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-11",
@@ -7000,8 +7028,8 @@
   "PFP.AX": {
     "ticker": "PFP.AX",
     "company": "PROPEL FUNERAL PARTNERS LTD",
-    "price": 2.809999942779541,
-    "date": "2026-09-29",
+    "price": 2.8499999046325684,
+    "date": "2026-09-30",
     "actions": [
       {
         "date": "2025-03-03",

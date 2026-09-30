@@ -485,7 +485,7 @@
     "industry": "Other Industrial Metals & Mining",
     "fundamental_currency": "AUD",
     "fundamental_period": "2025-12-31",
-    "fundamental_fetched": "2026-09-16",
+    "fundamental_fetched": "2026-09-30",
     "fundamental_source": "https://au.finance.yahoo.com/quote/DVP.AX/financials/",
     "net_income": 73086744.0,
     "free_cash_flow": -25627642.0,
@@ -1883,5 +1883,18 @@
     "operating_cash_flow": 63081000.0,
     "total_cash": 20612000.0,
     "total_debt": 148311008.0
+  },
+  "MMS.AX": {
+    "sector": "Industrials",
+    "industry": "Staffing & Employment Services",
+    "fundamental_currency": "AUD",
+    "fundamental_period": "2026-06-30",
+    "fundamental_fetched": "2026-09-30",
+    "fundamental_source": "https://au.finance.yahoo.com/quote/MMS.AX/financials/",
+    "net_income": 106699000.0,
+    "free_cash_flow": 79022000.0,
+    "operating_cash_flow": 8134000.0,
+    "total_cash": 100688000.0,
+    "total_debt": 837532032.0
   }
 }
