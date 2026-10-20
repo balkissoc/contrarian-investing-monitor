@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-19",
+  "as_of": "2026-10-20",
   "settings_version": "2026-09-hybrid-v1",
   "benchmark": "A300.AX",
-  "prospective_events": 164,
+  "prospective_events": 170,
   "legacy_events": 272,
   "unavailable_or_stale": 0,
   "horizons": {
@@ -14,10 +14,10 @@
       "hit_20_pct": null
     },
     "20d": {
-      "mature": 28,
-      "matched": 28,
-      "median_net_pct": -6.7,
-      "median_excess_pp": -6.78,
+      "mature": 31,
+      "matched": 31,
+      "median_net_pct": -6.36,
+      "median_excess_pp": -6.21,
       "hit_20_pct": null
     },
     "60d": {
@@ -55,12 +55,12 @@
       "median_excess_pp": -10.69
     },
     "40\u201359": {
-      "matched_20d": 22,
-      "median_excess_pp": -6.1
+      "matched_20d": 23,
+      "median_excess_pp": -5.98
     },
     "60\u201379": {
-      "matched_20d": 5,
-      "median_excess_pp": -10.36
+      "matched_20d": 7,
+      "median_excess_pp": -6.87
     },
     "80\u2013100": {
       "matched_20d": 0,
