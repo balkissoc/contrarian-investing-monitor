@@ -212,7 +212,7 @@
     "industry": "Gold",
     "fundamental_currency": "AUD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-09-24",
+    "fundamental_fetched": "2026-10-21",
     "fundamental_source": "https://au.finance.yahoo.com/quote/GGP.AX/financials/",
     "net_income": 862297024.0,
     "free_cash_flow": 503452000.0,
@@ -2045,7 +2045,7 @@
     "industry": "Steel",
     "fundamental_currency": "AUD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-10-16",
+    "fundamental_fetched": "2026-10-21",
     "fundamental_source": "https://au.finance.yahoo.com/quote/SGM.AX/financials/",
     "net_income": 245300000.0,
     "free_cash_flow": 184137504.0,
@@ -2123,7 +2123,7 @@
     "industry": "Airlines",
     "fundamental_currency": "AUD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-10-14",
+    "fundamental_fetched": "2026-10-21",
     "fundamental_source": "https://au.finance.yahoo.com/quote/VGN.AX/financials/",
     "net_income": 501200000.0,
     "free_cash_flow": -128725000.0,
@@ -2299,5 +2299,18 @@
     "operating_cash_flow": 109987000.0,
     "total_cash": 80675000.0,
     "total_debt": 110150000.0
+  },
+  "RWC.AX": {
+    "sector": "Industrials",
+    "industry": "Building Products & Equipment",
+    "fundamental_currency": "USD",
+    "fundamental_period": "2026-06-30",
+    "fundamental_fetched": "2026-10-21",
+    "fundamental_source": "https://au.finance.yahoo.com/quote/RWC.AX/financials/",
+    "net_income": 6268000.0,
+    "free_cash_flow": 199921376.0,
+    "operating_cash_flow": 240660992.0,
+    "total_cash": 28566000.0,
+    "total_debt": 378268000.0
   }
 }
