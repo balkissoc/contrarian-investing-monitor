@@ -65,7 +65,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed; Attention score changed materially",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "LYC.AX": {
     "last_price": 11.2,
@@ -82,7 +82,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "XRO.AX": {
     "last_price": 59.24,
@@ -136,8 +136,8 @@
     "last_seen": "2026-10-19"
   },
   "NXT.AX": {
-    "last_price": 5.17,
-    "attention_score": 100,
+    "last_price": 5.75,
+    "attention_score": 82,
     "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
@@ -147,10 +147,10 @@
     "free_cash_flow": -1722313856.0,
     "total_cash": 875977984.0,
     "total_debt": 3367548928.0,
-    "alert_date": "2026-10-21",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Price moved at least 5% since last alert; Threshold category changed; Evidence/data status changed; Attention score changed materially",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Price moved at least 5% since last alert; Attention score changed materially",
+    "last_seen": "2026-10-22"
   },
   "CAR.AX": {
     "last_price": 22.53,
@@ -320,7 +320,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "HUB.AX": {
     "last_price": 59.62,
@@ -340,8 +340,8 @@
     "last_seen": "2026-10-15"
   },
   "TLX.AX": {
-    "last_price": 14.74,
-    "attention_score": 65,
+    "last_price": 13.66,
+    "attention_score": 66,
     "signal_type": "near_miss",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
@@ -351,10 +351,10 @@
     "free_cash_flow": -62596000.0,
     "total_cash": 251910000.0,
     "total_debt": 579860992.0,
-    "alert_date": "2026-10-21",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Price moved at least 5% since last alert",
+    "last_seen": "2026-10-22"
   },
   "PDN.AX": {
     "last_price": 7.11,
@@ -371,7 +371,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "SEK.AX": {
     "last_price": 11.6,
@@ -473,7 +473,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "BGL.AX": {
     "last_price": 1.37,
@@ -541,7 +541,7 @@
     "alert_date": "2026-10-21",
     "alert_status": "changed",
     "alert_reason": "Threshold category changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "EVT.AX": {
     "last_price": 13.23,
@@ -561,8 +561,8 @@
     "last_seen": "2026-09-14"
   },
   "MFG.AX": {
-    "last_price": 8.35,
-    "attention_score": 65,
+    "last_price": 7.69,
+    "attention_score": 74,
     "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "sector_specialist",
@@ -572,10 +572,10 @@
     "free_cash_flow": 69030248.0,
     "total_cash": 347851008.0,
     "total_debt": 2022000.0,
-    "alert_date": "2026-09-23",
-    "alert_status": "changed",
-    "alert_reason": "Threshold category changed; Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-09-24"
+    "alert_date": "2026-10-22",
+    "alert_status": "new",
+    "alert_reason": "New sell-off episode",
+    "last_seen": "2026-10-22"
   },
   "DRO.AX": {
     "last_price": 1.43,
@@ -626,7 +626,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "DVP.AX": {
     "last_price": 3.92,
@@ -643,12 +643,12 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "GDG.AX": {
-    "last_price": 2.62,
-    "attention_score": 62,
-    "signal_type": "near_miss",
+    "last_price": 3.03,
+    "attention_score": 66,
+    "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "sector_specialist",
     "investigation_flags": "",
@@ -657,10 +657,10 @@
     "free_cash_flow": -1473832832.0,
     "total_cash": 6244027904.0,
     "total_debt": 47379000.0,
-    "alert_date": "2026-10-07",
-    "alert_status": "changed",
-    "alert_reason": "Threshold category changed",
-    "last_seen": "2026-10-08"
+    "alert_date": "2026-10-22",
+    "alert_status": "new",
+    "alert_reason": "New sell-off episode",
+    "last_seen": "2026-10-22"
   },
   "IRE.AX": {
     "last_price": 5.65,
@@ -680,9 +680,9 @@
     "last_seen": "2026-09-15"
   },
   "TEA.AX": {
-    "last_price": 8.75,
-    "attention_score": 76,
-    "signal_type": "candidate",
+    "last_price": 8.89,
+    "attention_score": 68,
+    "signal_type": "near_miss",
     "avoid_flags": "",
     "research_lane": "core_research",
     "investigation_flags": "",
@@ -691,15 +691,15 @@
     "free_cash_flow": 84708248.0,
     "total_cash": 66872000.0,
     "total_debt": 155322000.0,
-    "alert_date": "2026-10-21",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Price moved at least 5% since last alert; Threshold category changed",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Threshold category changed",
+    "last_seen": "2026-10-22"
   },
   "NCK.AX": {
-    "last_price": 13.85,
-    "attention_score": 57,
-    "signal_type": "near_miss",
+    "last_price": 12.06,
+    "attention_score": 92,
+    "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "core_research",
     "investigation_flags": "",
@@ -708,10 +708,10 @@
     "free_cash_flow": 101216496.0,
     "total_cash": 106594000.0,
     "total_debt": 350065984.0,
-    "alert_date": "2026-09-13",
+    "alert_date": "2026-10-22",
     "alert_status": "new",
     "alert_reason": "New sell-off episode",
-    "last_seen": "2026-09-14"
+    "last_seen": "2026-10-22"
   },
   "ELV.AX": {
     "last_price": 3.63,
@@ -728,7 +728,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "PNR.AX": {
     "last_price": 2.85,
@@ -830,7 +830,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "ELS.AX": {
     "last_price": 3.13,
@@ -847,7 +847,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Price moved at least 5% since last alert; Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "IPX.AX": {
     "last_price": 1.94,
@@ -864,7 +864,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "CAT.AX": {
     "last_price": 3.08,
@@ -884,8 +884,8 @@
     "last_seen": "2026-10-19"
   },
   "A4N.AX": {
-    "last_price": 0.42,
-    "attention_score": 79,
+    "last_price": 0.43,
+    "attention_score": 63,
     "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
@@ -895,10 +895,10 @@
     "free_cash_flow": -181703648.0,
     "total_cash": 160896480.0,
     "total_debt": 28273768.0,
-    "alert_date": "2026-10-20",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Attention score changed materially",
+    "last_seen": "2026-10-22"
   },
   "VUL.AX": {
     "last_price": 1.13,
@@ -915,7 +915,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "NAN.AX": {
     "last_price": 2.89,
@@ -983,12 +983,12 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Price moved at least 5% since last alert; Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "BMN.AX": {
-    "last_price": 3.15,
-    "attention_score": 65,
-    "signal_type": "candidate",
+    "last_price": 3.17,
+    "attention_score": 57,
+    "signal_type": "near_miss",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
     "investigation_flags": "",
@@ -997,10 +997,10 @@
     "free_cash_flow": -64528500.0,
     "total_cash": 64664000.0,
     "total_debt": 1878000.0,
-    "alert_date": "2026-10-20",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Threshold category changed",
+    "last_seen": "2026-10-22"
   },
   "PXA.AX": {
     "last_price": 6.79,
@@ -1021,8 +1021,8 @@
   },
   "ARU.AX": {
     "last_price": 0.15,
-    "attention_score": 60,
-    "signal_type": "near_miss",
+    "attention_score": 63,
+    "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
     "investigation_flags": "",
@@ -1031,10 +1031,10 @@
     "free_cash_flow": -28550248.0,
     "total_cash": 723241088.0,
     "total_debt": 1334871.0,
-    "alert_date": "2026-10-21",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
     "alert_reason": "Threshold category changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "REG.AX": {
     "last_price": 4.46,
@@ -1068,7 +1068,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "MAQ.AX": {
     "last_price": 44.22,
@@ -1122,9 +1122,9 @@
     "last_seen": "2026-09-15"
   },
   "MAF.AX": {
-    "last_price": 4.75,
-    "attention_score": 58,
-    "signal_type": "near_miss",
+    "last_price": 4.37,
+    "attention_score": 68,
+    "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "sector_specialist",
     "investigation_flags": "",
@@ -1133,10 +1133,10 @@
     "free_cash_flow": null,
     "total_cash": 604883968.0,
     "total_debt": 11511113728.0,
-    "alert_date": "2026-09-29",
-    "alert_status": "changed",
-    "alert_reason": "Threshold category changed",
-    "last_seen": "2026-09-29"
+    "alert_date": "2026-10-22",
+    "alert_status": "new",
+    "alert_reason": "New sell-off episode",
+    "last_seen": "2026-10-22"
   },
   "HSN.AX": {
     "last_price": 3.18,
@@ -1204,7 +1204,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "CMW.AX": {
     "last_price": 0.35,
@@ -1224,9 +1224,9 @@
     "last_seen": "2026-09-21"
   },
   "BOE.AX": {
-    "last_price": 1.28,
-    "attention_score": 67,
-    "signal_type": "candidate",
+    "last_price": 1.32,
+    "attention_score": 61,
+    "signal_type": "near_miss",
     "avoid_flags": "downgrade",
     "research_lane": "cyclical_research",
     "investigation_flags": "Headline terms require verification; allegation or context is not a verified exclusion",
@@ -1235,10 +1235,10 @@
     "free_cash_flow": 19407624.0,
     "total_cash": 54522000.0,
     "total_debt": 327000.0,
-    "alert_date": "2026-10-20",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Threshold category changed",
+    "last_seen": "2026-10-22"
   },
   "CU6.AX": {
     "last_price": 1.76,
@@ -1255,7 +1255,7 @@
     "alert_date": "2026-10-21",
     "alert_status": "changed",
     "alert_reason": "Threshold category changed; Attention score changed materially",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "LIC.AX": {
     "last_price": 4.38,
@@ -1275,9 +1275,9 @@
     "last_seen": "2026-09-29"
   },
   "WA1.AX": {
-    "last_price": 8.37,
-    "attention_score": 63,
-    "signal_type": "candidate",
+    "last_price": 8.35,
+    "attention_score": 61,
+    "signal_type": "near_miss",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
     "investigation_flags": "",
@@ -1286,10 +1286,10 @@
     "free_cash_flow": -45230680.0,
     "total_cash": 123799312.0,
     "total_debt": 1031220.0,
-    "alert_date": "2026-10-20",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Price moved at least 5% since last alert; Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Threshold category changed",
+    "last_seen": "2026-10-22"
   },
   "OCL.AX": {
     "last_price": 5.51,
@@ -1391,7 +1391,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "SHL.AX": {
     "last_price": 19.35,
@@ -1442,7 +1442,7 @@
     "alert_date": "2026-10-21",
     "alert_status": "changed",
     "alert_reason": "Price moved at least 5% since last alert",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "PYC.AX": {
     "last_price": 1.78,
@@ -1459,7 +1459,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "CIA.AX": {
     "last_price": 2.3,
@@ -1476,7 +1476,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "MGH.AX": {
     "last_price": 3.67,
@@ -1493,7 +1493,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "SXE.AX": {
     "last_price": 3.91,
@@ -1510,7 +1510,7 @@
     "alert_date": "2026-10-21",
     "alert_status": "changed",
     "alert_reason": "Price moved at least 5% since last alert; Evidence/data status changed; Market regime changed; Attention score changed materially",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "RPL.AX": {
     "last_price": 2.05,
@@ -1853,8 +1853,8 @@
     "last_seen": "2026-10-13"
   },
   "FFM.AX": {
-    "last_price": 1.33,
-    "attention_score": 81,
+    "last_price": 1.35,
+    "attention_score": 63,
     "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
@@ -1864,10 +1864,10 @@
     "free_cash_flow": -89490752.0,
     "total_cash": 193356992.0,
     "total_debt": 1593000.0,
-    "alert_date": "2026-10-20",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Attention score changed materially",
+    "last_seen": "2026-10-22"
   },
   "DGT.AX": {
     "last_price": 1.98,
@@ -1884,7 +1884,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Threshold category changed; Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "C79.AX": {
     "last_price": 6.51,
@@ -1938,9 +1938,9 @@
     "last_seen": "2026-09-18"
   },
   "PDI.AX": {
-    "last_price": 3.94,
-    "attention_score": 71,
-    "signal_type": "candidate",
+    "last_price": 3.89,
+    "attention_score": 63,
+    "signal_type": "near_miss",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
     "investigation_flags": "",
@@ -1949,10 +1949,10 @@
     "free_cash_flow": 76286624.0,
     "total_cash": 193736992.0,
     "total_debt": 20993000.0,
-    "alert_date": "2026-10-21",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
     "alert_reason": "Threshold category changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "IMD.AX": {
     "last_price": 3.22,
@@ -2040,9 +2040,9 @@
     "last_seen": "2026-09-28"
   },
   "MI6.AX": {
-    "last_price": 0.73,
-    "attention_score": 72,
-    "signal_type": "candidate",
+    "last_price": 0.75,
+    "attention_score": 64,
+    "signal_type": "near_miss",
     "avoid_flags": "capital raising",
     "research_lane": "turnaround_research",
     "investigation_flags": "Headline terms require verification; allegation or context is not a verified exclusion",
@@ -2051,10 +2051,10 @@
     "free_cash_flow": -38457124.0,
     "total_cash": 211280992.0,
     "total_debt": 2880000.0,
-    "alert_date": "2026-10-21",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Attention score changed materially",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Threshold category changed",
+    "last_seen": "2026-10-22"
   },
   "DRR.AX": {
     "last_price": 4.12,
@@ -2088,7 +2088,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "KLS.AX": {
     "last_price": 3.88,
@@ -2156,7 +2156,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "EIQ.AX": {
     "last_price": 0.69,
@@ -2244,8 +2244,8 @@
     "last_seen": "2026-09-28"
   },
   "EOS.AX": {
-    "last_price": 9.07,
-    "attention_score": 66,
+    "last_price": 9.06,
+    "attention_score": 51,
     "signal_type": "near_miss",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
@@ -2255,10 +2255,10 @@
     "free_cash_flow": 180603504.0,
     "total_cash": 256024992.0,
     "total_debt": 85105000.0,
-    "alert_date": "2026-10-20",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Threshold category changed",
-    "last_seen": "2026-10-20"
+    "alert_reason": "Attention score changed materially",
+    "last_seen": "2026-10-22"
   },
   "KAR.AX": {
     "last_price": 1.52,
@@ -2377,7 +2377,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed; Attention score changed materially",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "SOL.AX": {
     "last_price": 46.47,
@@ -2431,9 +2431,9 @@
     "last_seen": "2026-09-28"
   },
   "GNP.AX": {
-    "last_price": 7.93,
-    "attention_score": 75,
-    "signal_type": "candidate",
+    "last_price": 8.01,
+    "attention_score": 59,
+    "signal_type": "near_miss",
     "avoid_flags": "",
     "research_lane": "core_research",
     "investigation_flags": "",
@@ -2442,10 +2442,10 @@
     "free_cash_flow": 130070928.0,
     "total_cash": 390596480.0,
     "total_debt": 96195896.0,
-    "alert_date": "2026-10-21",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Price moved at least 5% since last alert; Threshold category changed; Evidence/data status changed; Market regime changed; Attention score changed materially",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Threshold category changed; Attention score changed materially",
+    "last_seen": "2026-10-22"
   },
   "WGN.AX": {
     "last_price": 4.23,
@@ -2581,7 +2581,7 @@
     "alert_date": "2026-10-21",
     "alert_status": "changed",
     "alert_reason": "Price moved at least 5% since last alert; Attention score changed materially",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "AMP.AX": {
     "last_price": 2.42,
@@ -2618,21 +2618,21 @@
     "last_seen": "2026-10-08"
   },
   "BCI.AX": {
-    "last_price": 0.52,
-    "attention_score": 52,
+    "last_price": 0.53,
+    "attention_score": 54,
     "signal_type": "near_miss",
     "avoid_flags": "",
     "research_lane": "turnaround_research",
-    "investigation_flags": "Liquidity unverified or below research floor; Price date needs review",
-    "market_context": "context_unavailable",
+    "investigation_flags": "Liquidity unverified or below research floor",
+    "market_context": "no_systemic_trigger",
     "net_income": 19400000.0,
     "free_cash_flow": -300075008.0,
     "total_cash": 100200000.0,
     "total_debt": 698200000.0,
-    "alert_date": "2026-10-19",
-    "alert_status": "new",
-    "alert_reason": "New sell-off episode",
-    "last_seen": "2026-10-19"
+    "alert_date": "2026-10-22",
+    "alert_status": "changed",
+    "alert_reason": "Evidence/data status changed; Market regime changed",
+    "last_seen": "2026-10-22"
   },
   "MLX.AX": {
     "last_price": 1.69,
@@ -2649,7 +2649,7 @@
     "alert_date": "2026-10-21",
     "alert_status": "changed",
     "alert_reason": "Price moved at least 5% since last alert",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "TLS.AX": {
     "last_price": 4.61,
@@ -2683,7 +2683,7 @@
     "alert_date": "2026-10-21",
     "alert_status": "changed",
     "alert_reason": "Price moved at least 5% since last alert",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "CNU.AX": {
     "last_price": 6.52,
@@ -2788,9 +2788,9 @@
     "last_seen": "2026-10-21"
   },
   "NWH.AX": {
-    "last_price": 6.73,
-    "attention_score": 58,
-    "signal_type": "near_miss",
+    "last_price": 6.44,
+    "attention_score": 69,
+    "signal_type": "candidate",
     "avoid_flags": "",
     "research_lane": "core_research",
     "investigation_flags": "",
@@ -2799,10 +2799,10 @@
     "free_cash_flow": 211033744.0,
     "total_cash": 319668000.0,
     "total_debt": 585496000.0,
-    "alert_date": "2026-10-20",
+    "alert_date": "2026-10-22",
     "alert_status": "changed",
-    "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "alert_reason": "Threshold category changed",
+    "last_seen": "2026-10-22"
   },
   "MND.AX": {
     "last_price": 28.08,
@@ -2836,7 +2836,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "changed",
     "alert_reason": "Evidence/data status changed; Market regime changed",
-    "last_seen": "2026-10-21"
+    "last_seen": "2026-10-22"
   },
   "PRN.AX": {
     "last_price": 2.02,
@@ -2972,7 +2972,7 @@
     "alert_date": "2026-10-20",
     "alert_status": "new",
     "alert_reason": "New sell-off episode",
-    "last_seen": "2026-10-20"
+    "last_seen": "2026-10-22"
   },
   "RRL.AX": {
     "last_price": 6.68,
@@ -3024,5 +3024,22 @@
     "alert_status": "new",
     "alert_reason": "New sell-off episode",
     "last_seen": "2026-10-21"
+  },
+  "AAC.AX": {
+    "last_price": 1.29,
+    "attention_score": 32,
+    "signal_type": "near_miss",
+    "avoid_flags": "",
+    "research_lane": "turnaround_research",
+    "investigation_flags": "Liquidity unverified or below research floor; Price date needs review",
+    "market_context": "no_systemic_trigger",
+    "net_income": 107285000.0,
+    "free_cash_flow": -250246752.0,
+    "total_cash": 10872000.0,
+    "total_debt": 516839008.0,
+    "alert_date": "2026-10-22",
+    "alert_status": "new",
+    "alert_reason": "New sell-off episode",
+    "last_seen": "2026-10-22"
   }
 }
