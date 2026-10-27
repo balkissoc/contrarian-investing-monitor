@@ -1017,14 +1017,14 @@
     "sector": "Consumer Cyclical",
     "industry": "Department Stores",
     "fundamental_currency": "AUD",
-    "fundamental_period": "2026-01-24",
-    "fundamental_fetched": "2026-09-22",
+    "fundamental_period": "2026-07-25",
+    "fundamental_fetched": "2026-10-27",
     "fundamental_source": "https://au.finance.yahoo.com/quote/MYR.AX/financials/",
-    "net_income": -201300000.0,
-    "free_cash_flow": null,
-    "operating_cash_flow": 304000000.0,
-    "total_cash": 286100000.0,
-    "total_debt": 1544000000.0
+    "net_income": -276500000.0,
+    "free_cash_flow": -18550000.0,
+    "operating_cash_flow": 258600000.0,
+    "total_cash": 100100000.0,
+    "total_debt": 1463500032.0
   },
   "FML.AX": {
     "sector": "Basic Materials",
@@ -1356,7 +1356,7 @@
     "industry": "Asset Management",
     "fundamental_currency": "USD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-10-20",
+    "fundamental_fetched": "2026-10-27",
     "fundamental_source": "https://au.finance.yahoo.com/quote/NGI.AX/financials/",
     "net_income": 21202000.0,
     "free_cash_flow": 36012500.0,
@@ -1837,7 +1837,7 @@
     "industry": "Internet Content & Information",
     "fundamental_currency": "AUD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-09-28",
+    "fundamental_fetched": "2026-10-27",
     "fundamental_source": "https://au.finance.yahoo.com/quote/REA.AX/financials/",
     "net_income": 673000000.0,
     "free_cash_flow": 515700000.0,
@@ -2175,7 +2175,7 @@
     "industry": "Other Industrial Metals & Mining",
     "fundamental_currency": "AUD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-10-15",
+    "fundamental_fetched": "2026-10-27",
     "fundamental_source": "https://au.finance.yahoo.com/quote/PRN.AX/financials/",
     "net_income": 81851000.0,
     "free_cash_flow": 51930000.0,
@@ -2377,5 +2377,18 @@
     "operating_cash_flow": 38362000.0,
     "total_cash": 18667000.0,
     "total_debt": 43005000.0
+  },
+  "AOV.AX": {
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts",
+    "fundamental_currency": "AUD",
+    "fundamental_period": "2026-06-30",
+    "fundamental_fetched": "2026-10-27",
+    "fundamental_source": "https://au.finance.yahoo.com/quote/AOV.AX/financials/",
+    "net_income": 75100000.0,
+    "free_cash_flow": 95475000.0,
+    "operating_cash_flow": 155200000.0,
+    "total_cash": 48800000.0,
+    "total_debt": 541100032.0
   }
 }
