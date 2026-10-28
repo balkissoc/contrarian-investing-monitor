@@ -2390,5 +2390,18 @@
     "operating_cash_flow": 155200000.0,
     "total_cash": 48800000.0,
     "total_debt": 541100032.0
+  },
+  "REH.AX": {
+    "sector": "Industrials",
+    "industry": "Industrial Distribution",
+    "fundamental_currency": "AUD",
+    "fundamental_period": "2026-06-30",
+    "fundamental_fetched": "2026-10-28",
+    "fundamental_source": "https://au.finance.yahoo.com/quote/REH.AX/financials/",
+    "net_income": 308155008.0,
+    "free_cash_flow": 503716992.0,
+    "operating_cash_flow": 645171968.0,
+    "total_cash": 327668000.0,
+    "total_debt": 2253190912.0
   }
 }
