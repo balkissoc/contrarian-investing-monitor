@@ -1,22 +1,22 @@
 {
-  "as_of": "2026-10-30",
+  "as_of": "2026-11-02",
   "settings_version": "2026-09-hybrid-v1",
   "benchmark": "A300.AX",
-  "prospective_events": 203,
+  "prospective_events": 208,
   "legacy_events": 272,
   "unavailable_or_stale": 0,
   "horizons": {
     "5d": {
-      "mature": 177,
-      "matched": 177,
-      "median_net_pct": -2.4,
+      "mature": 189,
+      "matched": 189,
+      "median_net_pct": -2.03,
       "median_excess_pp": -2.42,
       "hit_20_pct": null
     },
     "20d": {
-      "mature": 85,
-      "matched": 85,
-      "median_net_pct": -5.48,
+      "mature": 89,
+      "matched": 89,
+      "median_net_pct": -5.45,
       "median_excess_pp": -5.98,
       "hit_20_pct": null
     },
@@ -55,12 +55,12 @@
       "median_excess_pp": -10.69
     },
     "40\u201359": {
-      "matched_20d": 61,
+      "matched_20d": 63,
       "median_excess_pp": -5.96
     },
     "60\u201379": {
-      "matched_20d": 18,
-      "median_excess_pp": -10.95
+      "matched_20d": 20,
+      "median_excess_pp": -8.82
     },
     "80\u2013100": {
       "matched_20d": 3,
