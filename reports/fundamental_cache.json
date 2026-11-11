@@ -654,7 +654,7 @@
     "industry": "Other Industrial Metals & Mining",
     "fundamental_currency": "USD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-11-05",
+    "fundamental_fetched": "2026-11-11",
     "fundamental_source": "https://au.finance.yahoo.com/quote/IPX.AX/financials/",
     "net_income": -66767760.0,
     "free_cash_flow": -45066192.0,
@@ -771,7 +771,7 @@
     "industry": "Software - Application",
     "fundamental_currency": "AUD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-09-24",
+    "fundamental_fetched": "2026-11-11",
     "fundamental_source": "https://au.finance.yahoo.com/quote/PXA.AX/financials/",
     "net_income": 19201000.0,
     "free_cash_flow": 77388496.0,
@@ -2624,5 +2624,18 @@
     "operating_cash_flow": 373500000.0,
     "total_cash": 483900000.0,
     "total_debt": 1224199936.0
+  },
+  "DMP.AX": {
+    "sector": "Consumer Cyclical",
+    "industry": "Restaurants",
+    "fundamental_currency": "AUD",
+    "fundamental_period": "2026-06-28",
+    "fundamental_fetched": "2026-11-11",
+    "fundamental_source": "https://au.finance.yahoo.com/quote/DMP.AX/financials/",
+    "net_income": -134159000.0,
+    "free_cash_flow": 223573872.0,
+    "operating_cash_flow": 226708992.0,
+    "total_cash": 134026000.0,
+    "total_debt": 1121613952.0
   }
 }

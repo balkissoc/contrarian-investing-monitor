@@ -1,22 +1,22 @@
 {
-  "as_of": "2026-11-10",
+  "as_of": "2026-11-11",
   "settings_version": "2026-09-hybrid-v1",
   "benchmark": "A300.AX",
-  "prospective_events": 262,
+  "prospective_events": 264,
   "legacy_events": 272,
   "unavailable_or_stale": 2,
   "horizons": {
     "5d": {
-      "mature": 207,
+      "mature": 215,
       "matched": 207,
-      "median_net_pct": -1.68,
+      "median_net_pct": -1.69,
       "median_excess_pp": -1.77,
       "hit_20_pct": null
     },
     "20d": {
-      "mature": 117,
+      "mature": 131,
       "matched": 117,
-      "median_net_pct": -6.56,
+      "median_net_pct": -5.48,
       "median_excess_pp": -6.87,
       "hit_20_pct": null
     },
