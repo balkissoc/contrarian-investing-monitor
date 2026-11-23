@@ -1,23 +1,23 @@
 {
-  "as_of": "2026-11-20",
+  "as_of": "2026-11-23",
   "settings_version": "2026-09-hybrid-v1",
   "benchmark": "A300.AX",
-  "prospective_events": 376,
+  "prospective_events": 382,
   "legacy_events": 272,
   "unavailable_or_stale": 2,
   "horizons": {
     "5d": {
-      "mature": 267,
-      "matched": 267,
-      "median_net_pct": -1.68,
-      "median_excess_pp": -1.7,
+      "mature": 270,
+      "matched": 270,
+      "median_net_pct": -1.69,
+      "median_excess_pp": -1.69,
       "hit_20_pct": null
     },
     "20d": {
-      "mature": 176,
-      "matched": 176,
-      "median_net_pct": -4.21,
-      "median_excess_pp": -5.65,
+      "mature": 186,
+      "matched": 186,
+      "median_net_pct": -4.33,
+      "median_excess_pp": -5.51,
       "hit_20_pct": null
     },
     "60d": {
@@ -55,16 +55,16 @@
       "median_excess_pp": -3.22
     },
     "40\u201359": {
-      "matched_20d": 111,
+      "matched_20d": 115,
       "median_excess_pp": -5.51
     },
     "60\u201379": {
-      "matched_20d": 50,
-      "median_excess_pp": -9.18
+      "matched_20d": 56,
+      "median_excess_pp": -7.05
     },
     "80\u2013100": {
       "matched_20d": 8,
-      "median_excess_pp": 1.2
+      "median_excess_pp": 0.96
     }
   }
 }
