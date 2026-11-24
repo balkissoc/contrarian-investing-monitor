@@ -1,7 +1,6 @@
 Global X A300: loaded 296 equity holdings with SEDOL identifiers.
 OpenFIGI resolution: 295 holdings loaded from trusted cache; 1 SEDOLs require mapping.
 OpenFIGI mapped 1/1 uncached SEDOLs...
-Global X/OpenFIGI resolution: 295 unique ASX tickers; 1 unresolved holdings.
-First unresolved holdings: ZIP CO LTD
-Universe refreshed from Global X A300 holdings via OpenFIGI SEDOL mapping: 295 tickers written to config/watchlist_asx.csv.
-Ready to scan 295 ASX tickers.
+Global X/OpenFIGI resolution: 296 unique ASX tickers; 0 unresolved holdings.
+Universe refreshed from Global X A300 holdings via OpenFIGI SEDOL mapping: 296 tickers written to config/watchlist_asx.csv.
+Ready to scan 296 ASX tickers.
