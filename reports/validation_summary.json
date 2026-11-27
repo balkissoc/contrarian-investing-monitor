@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-26",
+  "as_of": "2026-11-27",
   "settings_version": "2026-09-hybrid-v1",
   "benchmark": "A300.AX",
   "prospective_events": 389,
@@ -7,15 +7,15 @@
   "unavailable_or_stale": 2,
   "horizons": {
     "5d": {
-      "mature": 331,
-      "matched": 331,
-      "median_net_pct": -2.03,
-      "median_excess_pp": -1.81,
+      "mature": 351,
+      "matched": 351,
+      "median_net_pct": -1.8,
+      "median_excess_pp": -1.68,
       "hit_20_pct": null
     },
     "20d": {
-      "mature": 195,
-      "matched": 195,
+      "mature": 201,
+      "matched": 201,
       "median_net_pct": -4.14,
       "median_excess_pp": -5.29,
       "hit_20_pct": null
@@ -51,20 +51,20 @@
   },
   "score_bands": {
     "0\u201339": {
-      "matched_20d": 8,
-      "median_excess_pp": -3.19
+      "matched_20d": 9,
+      "median_excess_pp": -3.17
     },
     "40\u201359": {
-      "matched_20d": 120,
-      "median_excess_pp": -5.4
+      "matched_20d": 123,
+      "median_excess_pp": -5.29
     },
     "60\u201379": {
-      "matched_20d": 58,
-      "median_excess_pp": -6.76
+      "matched_20d": 59,
+      "median_excess_pp": -6.87
     },
     "80\u2013100": {
-      "matched_20d": 9,
-      "median_excess_pp": 0.85
+      "matched_20d": 10,
+      "median_excess_pp": 0.26
     }
   }
 }

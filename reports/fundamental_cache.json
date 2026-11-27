@@ -2747,7 +2747,7 @@
     "industry": "Biotechnology",
     "fundamental_currency": "AUD",
     "fundamental_period": "2026-06-30",
-    "fundamental_fetched": "2026-11-23",
+    "fundamental_fetched": "2026-11-27",
     "fundamental_source": "https://au.finance.yahoo.com/quote/NEU.AX/financials/",
     "net_income": 20257000.0,
     "free_cash_flow": -13546250.0,
